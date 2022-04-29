@@ -1,0 +1,34 @@
+[
+  {
+    "username": "Customer1",
+    "accountNumber": "12345",
+    "pin": "11111",
+    "availableBalance": 1000.0,
+    "totalBalance": 1200.0,
+    "isAdmin": false
+  },
+  {
+    "username": "Customer2",
+    "accountNumber": "98765",
+    "pin": "22222",
+    "availableBalance": 200.0,
+    "totalBalance": 200.0,
+    "isAdmin": false
+  },
+  {
+    "username": "Customer3",
+    "accountNumber": "19234",
+    "pin": "33333",
+    "availableBalance": 200.0,
+    "totalBalance": 200.0,
+    "isAdmin": false
+  },
+  {
+    "username": "Manager1",
+    "accountNumber": "99999",
+    "pin": "00000",
+    "availableBalance": 0,
+    "totalBalance": 0,
+    "isAdmin": true
+  }
+]

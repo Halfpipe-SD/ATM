@@ -1,27 +1,36 @@
 
 public class Account {
-   private int accountNumber;
-   private int pin;
+   private String username;
+   private String accountNumber;
+   private String pin;
    private double availableBalance;
    private double totalBalance;
-   private int admin;
-   private String username;
+   private boolean admin;
 
-   public Account(String Username, int theAccountNumber, int thePIN,
-         double theAvailableBalance, double theTotalBalance, int isadmin) {
-      setUsername(Username);
-      setAccountNumber(theAccountNumber);
-      setPin(thePIN);
-      setAvailableBalance(theAvailableBalance);
-      setTotalBalance(theTotalBalance);
-      setAdmin(isadmin);
+   public Account(String username, String accountNumber, String pin, double availableBalance, double totalBalance,
+         boolean isadmin) {
+      this.username = username;
+      this.accountNumber = accountNumber;
+      this.pin = pin;
+      this.availableBalance = availableBalance;
+      this.totalBalance = totalBalance;
+      this.admin = isadmin;
    }
 
-   public boolean validatePIN(int userPIN) {
-      if (userPIN == getPin())
+   public boolean validatePIN(String userPIN) {
+      if (userPIN == pin)
          return true;
       else
          return false;
+   }
+
+   public void credit(double amount) {
+      totalBalance += amount;
+   }
+
+   public void debit(double amount) {
+      availableBalance = availableBalance - amount;
+      totalBalance = totalBalance - amount;
    }
 
    public double getAvailableBalance() {
@@ -32,24 +41,11 @@ public class Account {
       return totalBalance;
    }
 
-   public void credit(double amount) {
-      setTotalBalance(getTotalBalance() + amount);
-   }
-
-   public void debit(double amount) {
-      setAvailableBalance(getAvailableBalance() - amount);
-      setTotalBalance(getTotalBalance() - amount);
-   }
-
-   public int getAccountNumber() {
+   public String getAccountNumber() {
       return accountNumber;
    }
 
-   public int getISadmin() {
-      return getAdmin();
-   }
-
-   public int GetPin() {
+   public String getPin() {
       return getPin();
    }
 
@@ -57,51 +53,7 @@ public class Account {
       return username;
    }
 
-   public void setUsername(String username) {
-      this.username = username;
-   }
-
-   public void setAccountNumber(int accountNumber) {
-      this.accountNumber = accountNumber;
-   }
-
-   public int getPin() {
-      return pin;
-   }
-
-   public void setPin(int pin) {
-      this.pin = pin;
-   }
-
-   public void setAvailableBalance(double availableBalance) {
-      this.availableBalance = availableBalance;
-   }
-
-   public void setTotalBalance(double totalBalance) {
-      this.totalBalance = totalBalance;
-   }
-
-   public int getAdmin() {
+   public boolean getAdmin() {
       return admin;
    }
-
-   public void setAdmin(int admin) {
-      this.admin = admin;
-   }
-
 }
-
-/**************************************************************************
- * (C) Copyright 1992-2014 by Deitel & Associates, Inc. and *
- * Pearson Education, Inc. All Rights Reserved. *
- * *
- * DISCLAIMER: The authors and publisher of this book have used their *
- * best efforts in preparing the book. These efforts include the *
- * development, research, and testing of the theories and programs *
- * to determine their effectiveness. The authors and publisher make *
- * no warranty of any kind, expressed or implied, with regard to these *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or *
- * consequential damages in connection with, or arising out of, the *
- * furnishing, performance, or use of these programs. *
- *************************************************************************/

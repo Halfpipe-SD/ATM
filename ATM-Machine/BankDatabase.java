@@ -1,120 +1,133 @@
+import java.io.IOException;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.InvalidPathException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import com.google.gson.Gson;
+import java.lang.reflect.Type;
+import com.google.gson.reflect.TypeToken;
 
 public class BankDatabase {
-   static ArrayList<Account> accounts = new ArrayList<Account>();
+   private static final String pathToAccountsJSON = "../accounts.json";
+   private static final ArrayList<Account> accounts = initializeAccounts();
 
    public BankDatabase() {
-
-      Account accounts1 = new Account("Customer1", 12345, 11111, 1000.0, 1200.0, 0);
-      Account accounts2 = new Account("Customer2", 98765, 22222, 200.0, 200.0, 0);
-      Account accounts3 = new Account("Customer3", 19234, 33333, 200.0, 200.0, 0);
-      Account accounts4 = new Account("Manager1", 99999, 00000, 0, 0, 1);
-      accounts.add(accounts1);
-      accounts.add(accounts2);
-      accounts.add(accounts3);
-      accounts.add(accounts4);
+      System.out.println(this.accounts);
    }
 
-   public Account getAccount(int accountnumber) {
+   private static ArrayList<Account> initializeAccounts() {
+      try {
+         // Read the accounts.json file
+         Reader r = Files.newBufferedReader(Paths.get(pathToAccountsJSON));
 
-      for (Account currentAccount : accounts) {
+         // Define the type of the object to be deserialized
+         Type t = new TypeToken<ArrayList<Account>>() {
+         }.getType();
 
-         if (currentAccount.getAccountNumber() == accountnumber)
-            return currentAccount;
+         // convert JSON string to account arrayList object
+         return new Gson().fromJson(r, t);
+
+      } catch (InvalidPathException ipe) {
+         System.out.println("Error reading the path of accounts.json");
+
+      } catch (IOException ioe) {
+         System.out.println("Error reading accounts.json file!");
+
+      } catch (Exception e) {
+         e.printStackTrace();
       }
-
+      // terminate program
+      System.exit(1);
       return null;
    }
 
-   private Account getAccountpin(int PIN) {
+// public Account getAccount(int accountnumber) {
 
-      for (Account currentAccount : accounts) {
+// for (Account currentAccount : accounts) {
 
-         if (currentAccount.GetPin() == PIN)
-            return currentAccount;
-      }
+// if (currentAccount.getAccountNumber() == accountnumber)
+// return currentAccount;
+// }
 
-      return null;
-   }
+// return null;
+// }
 
-   public boolean authenticateUser(int userPIN) {
+// private Account getAccountpin(int PIN) {
 
-      Account userAccount = getAccountpin(userPIN);
+// for (Account currentAccount : accounts) {
 
-      if (userAccount != null)
-         return userAccount.validatePIN(userPIN);
-      else
-         return false;
-   }
+// if (currentAccount.GetPin() == PIN)
+// return currentAccount;
+// }
 
-   public double getAvailableBalance(int userAccountNumber) {
-      return getAccount(userAccountNumber).getAvailableBalance();
-   }
+// return null;
+// }
 
-   public double getTotalBalance(int userAccountNumber) {
-      return getAccount(userAccountNumber).getTotalBalance();
-   }
+// public boolean authenticateUser(int userPIN) {
 
-   public void credit(int userAccountNumber, double amount) {
-      getAccount(userAccountNumber).credit(amount);
-   }
+// Account userAccount = getAccountpin(userPIN);
 
-   public void debit(int userAccountNumber, double amount) {
-      getAccount(userAccountNumber).debit(amount);
-   }
+// if (userAccount != null)
+// return userAccount.validatePIN(userPIN);
+// else
+// return false;
+// }
 
-   public int getadmin(int userAccountNumber) {
-      return getAccountpin(userAccountNumber).getISadmin();
-   }
+// public double getAvailableBalance(int userAccountNumber) {
+// return getAccount(userAccountNumber).getAvailableBalance();
+// }
 
-   public static Iterator createIterator() {
-      return new AccountIterator(accounts);
-   }
+// public double getTotalBalance(int userAccountNumber) {
+// return getAccount(userAccountNumber).getTotalBalance();
+// }
 
-   public int getaccpin(int PIN) {
-      for (Account currentAccount : accounts) {
+// public void credit(int userAccountNumber, double amount) {
+// getAccount(userAccountNumber).credit(amount);
+// }
 
-         if (currentAccount.GetPin() == PIN)
-            return currentAccount.getAccountNumber();
-         else
-            return 1;
-      }
-      return PIN;
-   }
+// public void debit(int userAccountNumber, double amount) {
+// getAccount(userAccountNumber).debit(amount);
+// }
 
-   public static void Adduser() {
-      String name = Screen.Inputfield1.getText();
-      int accountnumber = Integer.parseInt(Screen.Inputfield2.getText());
-      int pin = Integer.parseInt(Screen.Inputfield4.getText());
-      int balance = Integer.parseInt(Screen.Inputfield3.getText());
+// public int getadmin(int userAccountNumber) {
+// return getAccountpin(userAccountNumber).getISadmin();
+// }
 
-      Account newaccount = new Account(name, accountnumber, pin, balance, balance, 0);
-      accounts.add(newaccount);
+// public static Iterator createIterator() {
+// return new AccountIterator(accounts);
+// }
 
-      Screen.Inputfield1.setText("");
-      Screen.Inputfield2.setText("");
-      Screen.Inputfield3.setText("");
-      Screen.Inputfield4.setText("");
-   }
+// public int getaccpin(int PIN) {
+// for (Account currentAccount : accounts) {
 
-   public static void Deleteuser(int position) {
-      accounts.remove(position);
+// if (currentAccount.GetPin() == PIN)
+// return currentAccount.getAccountNumber();
+// else
+// return 1;
+// }
+// return PIN;
+// }
 
-   }
+// public static void Adduser() {
+// String name = Screen.Inputfield1.getText();
+// int accountnumber = Integer.parseInt(Screen.Inputfield2.getText());
+// int pin = Integer.parseInt(Screen.Inputfield4.getText());
+// int balance = Integer.parseInt(Screen.Inputfield3.getText());
 
-}
+// Account newaccount = new Account(name, accountnumber, pin, balance, balance,
+// 0);
+// accounts.add(newaccount);
 
-/**************************************************************************
- * (C) Copyright 1992-2014 by Deitel & Associates, Inc. and *
- * Pearson Education, Inc. All Rights Reserved. *
- * *
- * DISCLAIMER: The authors and publisher of this book have used their *
- * best efforts in preparing the book. These efforts include the *
- * development, research, and testing of the theories and programs *
- * to determine their effectiveness. The authors and publisher make *
- * no warranty of any kind, expressed or implied, with regard to these *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or *
- * consequential damages in connection with, or arising out of, the *
- * furnishing, performance, or use of these programs. *
- *************************************************************************/
+// Screen.Inputfield1.setText("");
+// Screen.Inputfield2.setText("");
+// Screen.Inputfield3.setText("");
+// Screen.Inputfield4.setText("");
+// }
+
+// public static void Deleteuser(int position) {
+// accounts.remove(position);
+
+// }
+
+// }
