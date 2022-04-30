@@ -27,8 +27,8 @@
     "username": "Manager1",
     "accountNumber": "99999",
     "pin": "00000",
-    "availableBalance": 0,
-    "totalBalance": 0,
+    "availableBalance": 0.0,
+    "totalBalance": 0.0,
     "isAdmin": true
   }
 ]

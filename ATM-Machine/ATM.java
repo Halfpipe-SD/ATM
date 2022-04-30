@@ -2,67 +2,48 @@ import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.nio.file.InvalidPathException;
+import java.awt.Color;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class ATM {
-	private boolean userAuthenticated;
-	private int currentAccountNumber;
+	// private boolean userAuthenticated = false;
+	// private String currentAccountNumber = "";
+	// private CashDispenser cashDispenser;
+	// private DepositSlot depositSlot;
+	// private boolean adminCheck;
+	// private String userinput = "";
+
 	private Screen screen;
-	private Keypad keypad;
-	private CashDispenser cashDispenser;
-	private DepositSlot depositSlot;
 	private BankDatabase bankDatabase;
-	private int AdminCheck;
-	private String userinput = "";
-	private int position = 0;
-	private static ATM uniqueinstance;
-	Iterator Users = BankDatabase.createIterator();
+	private Account currentUser;
+	private final String pathToAccounts = "/accounts.json";
 
-	private static final int BALANCE_INQUIRY = 1;
-	private static final int WITHDRAWAL = 2;
-	private static final int DEPOSIT = 3;
-	private static final int EXIT = 4;
+	private static enum USER_ACTION {
+		WITHDRAWAL, DEPOSIT, BALANCE_INQUIRY, EXIT
+	};
 
-	public ATM() {
-
-		userAuthenticated = false;
-		currentAccountNumber = 0;
-		screen = new Screen();
-
-		keypad = new Keypad();
-
-		cashDispenser = new CashDispenser();
-		depositSlot = new DepositSlot();
-		bankDatabase = new BankDatabase();
+	public ATM() throws InvalidPathException, IOException {
+		screen = new Screen("ATM Machine");
+		bankDatabase = new BankDatabase(pathToAccounts);
+		// cashDispenser = new CashDispenser();
+		// depositSlot = new DepositSlot();
 	}
 
-	public void run() {
-
-		startlogin();
+	void start() {
+		// do user login
+		userLogin();
 	}
 
-	void startlogin() {
+	private void userLogin() {
+		// display the login screen
+		screen.showLogin();
 
-		position = 0;
-		screen.createlogin();
-		userinput = "";
+		// int PIN = Integer.parseInt(screen.Inputfield2.getText());
 
-		authenticate check = new authenticate();
-		screen.Mainframe.revalidate();
-		screen.Inputfield2.setText("");
-		keypad.setbuttons();
-		addkeypadlisteners();
-
-		screen.Mainframe.add(keypad.addkeypad(), BorderLayout.CENTER);
-
-		screen.Mainframe.revalidate();
-		keypad.BEnter.addActionListener(check);
-		screen.Mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		screen.Mainframe.setSize(400, 280);
-		screen.Mainframe.setVisible(true);
-		screen.Mainframe.revalidate();
 	}
 
 	public void authenticateuser(int pin) {
@@ -106,7 +87,7 @@ public class ATM {
 	private class Addcheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 
-			BankDatabase.Adduser();
+			BankDatabase.addUser();
 
 		}
 	}
@@ -114,7 +95,7 @@ public class ATM {
 	private class Deletecheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 
-			BankDatabase.Deleteuser(position);
+			BankDatabase.deleteUser(position);
 			position = position - 1;
 
 		}
@@ -229,24 +210,8 @@ public class ATM {
 		screen.button1.addActionListener(Ncheck);
 		screen.button4.addActionListener(Pcheck);
 		screen.Exit.addActionListener(check4);
-		screen.Mainframe.revalidate();
+		screen..revalidate();
 
-	}
-
-	public void addkeypadlisteners() {
-		BCheck BC = new BCheck();
-		BClear BC1 = new BClear();
-		keypad.B1.addActionListener(BC);
-		keypad.B2.addActionListener(BC);
-		keypad.B3.addActionListener(BC);
-		keypad.B4.addActionListener(BC);
-		keypad.B5.addActionListener(BC);
-		keypad.B6.addActionListener(BC);
-		keypad.B7.addActionListener(BC);
-		keypad.B8.addActionListener(BC);
-		keypad.B9.addActionListener(BC);
-		keypad.B0.addActionListener(BC);
-		keypad.BClear.addActionListener(BC1);
 	}
 
 	public class BCheck implements ActionListener {
@@ -306,26 +271,4 @@ public class ATM {
 
 	}
 
-	public static ATM getinstance() {
-		if (uniqueinstance == null) {
-			uniqueinstance = new ATM();
-		}
-		return uniqueinstance;
-	}
-
 }
-
-/**************************************************************************
- * (C) Copyright 1992-2014 by Deitel & Associates, Inc. and *
- * Pearson Education, Inc. All Rights Reserved. *
- * *
- * DISCLAIMER: The authors and publisher of this book have used their *
- * best efforts in preparing the book. These efforts include the *
- * development, research, and testing of the theories and programs *
- * to determine their effectiveness. The authors and publisher make *
- * no warranty of any kind, expressed or implied, with regard to these *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or *
- * consequential damages in connection with, or arising out of, the *
- * furnishing, performance, or use of these programs. *
- *************************************************************************/
