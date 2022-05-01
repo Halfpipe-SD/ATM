@@ -1,71 +1,77 @@
-
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Graphics;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.BorderLayout;
-import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-
 import javax.swing.JLabel;
-import javax.swing.JButton;
 
-public class Screen extends JFrame {
-	private Keypad mainKeypad = new Keypad(180, 160);
-	private SidePanel sidePanel = new SidePanel(200, 160);
-	private JTextField textField = new JTextField(20);
+import java.awt.Font;
+import java.awt.BorderLayout;
 
-	public Screen(String title) {
+public class Screen extends JFrame implements KeypadListener {
+
+	private Keypad keypad = new Keypad(this, 180, 160);
+	private SidePanel sidePanel = new SidePanel(160, 160);
+
+	private JTextField tfTop = new JTextField(20);
+	// private JTextField tfBottom = new JTextField(20);
+
+	private Font tfFontTop = new Font("", Font.PLAIN, 12);
+	// private Font tfFontBottom = new Font("", Font.BOLD, 12);
+
+	private ATMActionsListener atmListener;
+
+	public Screen(ATMActionsListener atml, String title) {
 		super(title);
+		atmListener = atml;
 
 		// initialize main screen
 		setSize(1000, 1000);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+		// setup textfields
+		tfTop.setHorizontalAlignment(JLabel.CENTER);
+		tfTop.setFont(tfFontTop);
+		tfTop.setEditable(false);
+		// tfBottom.setHorizontalAlignment(JLabel.CENTER);
+		// tfBottom.setFont(tfFontBottom);
+		// tfBottom.setEditable(false);
+
 		// add components to main screen
-		add(textField, BorderLayout.NORTH);
-		add(mainKeypad, BorderLayout.CENTER);
+		add(tfTop, BorderLayout.NORTH);
+		add(keypad, BorderLayout.CENTER);
 		add(sidePanel, BorderLayout.LINE_END);
+		// add(tfBottom, BorderLayout.SOUTH);
 		pack();
 		setVisible(true);
-
-		showLogin();
 	}
 
-	public JTextField getTextField() {
-		return textField;
-	}
-
-	private void resetScreen() {
-		getContentPane().removeAll();
-		setLayout(new FlowLayout());
-		add(textField);
+	@Override
+	public void buttonPressed(String value) {
+		switch (value) {
+			case "Clear":
+				sidePanel.clearTextField();
+				break;
+			case "Enter":
+				atmListener.atmEnterAction(sidePanel.getTextField());
+				break;
+			default:
+				sidePanel.addTextFieldChar(value);
+		}
 	}
 
 	public void showLogin() {
-		textField.setEditable(false);
-
-		String message = "Insert your credit/debit card then\n"
-				+ "Insert your credit/debit card then\n"
-				+ "Enter your PIN number: ";
-
-		sidePanel.setTextarea(message);
-		repaint();
+		tfTop.setText("Insert your credit/debit card, then enter your PIN number: ");
 	}
 
 	public void showMenu() {
-		textField.setVisible(false);
 		String message = "Welcome to the ATM\n"
 				+ "Please select an option: \n"
 				+ "1 - Balance\n"
 				+ "2 - Withdrawal\n"
 				+ "3 - Deposit\n"
 				+ "4 - Exit";
-		sidePanel.setTextarea(message);
-		repaint();
+	}
+
+	public String getText() {
+		return tfTop.getText();
 	}
 
 	public void showBalanceUI() {

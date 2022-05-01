@@ -33,7 +33,7 @@ public class BankDatabase {
 
    private ArrayList<Account> readAccountsFromFile() throws FileNotFoundException {
       FileReader fr = new FileReader(accountsFilePath);
-      // Define the type of the object to be read with gson
+      // Define the type of the object to be read from the json file
       Type t = new TypeToken<ArrayList<Account>>() {
       }.getType();
 
@@ -51,11 +51,19 @@ public class BankDatabase {
    }
 
    public Account getAccount(String accNumber) {
-      for (Account currentAccount : accounts) {
-         if (currentAccount.getAccountNumber() == accNumber)
-            return currentAccount;
+      for (Account acc : accounts) {
+         if (acc.getAccountNumber() == accNumber)
+            return acc;
       }
       return null;
+   }
+
+   public boolean validatePin(String pin) {
+      for (Account acc : accounts) {
+         if (acc.getPin() == pin)
+            return true;
+      }
+      return false;
    }
 
    // public void addUser() {

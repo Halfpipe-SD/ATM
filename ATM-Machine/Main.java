@@ -20,7 +20,7 @@ public class Main {
 
       } catch (Exception e) {
          System.out.println("Exception when starting ATM!");
-         System.exit(1);
+         e.printStackTrace();
       }
    }
 }
