@@ -2,14 +2,14 @@ import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 import java.io.IOException;
 import java.nio.file.InvalidPathException;
-import java.awt.Color;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class ATM {
+public class ATM implements ATMActionsListener {
 	// private boolean userAuthenticated = false;
 	// private String currentAccountNumber = "";
 	// private CashDispenser cashDispenser;
@@ -22,28 +22,40 @@ public class ATM {
 	private Account currentUser;
 	private final String pathToAccounts = "/accounts.json";
 
-	private static enum USER_ACTION {
-		WITHDRAWAL, DEPOSIT, BALANCE_INQUIRY, EXIT
-	};
-
 	public ATM() throws InvalidPathException, IOException {
-		screen = new Screen("ATM Machine");
+		screen = new Screen(this, "ATM Machine");
 		bankDatabase = new BankDatabase(pathToAccounts);
 		// cashDispenser = new CashDispenser();
 		// depositSlot = new DepositSlot();
 	}
 
-	void start() {
-		// do user login
-		userLogin();
-	}
-
-	private void userLogin() {
+	public void start() {
 		// display the login screen
 		screen.showLogin();
+		bankDatabase.validatePin("");
+	}
 
-		// int PIN = Integer.parseInt(screen.Inputfield2.getText());
+	@Override
+	public void atmUserAction(USER action) {
+		switch (action) {
+			case WITHDRAWAL:
+				System.out.println("Withdrawal");
+				break;
+			case DEPOSIT:
+				System.out.println("deposit");
+				break;
+			case BALANCE_INQUIRY:
+				System.out.println("balance inquiry");
+				break;
+			case EXIT:
+				System.out.println("exit");
+				break;
+		}
+	}
 
+	@Override
+	public void atmEnterAction(String input) {
+		System.out.println("Enter: " + input);
 	}
 
 	public void authenticateuser(int pin) {
