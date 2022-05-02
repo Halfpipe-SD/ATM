@@ -1,5 +1,5 @@
-
 public class Account {
+
    private String username;
    private String accountNumber;
    private String pin;
@@ -15,6 +15,11 @@ public class Account {
       this.availableBalance = availableBalance;
       this.totalBalance = totalBalance;
       this.isAdmin = isAdmin;
+   }
+
+   private double roundToTwoDecimals(double d) {
+      // TODO Implement rounding functionality
+      return d;
    }
 
    public boolean validatePIN(String userPIN) {
@@ -34,11 +39,11 @@ public class Account {
    }
 
    public double getAvailableBalance() {
-      return availableBalance;
+      return roundToTwoDecimals(availableBalance);
    }
 
    public double getTotalBalance() {
-      return totalBalance;
+      return roundToTwoDecimals(totalBalance);
    }
 
    public String getAccountNumber() {
@@ -46,7 +51,7 @@ public class Account {
    }
 
    public String getPin() {
-      return getPin();
+      return pin;
    }
 
    public String getUsername() {

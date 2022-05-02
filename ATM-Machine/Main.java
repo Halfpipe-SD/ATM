@@ -7,7 +7,7 @@ public class Main {
 
       // create new atm instance and start it
       try {
-         ATM atm = new ATM();
+         ATM atm = new ATM(true);
          atm.start();
 
       } catch (FileNotFoundException fnfe) {

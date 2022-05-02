@@ -1,19 +1,17 @@
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.InvalidPathException;
-import java.nio.file.Paths;
-import java.util.ArrayList;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
+
+import java.util.ArrayList;
+import java.lang.reflect.Type;
+
+import Exceptions.LoginFailedException;
 
 public class BankDatabase {
 
@@ -50,20 +48,24 @@ public class BankDatabase {
       accounts.removeIf(acc -> acc.getAccountNumber() == accNumber);
    }
 
-   public Account getAccount(String accNumber) {
+   public Account validateAccount(String pin) throws LoginFailedException {
+      Account found = null;
+      for (Account acc : accounts) {
+         if (pin.equals(acc.getPin()))
+            found = acc;
+      }
+      if (found == null)
+         throw new LoginFailedException("Error Validating PIN: " + pin);
+
+      return found;
+   }
+
+   public Account getAccountByAccountNumber(String accNumber) {
       for (Account acc : accounts) {
          if (acc.getAccountNumber() == accNumber)
             return acc;
       }
       return null;
-   }
-
-   public boolean validatePin(String pin) {
-      for (Account acc : accounts) {
-         if (acc.getPin() == pin)
-            return true;
-      }
-      return false;
    }
 
    // public void addUser() {

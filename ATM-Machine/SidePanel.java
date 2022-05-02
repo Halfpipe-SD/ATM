@@ -18,10 +18,19 @@ public class SidePanel extends JPanel {
     setPreferredSize(new Dimension(width, height));
     setBackground(backgroundColor);
     setLayout(new FlowLayout());
+
     tf.setEditable(false);
     add(tf);
     add(tl);
   }
+
+  // public void hideTextField() {
+  // tf.setVisible(false);
+  // }
+
+  // public void showTextField() {
+  // tf.setVisible(true);
+  // }
 
   public void clearTextField() {
     tf.setText("");
@@ -35,8 +44,8 @@ public class SidePanel extends JPanel {
     tf.setText(text);
   }
 
-  public void setLabel(String text) {
-    tl.setText(text);
+  public void setLabelHTML(String html) {
+    tl.setText("<html>" + html + "</html>");
   }
 
   public String getTextField() {
