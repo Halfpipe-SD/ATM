@@ -1,286 +1,347 @@
-import java.awt.BorderLayout;
-import java.awt.Button;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.Color;
 import java.io.IOException;
 import java.nio.file.InvalidPathException;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
+import Exceptions.LoginFailedException;
+import Exceptions.InvalidMenuException;
+import Listeners.ATMListener;
 
-public class ATM implements ATMActionsListener {
-	// private boolean userAuthenticated = false;
-	// private String currentAccountNumber = "";
-	// private CashDispenser cashDispenser;
-	// private DepositSlot depositSlot;
-	// private boolean adminCheck;
-	// private String userinput = "";
+public class ATM implements ATMListener {
 
-	private Screen screen;
-	private BankDatabase bankDatabase;
-	private Account currentUser;
 	private final String pathToAccounts = "/accounts.json";
 
-	public ATM() throws InvalidPathException, IOException {
+	private Screen screen = null;
+	private BankDatabase bankDatabase = null;
+	private Account currentAccount = null;
+	private ATM_Mode currentMode = null;
+
+	private boolean debugMode = false;
+
+	public ATM(boolean debug) throws InvalidPathException, IOException {
+
+		// set debug mode
+		debugMode = debug;
+
+		// initialize Screen and BankDatabase
 		screen = new Screen(this, "ATM Machine");
 		bankDatabase = new BankDatabase(pathToAccounts);
-		// cashDispenser = new CashDispenser();
-		// depositSlot = new DepositSlot();
+	}
+
+	public ATM() throws InvalidPathException, IOException {
+		this(false);
 	}
 
 	public void start() {
-		// display the login screen
-		screen.showLogin();
-		bankDatabase.validatePin("");
-	}
-
-	@Override
-	public void atmUserAction(USER action) {
-		switch (action) {
-			case WITHDRAWAL:
-				System.out.println("Withdrawal");
-				break;
-			case DEPOSIT:
-				System.out.println("deposit");
-				break;
-			case BALANCE_INQUIRY:
-				System.out.println("balance inquiry");
-				break;
-			case EXIT:
-				System.out.println("exit");
-				break;
-		}
+		// start in login mode
+		this.atmSwitchModeAction(ATM_Mode.LOGIN);
 	}
 
 	@Override
 	public void atmEnterAction(String input) {
-		System.out.println("Enter: " + input);
-	}
+		if (debugMode)
+			System.out.println("Mode: " + currentMode + " | Input: " + input);
 
-	public void authenticateuser(int pin) {
-		userAuthenticated = bankDatabase.authenticateUser(pin);
+		screen.getSidePanel().clearTextField();
+		try {
+			switch (currentMode) {
+				case LOGIN:
+					currentAccount = bankDatabase.validateAccount(input);
+					this.atmSwitchModeAction(ATM_Mode.MENU);
+					break;
+				case MENU:
+					this.atmSwitchModeAction(getModeFromMenuInput(input));
+					break;
+				case BALANCE:
 
-		if (userAuthenticated) {
-			int accountNumber = bankDatabase.getaccpin(pin);
-			AdminCheck = bankDatabase.getadmin(pin);
-			if (AdminCheck == 0) {
-				currentAccountNumber = accountNumber;
-				screen.Mainframe.getContentPane().removeAll();
-				screen.Mainframe.revalidate();
-				createmenu();
-				screen.Mainframe.add(keypad.addkeypad(), BorderLayout.CENTER);
-				screen.Mainframe.revalidate();
+					break;
+				case WITHDRAWAL:
+					break;
+				case DEPOSIT:
+					break;
+				case ADMIN:
+					break;
 			}
-
-			else
-
-				createAdminGUI();
-			Iterator UserIterator = BankDatabase.createIterator();
-			Addcheck check = new Addcheck();
-			Deletecheck check2 = new Deletecheck();
-			screen.button2.addActionListener(check);
-			screen.button3.addActionListener(check2);
-
-		} else
-			screen.messageJLabel3.setText(
-					"Invalid account number or PIN. Please try again.");
-	}
-
-	private class authenticate implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-
-			int PIN = Integer.parseInt(screen.Inputfield2.getText());
-
-			authenticateuser(PIN);
+		} catch (LoginFailedException e) {
+			// TODO set error message
+			System.out.println(e);
+		} catch (InvalidMenuException e) {
+			// TODO set error message
+			System.out.println(e);
 		}
 	}
 
-	private class Addcheck implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
+	@Override
+	public void atmSwitchModeAction(ATM_Mode newMode) {
+		if (debugMode)
+			System.out.println("Switched mode from: " + currentMode + " to: " + newMode);
 
-			BankDatabase.addUser();
+		currentMode = newMode;
+		screen.setAdditionalTitle(currentMode.toString());
 
+		switch (newMode) {
+			case LOGIN:
+				screen.showLogin();
+				break;
+			case MENU:
+				screen.showMenu();
+				break;
+			case BALANCE:
+				screen.showBalance();
+				break;
+			case WITHDRAWAL:
+				break;
+			case DEPOSIT:
+				break;
+			case ADMIN:
+				break;
 		}
 	}
 
-	private class Deletecheck implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-
-			BankDatabase.deleteUser(position);
-			position = position - 1;
-
+	private ATM_Mode getModeFromMenuInput(String input) throws InvalidMenuException {
+		switch (input) {
+			case "1":
+				return ATM_Mode.BALANCE;
+			case "2":
+				return ATM_Mode.WITHDRAWAL;
+			case "3":
+				return ATM_Mode.DEPOSIT;
+			case "4":
+				return ATM_Mode.LOGIN;
+			default:
+				throw new InvalidMenuException("Invalid menu input: " + input);
 		}
 	}
 
-	public void createmenu() {
-		screen.setSize(300, 150);
-		balancecheck check1 = new balancecheck();
-		Depositcheck check2 = new Depositcheck();
-		Withdrawcheck check3 = new Withdrawcheck();
-		Exitcheck check4 = new Exitcheck();
-		screen.Mainframe.getContentPane().removeAll();
-		screen.Mainframe.revalidate();
-
-		screen.Mainframe.add(keypad.addkeypad(), BorderLayout.CENTER);
-		screen.createmenu();
-		Account Account1 = bankDatabase.getAccount(currentAccountNumber);
-		screen.messageJLabel.setText("Welcome " + Account1.getUsername()
-				+ "                                                                                   ");
-
-		keypad.B1.addActionListener(check1);
-		keypad.B2.addActionListener(check3);
-		keypad.B3.addActionListener(check2);
-		keypad.B4.addActionListener(check4);
-		screen.Mainframe.revalidate();
+	public Account getCurrentAccount() {
+		return currentAccount;
 	}
 
-	private class balancecheck implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			userinput = "";
-			performTransactions(1);
-		}
-	}
+	// public void authenticateuser(int pin) {
+	// userAuthenticated = bankDatabase.authenticateUser(pin);
 
-	private class Depositcheck implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			userinput = "";
-			performTransactions(3);
-		}
-	}
+	// if (userAuthenticated) {
+	// int accountNumber = bankDatabase.getaccpin(pin);
+	// AdminCheck = bankDatabase.getadmin(pin);
+	// if (AdminCheck == 0) {
+	// currentAccountNumber = accountNumber;
+	// screen.Mainframe.getContentPane().removeAll();
+	// screen.Mainframe.revalidate();
+	// createmenu();
+	// screen.Mainframe.add(keypad.addkeypad(), BorderLayout.CENTER);
+	// screen.Mainframe.revalidate();
+	// }
 
-	private class Withdrawcheck implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			userinput = "";
-			performTransactions(2);
-		}
-	}
+	// else
 
-	private class Exitcheck implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			startlogin();
-		}
-	}
+	// createAdminGUI();
+	// Iterator UserIterator = BankDatabase.createIterator();
+	// Addcheck check = new Addcheck();
+	// Deletecheck check2 = new Deletecheck();
+	// screen.button2.addActionListener(check);
+	// screen.button3.addActionListener(check2);
 
-	private void performTransactions(int a) {
+	// } else
+	// screen.messageJLabel3.setText(
+	// "Invalid account number or PIN. Please try again.");
+	// }
 
-		Transaction currentTransaction = null;
+	// private class authenticate implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
 
-		currentTransaction = createTransaction(a);
-		keypad.setbuttons();
-		addkeypadlisteners();
+	// int PIN = Integer.parseInt(screen.Inputfield2.getText());
 
-		userinput = "";
-		screen.Inputfield2.setText(userinput);
-		currentTransaction.execute();
+	// authenticateuser(PIN);
+	// }
+	// }
 
-		Backcheck Back = new Backcheck();
-		screen.Exit.addActionListener(Back);
-		screen.Mainframe.revalidate();
+	// private class Addcheck implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
 
-	}
+	// BankDatabase.addUser();
 
-	public class Backcheck implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
+	// }
+	// }
 
-			createmenu();
-			screen.Mainframe.add(keypad.addkeypad(), BorderLayout.CENTER);
-			screen.Mainframe.revalidate();
-			userinput = "";
-			screen.Inputfield2.setText(userinput);
-		}
-	}
+	// private class Deletecheck implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
 
-	private Transaction createTransaction(int type) {
-		Transaction temp = null;
-		screen.getContentPane().removeAll();
-		screen.revalidate();
+	// BankDatabase.deleteUser(position);
+	// position = position - 1;
 
-		if (type == 1)
-			temp = new BalanceInquiry(
-					currentAccountNumber, screen, bankDatabase);
-		else if (type == 2)
-			temp = new Withdrawal(currentAccountNumber, screen,
-					bankDatabase, keypad, cashDispenser);
-		else if (type == 3) {
-			screen.setSize(400, 250);
-			temp = new Deposit(currentAccountNumber, screen,
-					bankDatabase, keypad, depositSlot);
-		}
+	// }
+	// }
 
-		return temp;
-	}
+	// public void createmenu() {
+	// screen.setSize(300, 150);
+	// balancecheck check1 = new balancecheck();
+	// Depositcheck check2 = new Depositcheck();
+	// Withdrawcheck check3 = new Withdrawcheck();
+	// Exitcheck check4 = new Exitcheck();
+	// screen.Mainframe.getContentPane().removeAll();
+	// screen.Mainframe.revalidate();
 
-	public void createAdminGUI() {
+	// screen.Mainframe.add(keypad.addkeypad(), BorderLayout.CENTER);
+	// screen.createmenu();
+	// Account Account1 = bankDatabase.getAccount(currentAccountNumber);
+	// screen.messageJLabel.setText("Welcome " + Account1.getUsername()
+	// + " ");
 
-		screen.Mainframe.getContentPane().removeAll();
-		Nextcheck Ncheck = new Nextcheck();
-		Prevcheck Pcheck = new Prevcheck();
-		Exitcheck check4 = new Exitcheck();
-		screen.Mainframe.revalidate();
-		screen.createAdminpage();
-		screen.button1.addActionListener(Ncheck);
-		screen.button4.addActionListener(Pcheck);
-		screen.Exit.addActionListener(check4);
-		screen..revalidate();
+	// keypad.B1.addActionListener(check1);
+	// keypad.B2.addActionListener(check3);
+	// keypad.B3.addActionListener(check2);
+	// keypad.B4.addActionListener(check4);
+	// screen.Mainframe.revalidate();
+	// }
 
-	}
+	// private class balancecheck implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
+	// userinput = "";
+	// performTransactions(1);
+	// }
+	// }
 
-	public class BCheck implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			JButton b = (JButton) e.getSource();
-			String label = b.getLabel();
-			userinput = userinput + label;
+	// private class Depositcheck implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
+	// userinput = "";
+	// performTransactions(3);
+	// }
+	// }
 
-			screen.Inputfield2.setText(userinput);
+	// private class Withdrawcheck implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
+	// userinput = "";
+	// performTransactions(2);
+	// }
+	// }
 
-		}
-	}
+	// private class Exitcheck implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
+	// startlogin();
+	// }
+	// }
 
-	public class BClear implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
+	// private void performTransactions(int a) {
 
-			userinput = "";
-			screen.Inputfield2.setText(userinput);
-		}
-	}
+	// Transaction currentTransaction = null;
 
-	public class Nextcheck implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
+	// currentTransaction = createTransaction(a);
+	// keypad.setbuttons();
+	// addkeypadlisteners();
 
-			IterateUser(BankDatabase.createIterator());
-		}
-	}
+	// userinput = "";
+	// screen.Inputfield2.setText(userinput);
+	// currentTransaction.execute();
 
-	public class Prevcheck implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
+	// Backcheck Back = new Backcheck();
+	// screen.Exit.addActionListener(Back);
+	// screen.Mainframe.revalidate();
 
-			prevIterateUser(BankDatabase.createIterator());
-		}
-	}
+	// }
 
-	public void IterateUser(Iterator Iterator) {
-		if (Iterator.hasNext(position) == true) {
-			position = position + 1;
+	// public class Backcheck implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
 
-			Account AccountItem = (Account) Iterator.next(position);
-			screen.messageJLabel2.setText("Username: " + AccountItem.getUsername());
-			screen.messageJLabel3.setText("Avaliable Balance: " + AccountItem.getAvailableBalance());
-			screen.messageJLabel4.setText("Avaliable Balance: " + AccountItem.getTotalBalance());
-		}
+	// createmenu();
+	// screen.Mainframe.add(keypad.addkeypad(), BorderLayout.CENTER);
+	// screen.Mainframe.revalidate();
+	// userinput = "";
+	// screen.Inputfield2.setText(userinput);
+	// }
+	// }
 
-	}
+	// private Transaction createTransaction(int type) {
+	// Transaction temp = null;
+	// screen.getContentPane().removeAll();
+	// screen.revalidate();
 
-	public void prevIterateUser(Iterator Iterator) {
-		if (Iterator.hasPrev(position) == true) {
-			position = position - 1;
-			Account AccountItem = (Account) Iterator.next(position);
-			screen.messageJLabel2.setText("Username: " + AccountItem.getUsername());
-			screen.messageJLabel3.setText("Avaliable Balance: " + AccountItem.getAvailableBalance());
-			screen.messageJLabel4.setText("Avaliable Balance: " + AccountItem.getTotalBalance());
+	// if (type == 1)
+	// temp = new BalanceInquiry(
+	// currentAccountNumber, screen, bankDatabase);
+	// else if (type == 2)
+	// temp = new Withdrawal(currentAccountNumber, screen,
+	// bankDatabase, keypad, cashDispenser);
+	// else if (type == 3) {
+	// screen.setSize(400, 250);
+	// temp = new Deposit(currentAccountNumber, screen,
+	// bankDatabase, keypad, depositSlot);
+	// }
 
-		}
+	// return temp;
+	// }
 
-	}
+	// public void createAdminGUI() {
+
+	// screen.Mainframe.getContentPane().removeAll();
+	// Nextcheck Ncheck = new Nextcheck();
+	// Prevcheck Pcheck = new Prevcheck();
+	// Exitcheck check4 = new Exitcheck();
+	// screen.Mainframe.revalidate();
+	// screen.createAdminpage();
+	// screen.button1.addActionListener(Ncheck);
+	// screen.button4.addActionListener(Pcheck);
+	// screen.Exit.addActionListener(check4);
+	// screen..revalidate();
+
+	// }
+
+	// public class BCheck implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
+	// JButton b = (JButton) e.getSource();
+	// String label = b.getLabel();
+	// userinput = userinput + label;
+
+	// screen.Inputfield2.setText(userinput);
+
+	// }
+	// }
+
+	// public class BClear implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
+
+	// userinput = "";
+	// screen.Inputfield2.setText(userinput);
+	// }
+	// }
+
+	// public class Nextcheck implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
+
+	// IterateUser(BankDatabase.createIterator());
+	// }
+	// }
+
+	// public class Prevcheck implements ActionListener {
+	// public void actionPerformed(ActionEvent e) {
+
+	// prevIterateUser(BankDatabase.createIterator());
+	// }
+	// }
+
+	// public void IterateUser(Iterator Iterator) {
+	// if (Iterator.hasNext(position) == true) {
+	// position = position + 1;
+
+	// Account AccountItem = (Account) Iterator.next(position);
+	// screen.messageJLabel2.setText("Username: " + AccountItem.getUsername());
+	// screen.messageJLabel3.setText("Avaliable Balance: " +
+	// AccountItem.getAvailableBalance());
+	// screen.messageJLabel4.setText("Avaliable Balance: " +
+	// AccountItem.getTotalBalance());
+	// }
+
+	// }
+
+	// public void prevIterateUser(Iterator Iterator) {
+	// if (Iterator.hasPrev(position) == true) {
+	// position = position - 1;
+	// Account AccountItem = (Account) Iterator.next(position);
+	// screen.messageJLabel2.setText("Username: " + AccountItem.getUsername());
+	// screen.messageJLabel3.setText("Avaliable Balance: " +
+	// AccountItem.getAvailableBalance());
+	// screen.messageJLabel4.setText("Avaliable Balance: " +
+	// AccountItem.getTotalBalance());
+
+	// }
+
+	// }
 
 }
