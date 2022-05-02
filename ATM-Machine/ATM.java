@@ -22,7 +22,7 @@ public class ATM implements ATMListener {
 		debugMode = debug;
 
 		// initialize Screen and BankDatabase
-		screen = new Screen(this, "ATM Machine");
+		screen = new Screen(this, "ATM-Machine");
 		bankDatabase = new BankDatabase(pathToAccounts);
 	}
 
@@ -38,9 +38,12 @@ public class ATM implements ATMListener {
 	@Override
 	public void atmEnterAction(String input) {
 		if (debugMode)
-			System.out.println("Mode: " + currentMode + " | Input: " + input);
+			System.out.println("Enter action in mode: " + currentMode + " with input: " + input);
 
+		// clear sidepanel text field and error message
 		screen.getSidePanel().clearTextField();
+		screen.clearErrorMessage();
+
 		try {
 			switch (currentMode) {
 				case LOGIN:
@@ -51,7 +54,6 @@ public class ATM implements ATMListener {
 					this.atmSwitchModeAction(getModeFromMenuInput(input));
 					break;
 				case BALANCE:
-
 					break;
 				case WITHDRAWAL:
 					break;
@@ -61,11 +63,10 @@ public class ATM implements ATMListener {
 					break;
 			}
 		} catch (LoginFailedException e) {
-			// TODO set error message
-			System.out.println(e);
+			screen.setErrorMessage(e.getMessage());
+
 		} catch (InvalidMenuException e) {
-			// TODO set error message
-			System.out.println(e);
+			screen.setErrorMessage(e.getMessage());
 		}
 	}
 
@@ -94,6 +95,11 @@ public class ATM implements ATMListener {
 			case ADMIN:
 				break;
 		}
+	}
+
+	@Override
+	public boolean isDebugMode() {
+		return debugMode;
 	}
 
 	private ATM_Mode getModeFromMenuInput(String input) throws InvalidMenuException {
