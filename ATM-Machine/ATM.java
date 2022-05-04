@@ -1,5 +1,5 @@
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.InvalidPathException;
 
 import Exceptions.LoginFailedException;
 import Exceptions.InvalidMenuException;
@@ -16,7 +16,7 @@ public class ATM implements ATMListener {
 
 	private boolean debugMode = false;
 
-	public ATM(boolean debug) throws InvalidPathException, IOException {
+	public ATM(boolean debug) throws FileNotFoundException, IOException {
 
 		// set debug mode
 		debugMode = debug;
@@ -26,7 +26,7 @@ public class ATM implements ATMListener {
 		bankDatabase = new BankDatabase(pathToAccounts);
 	}
 
-	public ATM() throws InvalidPathException, IOException {
+	public ATM() throws FileNotFoundException, IOException {
 		this(false);
 	}
 
