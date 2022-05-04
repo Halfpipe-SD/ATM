@@ -34,7 +34,7 @@ public class Screen extends JFrame implements KeypadListener {
 		setSize(1000, 1000);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// setup textfield fonts
+		// setup textfields
 		tfTop.setHorizontalAlignment(JLabel.CENTER);
 		tfTop.setFont(tfFontTop);
 		tfTop.setEditable(false);
