@@ -7,6 +7,6 @@ repo_url: https://github.com/thieleju/atm/
 edit_uri: ""
 
 nav:
-  - Home: 'index.md'
-  - About: 'about.md'
+  - Home: index.md
+  - About: about.md
 
