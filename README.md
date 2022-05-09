@@ -1,9 +1,5 @@
 # ATM
 
-Hello there
+## Check out our documentation [here](https://atm.node5.de/)
 
-Check out the Wiki section!
-
-Copy of DanH957/ATM-Machine
-
-lol
+Code origin is DanH957/ATM-Machine
