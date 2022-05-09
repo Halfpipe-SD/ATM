@@ -19,7 +19,7 @@ jobs:
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
           CUSTOM_DOMAIN: atm.node5.de
           CONFIG_FILE: docs/mkdocs.yml
           EXTRA_PACKAGES: build-base
