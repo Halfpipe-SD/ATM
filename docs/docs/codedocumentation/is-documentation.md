@@ -1,4 +1,4 @@
-# Code Ist-Documentation
+# Code Ist-Dokumentation
 
 ## Klassen
 
@@ -19,7 +19,11 @@
     - `withdrawal`: Geld abheben, indem man die Scheine einzeln wählt
     - `deposit`: Geld einzahlen. Geld ist erst verfügbar, wenn überprüft.
     - `exit`: Führt Login erneut aus, öffnet allerdings neues Fenster
-- Sollte man als Admin angemeldet sein, öffnet sich die Adminoberfläche mit diesen Funktionen: - Kontostand jedes Nutzers einsehen - Accounts löschen - Neue Accounts hinzufügen
+- Sollte man als Admin angemeldet sein, öffnet sich die Adminoberfläche mit diesen Funktionen:  
+    - Kontostand jedes Nutzers einsehen
+    - Zwischen Accounts wecheln 
+    - Accounts löschen 
+    - Neue Accounts hinzufügen
 
 
 `Transaction.java`
