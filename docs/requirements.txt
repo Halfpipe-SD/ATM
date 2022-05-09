@@ -1,1 +1,1 @@
-mkdocs-with-pdf
+mkdocs-pdf-export-plugin
