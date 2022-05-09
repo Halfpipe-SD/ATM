@@ -1,12 +1,12 @@
-site_name: ATM Dokumentation - Die Panzerknacker
+site_name: ATM Dokumentation
 site_url: https://atm.node5.de
 
 nav:
   - Startseite: index.md
   - Anforderungsdokumentation: requirements.md
   - Codedokumentation:
-      - Ist-Dokumentation: is-documentation.md
-      - Delta-Dokumentation: delta-documentation.md
+      - Ist-Dokumentation: codedocumentation/is-documentation.md
+      - Delta-Dokumentation: codedocumentation/delta-documentation.md
   - Über das Team: about.md
 
 theme: readthedocs
