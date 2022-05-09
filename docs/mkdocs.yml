@@ -1,0 +1,9 @@
+site_name: ATM Dokumentation
+site_url: https://atm.node5.de
+nav:
+    – Start: index.md
+    – Anforderungsdokumentation: requirements.md
+    – Über uns: about.md
+
+
+theme: readthedocs
