@@ -4,9 +4,9 @@ site_url: https://atm.node5.de
 nav:
   - Startseite: index.md
   - Anforderungsdokumentation: requirements.md
-  # - Codedokumentation:
-  # - Ist-Dokumentation: codedocumentation/is-documentation.md
-  # - Delta-Dokumentation: codedocumentation/delta-documentation.md
+  - Codedokumentation:
+      - Ist-Dokumentation: codedocumentation/is-documentation.md
+      - Delta-Dokumentation: codedocumentation/delta-documentation.md
   - Über das Team: about.md
 
 theme: readthedocs
