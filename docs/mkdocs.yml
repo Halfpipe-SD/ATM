@@ -1,9 +1,10 @@
 site_name: ATM Dokumentation
 site_url: https://atm.node5.de
-nav:
-    – Start: index.md
-    – Anforderungsdokumentation: requirements.md
-    – Über uns: about.md
 
+nav:
+  - Start: docs/index.md
+  - Ist-Analyse: docs/is-analysis.md
+  - Anforderungsdokumentation: docs/requirements.md
+  - Über uns: docs/about.md
 
 theme: readthedocs
