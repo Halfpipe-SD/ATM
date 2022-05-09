@@ -13,4 +13,3 @@ theme: readthedocs
 
 plugins:
   - search
-  - pdf-export
