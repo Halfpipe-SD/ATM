@@ -17,6 +17,8 @@ jobs:
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        with:
+          repo-token: ${{ secrets.PAT }}
         # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
