@@ -10,7 +10,7 @@ nav:
 theme: readthedocs
 
 plugins:
-  - with-pdf
+  - with-pdf:
     author: Die Panzerknacker
     #cover: false
     #back_cover: true
