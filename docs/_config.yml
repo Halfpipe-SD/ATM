@@ -6,7 +6,7 @@ site_author: Die Panzerknacker
 repo_url: github.com/thieleju/atm
 edit_uri: ""
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate
 
 nav:
     - Home: index.md
