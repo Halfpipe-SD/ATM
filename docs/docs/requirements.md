@@ -18,7 +18,16 @@ coming soon
 
 ## Begriffslexikon
 
-coming soon
+| Begriff        | Bedeutung                         |
+| -------------- | --------------------------------- |
+| Cash Dispenser | Bargeld im ATM-Dispenser          |
+| deposit Slot   | Geldfach zum ein- und auszahlen   |
+| Balance        | ist Saldo auf einem Account       |
+| Withdrawal     | Geld abheben                      |
+| Account pin    | Geheimpin eines Accounts (unique) |
+| Account number | Nummer eines Accounts(unique)     |
+| Credit         | Gutschrifft                       |
+| Debit          | Lastschrifft                      |
 
 ## Mengengerüst
 
