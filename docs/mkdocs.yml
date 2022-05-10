@@ -13,4 +13,5 @@ theme: readthedocs
 
 plugins:
   - search
-  - with-pdf
+  - mkdocs-codeinclude-plugin
+  # - with-pdf
