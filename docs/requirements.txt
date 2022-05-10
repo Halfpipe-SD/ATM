@@ -1,1 +1,3 @@
+wheel
+libsass
 mkdocs-with-pdf
