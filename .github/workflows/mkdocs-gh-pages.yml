@@ -25,3 +25,6 @@ jobs:
           EXTRA_PACKAGES: build-base
           # GITHUB_DOMAIN: github.myenterprise.com
           REQUIREMENTS: docs/requirements.txt
+
+      - name: Generate PDF
+        run: mkdocs build
