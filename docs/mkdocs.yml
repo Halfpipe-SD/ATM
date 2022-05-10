@@ -13,6 +13,4 @@ theme: readthedocs
 
 plugins:
   - search
-  - codeinclude
-  - with-pdf:
-    author: Die Panzerknacker
+  - with-pdf

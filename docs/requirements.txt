@@ -1,2 +1,1 @@
-mkdocs-codeinclude-plugin
 mkdocs-with-pdf
