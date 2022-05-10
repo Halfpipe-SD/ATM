@@ -67,8 +67,56 @@
 
 - Initialisiert alle Accounts
 - Authentifiziert Nutzer anhand der PIN
-- Funktionen um anhand der AccountNumber Daten über den Account abzurufen
-- ruft
+- Funktionen um anhand der AccountNumber Daten über den Account abzurufen (verfügbares Guthaben, etc)
+- Besitzt Funktionen um Guthaben von Accounts abzuziehen oder aufzuladen
+- Fehler: `getaccpin` funktioniert nicht
+- Funktion um temporär einen Account zu erstellen und dem Account-Array hinzuzufügen
+- Funktion um temporär einen Account zu löschen
+
+
+`Account.java`
+
+- Besitzt Eigenschaften eines Benutzers
+- Funktion um Pin mit aktuellem Account zu verifizieren
+- Getter und Setter
+
+
+`AccountFactory.java`
+
+- Wird nicht verwendet
+- Erbt von Account, initialisiert einen Account 
+
+
+`Iterator`
+
+- Interface, das zwei Funktionen beinhaltet, die einen Wahrheitswert zurückgeben, ob von der aktuellen Position ein nächstes oder vorheriges Element existiert
+- Funktion, die ein Objekt zurück gibt, anhand einer Position
+
+
+`AccountIterator.java`
+
+- Implementiert das Iterator Interface und überschreibt dessen Funktionen
+
+
+`Screen.java`
+
+- JFrame-Komponente, die Textfelder, Labels und Buttons besitzt
+- Besitzt Funktionen um Nachrichten in der Konsole auszugeben
+- Besitzt Funktionen um UI-Elemente anzuzeigen:
+    - Login
+    - Menü
+    - Kontostand
+    - Geldauszahlung
+    - Geldeinzahlung
+    - Admin-Ansicht
+
+
+`Keypad.java`
+
+- Besitzt unbenutze Scanner-Funktion 
+- Besitzt JButtons für ein Tastenfeld mit Löschen und Enter Funktionen
+- Funktion um ein JPanel mit Buttons zu initialisieren und zurückgeben
+- Fehler: Endlos-Schleife `userinput()`
 
 
 ## Verbesserungen
@@ -82,3 +130,5 @@
 - Verbesserung des UI-Handlings mit JFrame und JPanel
 - Verbesserung der CashDispenser-Funktion
 - Bankautomat in Deutsch oder Englisch
+- Lizens nur 1x erwähnen
+
