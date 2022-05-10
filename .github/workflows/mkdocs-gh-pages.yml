@@ -22,7 +22,7 @@ jobs:
       #     pip install mkdocs-with-pdf
 
       - name: install mkdocs
-        run: echo 'mkdocs' > requirements.txt
+        run: echo 'mkdocs'
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
@@ -33,4 +33,4 @@ jobs:
           CONFIG_FILE: docs/mkdocs.yml
           EXTRA_PACKAGES: build-base
           # GITHUB_DOMAIN: github.myenterprise.com
-          # REQUIREMENTS: docs/requirements.txt
+          REQUIREMENTS: requirements.txt
