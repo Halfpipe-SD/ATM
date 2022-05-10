@@ -10,5 +10,7 @@ nav:
   - Über das Team: about.md
 
 theme: readthedocs
-# plugins:
-#   - search
+
+plugins:
+  - search
+  - with-pdf
