@@ -1,1 +1,1 @@
-mkpdfs-mkdocs
+mkdocs-with-pdf
