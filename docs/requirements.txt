@@ -1,4 +1,1 @@
-wheel
-libsass
 mkdocs-with-pdf
-with-pdf
