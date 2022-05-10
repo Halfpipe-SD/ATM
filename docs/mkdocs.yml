@@ -12,5 +12,5 @@ nav:
 theme: readthedocs
 
 plugins:
-  - search
+  # - search
   - with-pdf
