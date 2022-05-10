@@ -22,7 +22,14 @@ coming soon
 
 ## Mengengerüst
 
-coming soon
+Mengengerüst Stichpunkte:
+
+- Pinlänge: immer genau 4 Stellen
+- Maximal Geld pro Account an einem Tag abheben: 1000€?
+- Maximale Nutzer gleichzeitig: ???
+- Maximale Transaktionen pro Minute: ???
+- Maximale registrierte Nutzer: ???
+
 
 ## Use Cases
 
