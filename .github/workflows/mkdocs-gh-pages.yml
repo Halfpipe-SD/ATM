@@ -15,11 +15,14 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: |
-          pip install --upgrade wheel
-          pip install libsass
-          pip install mkdocs-with-pdf
+      # - name: Install dependencies
+      #   run: |
+      #     pip install --upgrade wheel
+      #     pip install libsass
+      #     pip install mkdocs-with-pdf
+
+      - name: install mkdocs
+        run: echo 'mkdocs' > requirements.txt
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
@@ -30,4 +33,4 @@ jobs:
           CONFIG_FILE: docs/mkdocs.yml
           EXTRA_PACKAGES: build-base
           # GITHUB_DOMAIN: github.myenterprise.com
-          REQUIREMENTS: docs/requirements.txt
+          # REQUIREMENTS: docs/requirements.txt
