@@ -21,9 +21,6 @@ jobs:
       #     pip install libsass
       #     pip install mkdocs-with-pdf
 
-      - name: install mkdocs
-        run: echo 'mkdocs'
-
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
@@ -33,4 +30,4 @@ jobs:
           CONFIG_FILE: docs/mkdocs.yml
           EXTRA_PACKAGES: build-base
           # GITHUB_DOMAIN: github.myenterprise.com
-          REQUIREMENTS: requirements.txt
+          REQUIREMENTS: docs/requirements.txt
