@@ -9,7 +9,8 @@ nav:
       - Delta-Dokumentation: codedocumentation/delta-documentation.md
   - Über das Team: about.md
 
-theme: readthedocs
+theme:
+  name: material
 
 plugins:
   - search
