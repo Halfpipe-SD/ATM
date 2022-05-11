@@ -33,7 +33,7 @@ coming soon
 
 ## User Stories
 
-Als <Rolle> möchte ich <Ziel/Wunsch>, um <Nutzen>
+Als [Rolle] möchte ich [Ziel/Wunsch], um [Nutzen]
 
 Als Bankkunde möchte ich verschiedene Geldbeträge eingeben, um diese abzuheben.
 Als Bankkunde möchte ich sehen, wie viel Geld auf meinem Konto ist, um zu wissen, wieviel ich noch abheben kann.
