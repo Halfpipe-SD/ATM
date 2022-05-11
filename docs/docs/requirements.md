@@ -73,16 +73,14 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 
 ## User Stories
 
-Als [Rolle] möchte ich [Ziel/Wunsch], um [Nutzen]
+> Als **[Rolle]** möchte ich **[Ziel/Wunsch]**, um **[Nutzen]**
 
-Als Bankkunde möchte ich verschiedene Geldbeträge eingeben, um diese abzuheben.
-Als Bankkunde möchte ich sehen, wie viel Geld auf meinem Konto ist, um zu wissen, wieviel ich noch abheben kann.
-Als Bankkunde möchte ich einen vierstelligen Pin zu meiner Karte eingeben müssen, um zu wissen, dass mein Bankkonto sicher ist.
-Als Bankkunde möchte ich eine Stückelung auswählen können, um gewünschte Scheine zu erhalten.
-
-Als Bankmitarbeiter möchte ich mich einloggen können, um geleistete Transfaire zu sehen.
-
-Als It-Mitarbeiter der Bank möchte ich eine vollständige und detaillierte Dokumentation, um im Fehlerfall schnell handeln zu können.
+1. Als **Benutzer** möchte ich **verschiedene Geldbeträge eingeben**, um diese abzuheben
+2. Als **Benutzer** möchte ich **sehen, wie viel Geld auf meinem Konto** ist, um zu wissen, wie viel ich noch abheben kann
+3. Als **Benutzer** möchte ich eine **vierstellige Pin zu meiner Karte eingeben müssen**, um zu wissen, dass mein Bankkonto sicher ist
+4. Als **Benutzer** möchte ich eine **Stückelung auswählen** können, um gewünschte Scheine zu erhalten
+5. Als **Benutzer** möchte ich mich **einloggen können**, um getätigte Transaktionen zu sehen
+6. Als **Administrator** der Bank möchte ich eine **vollständige und detaillierte Dokumentation**, um im Fehlerfall schnell handeln zu können
 
   
 ## Aufgaben
