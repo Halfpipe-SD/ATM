@@ -13,4 +13,4 @@ theme: readthedocs
 
 plugins:
   - search
-  # - with-pdf
+  - with-pdf
