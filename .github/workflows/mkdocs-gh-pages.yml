@@ -1,4 +1,4 @@
-name: Publish docs via GitHub Pages
+name: Publish MkDocs via GitHub Pages
 on:
   push:
     branches:
@@ -8,16 +8,32 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Deploy docs
+  # build:
+  #   name: Deploy docs
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout main
+  #       uses: actions/checkout@v2
+
+  #     - name: Deploy docs
+  #       uses: mhausenblas/mkdocs-deploy-gh-pages@master
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         CONFIG_FILE: docs/mkdocs.yml
+  #         REQUIREMENTS: docs/requirements.txt
+  pdf:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v2
-
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CONFIG_FILE: docs/mkdocs.yml
-          REQUIREMENTS: docs/requirements.txt
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v2
+      - run: | 
+        pip install --upgrade pip 
+        pip install mkdocs mkdocs-gen-files
+        pip install mkdocs-with-pdf
+        git config user.name 'github-actions[bot]' 
+        git config user.email 'github-actions[bot]@users.noreply.github.com'
+        
+      - name: Publish docs
+        run: mkdocs gh-deploy
