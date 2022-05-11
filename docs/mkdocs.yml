@@ -14,4 +14,14 @@ theme:
 
 plugins:
   - search
-  - with-pdf
+  - with-pdf:
+      author: Die Panzerknacker
+      cover_title: ATM Dokumentation
+      cover_subtitle:
+      #custom_template_path: TEMPLATES PATH
+      toc_title: Inhaltsverzeichnis
+      #heading_shift: false
+      #toc_level: 3
+      #ordered_chapter_level: 2
+      #two_columns_level: 3
+      output_path: docs.pdf
