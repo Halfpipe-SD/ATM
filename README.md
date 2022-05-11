@@ -3,4 +3,6 @@
 
 ### Check out our documentation [here](https://atm.node5.de/)
 
+Download the documentation as pdf [here](https://github.com/thieleju/ATM/raw/gh-pages/docs.pdf)
+
 Code origin is DanH957/ATM-Machine

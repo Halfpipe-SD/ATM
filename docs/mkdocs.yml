@@ -16,11 +16,11 @@ plugins:
   - search
   - with-pdf:
       author: Die Panzerknacker
+      copyright: © 2022 Die Panzerknacker
       cover_title: ATM Dokumentation
-      cover_subtitle:
-      #custom_template_path: TEMPLATES PATH
+      cover_subtitle: Die Panzerknacker
       toc_title: Inhaltsverzeichnis
-      #heading_shift: false
+      heading_shift: false
       #toc_level: 3
       #ordered_chapter_level: 2
       #two_columns_level: 3
