@@ -20,7 +20,7 @@ plugins:
       cover_title: ATM Dokumentation
       cover_subtitle: Die Panzerknacker
       toc_title: Inhaltsverzeichnis
-      heading_shift: false
+      heading_shift: true
       #toc_level: 3
       #ordered_chapter_level: 2
       #two_columns_level: 3
