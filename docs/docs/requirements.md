@@ -18,17 +18,57 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 
 ### Rollen
 
-| **Team Mitglied**    | **Rolle**           | **Vertiefungsthema**     |
-| -------------------- | ------------------- | -------------------------|
-| **Julian Thiele**    | Lead                | UML/Kollaborations-Werkzeug |
-| **Juri Kaemper**     | Coach               | Test und Qualitäts Sicherung|
-| **Felix Möhler**     |  -                  | Requirements Engineering    |
-| **Michel Franz**     |  -                  | User Experience             |
-| **Christian Andrés** |  -                  | Programmierung              |
+| Rollen        | Beschreibung                                                                                |
+| ------------- | ------------------------------------------------------------------------------------------- |
+| Benutzer      | Die Benutzer sind Kunden der Bank, die den Geldautomaten zur Verfügung stellt               |
+| Administrator | Administratoren des Bankautomatensystems, die Verwaltungsrechte über alle Benutzer besitzen |
+
 
 ### Personas
 
-coming soon
+| Name                    | Gertrude Gabel                          |
+| ----------------------- | --------------------------------------- |
+| Rolle                   | Benutzer                                |
+| Alter                   | 65                                      |
+| Geschlecht              | weiblich                                |
+| Tätigkeit               | Rentnerin                               |
+| Familienstand           | verheiratet                             |
+| Bildung                 | Mittelschule                            |
+| Computerkenntnisse      | Keine                                   |
+| Interessen und Hobbies  | Wandern, Kaffee trinken                 |
+| Einstellung zum Produkt | "Eine tolle Maschine, tut was sie soll" |
+| Wünsche                 | Einfache Bedienung, wenig zum Merken    |
+
+<br>
+
+| Name                    | Peter Pecks                                         |
+| ----------------------- | --------------------------------------------------- |
+| Rolle                   | Benutzer                                            |
+| Alter                   | 38                                                  |
+| Geschlecht              | männlich                                            |
+| Tätigkeit               | Handwerker                                          |
+| Familienstand           | verheiratet                                         |
+| Bildung                 | Realschule                                          |
+| Computerkenntnisse      | Grundkenntnisse                                     |
+| Interessen und Hobbies  | Autos, Actionfilme, Fahrradfahren                   |
+| Einstellung zum Produkt | "Hoffentlich werden die neuen Geldautomaten besser" |
+| Wünsche                 | Nützliche Funktionen, Schnelle Bedienbarkeit        |
+
+<br>
+
+| Name                    | Andy Auman                                    |
+| ----------------------- | --------------------------------------------- |
+| Rolle                   | Administrator                                 |
+| Alter                   | 29                                            |
+| Geschlecht              | männlich                                      |
+| Tätigkeit               | Systemadministrator                           |
+| Familienstand           | ledig                                         |
+| Bildung                 | Abitur                                        |
+| Computerkenntnisse      | Fachkenntnisse                                |
+| Interessen und Hobbies  | Programmierung, Netzwerke, Gaming             |
+| Einstellung zum Produkt | ""                                            |
+| Wünsche                 | Viele Funktionen, Wenig Konfigurationsaufwand |
+
 
 
 ## User Stories
@@ -60,15 +100,15 @@ coming soon
 | **Withdrawal**     | Geld abheben                      |
 | **Account Pin**    | Geheimpin eines Accounts (unique) |
 | **Account number** | Nummer eines Accounts (unique)    |
-| **Credit**         | Gutschrifft                       |
-| **Debit**          | Lastschrifft                      |
+| **Credit**         | Gutschrift                        |
+| **Debit**          | Lastschrift                       |
 
   
 ## Mengengerüst
 
 Mengengerüst Stichpunkte:
 
-- Pinlänge: Immer genau 4 Stellen
+- Pin-Länge: Immer genau 4 Stellen
 - Maximaler Betrag pro Account an einem Tag abheben: 1000€?
 - Maximale Nutzer gleichzeitig: ???
 - Maximale Transaktionen pro Minute: ???
