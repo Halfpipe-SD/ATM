@@ -28,12 +28,14 @@ jobs:
         with:
           fetch-depth: 0
       - uses: actions/setup-python@v2
-      - run: | 
+
+      - name: Install Dependencies and Setup Git Config
+        run: | 
         pip install --upgrade pip 
         pip install mkdocs mkdocs-gen-files
         pip install mkdocs-with-pdf
         git config user.name 'github-actions[bot]' 
         git config user.email 'github-actions[bot]@users.noreply.github.com'
-        
+
       - name: Publish docs
         run: mkdocs gh-deploy
