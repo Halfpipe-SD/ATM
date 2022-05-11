@@ -2,10 +2,16 @@ site_name: ATM Dokumentation
 site_url: https://atm.node5.de
 
 nav:
-  - Anforderungsdokumentation: requirements.md
+  - Startseite: index.md
+  - Anforderungsdokumentation: requirements-docs.md
+  - Architekturdokumentation: architecture-docs.md
+  - Testdokumentation: test-docs.md
+  - Abnahmedokumentation: acceptance-docs.md
+  - Benutzerdokumentation: user-docs.md
+  - Projektdokumentation: project-docs.md
   - Codedokumentation:
-      - Ist-Dokumentation: codedocumentation/is-documentation.md
-      - Delta-Dokumentation: codedocumentation/delta-documentation.md
+      - Ist-Dokumentation: codedocs/is-docs.md
+      - Delta-Dokumentation: codedocs/delta-docs.md
   - Über das Team: about.md
 
 theme:
