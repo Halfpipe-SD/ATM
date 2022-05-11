@@ -30,14 +30,26 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 
 coming soon
 
+
 ## User Stories
 
-coming soon
+Als [Rolle] möchte ich [Ziel/Wunsch], um [Nutzen]
 
+Als Bankkunde möchte ich verschiedene Geldbeträge eingeben, um diese abzuheben.
+Als Bankkunde möchte ich sehen, wie viel Geld auf meinem Konto ist, um zu wissen, wieviel ich noch abheben kann.
+Als Bankkunde möchte ich einen vierstelligen Pin zu meiner Karte eingeben müssen, um zu wissen, dass mein Bankkonto sicher ist.
+Als Bankkunde möchte ich eine Stückelung auswählen können, um gewünschte Scheine zu erhalten.
+
+Als Bankmitarbeiter möchte ich mich einloggen können, um geleistete Transfaire zu sehen.
+
+Als It-Mitarbeiter der Bank möchte ich eine vollständige und detaillierte Dokumentation, um im Fehlerfall schnell handeln zu können.
+
+  
 ## Aufgaben
 
 coming soon
 
+  
 ## Begriffslexikon
 
 | **Begriff**        | **Bedeutung**                     |
@@ -51,6 +63,7 @@ coming soon
 | **Credit**         | Gutschrifft                       |
 | **Debit**          | Lastschrifft                      |
 
+  
 ## Mengengerüst
 
 Mengengerüst Stichpunkte:
@@ -61,6 +74,7 @@ Mengengerüst Stichpunkte:
 - Maximale Transaktionen pro Minute: ???
 - Maximal registrierte Nutzer: ???
 
+  
 ## Use Cases
 
 coming soon
