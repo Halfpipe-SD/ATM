@@ -3,7 +3,7 @@ import java.io.IOException;
 
 import Exceptions.LoginFailedException;
 import Interfaces.ATMListener;
-import Exceptions.InvalidMenuException;
+import Exceptions.InvalidModeException;
 
 public class ATM implements ATMListener {
 
@@ -65,7 +65,7 @@ public class ATM implements ATMListener {
     } catch (LoginFailedException e) {
       screen.setErrorMessage(e.getMessage());
 
-    } catch (InvalidMenuException e) {
+    } catch (InvalidModeException e) {
       screen.setErrorMessage(e.getMessage());
     }
   }
