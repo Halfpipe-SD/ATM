@@ -7,6 +7,8 @@ import Exceptions.InvalidModeException;
 
 public class ATM implements ATMListener {
 
+  private static ATM uniqueinstance;
+
   private final String pathToAccounts = "/accounts.json";
 
   private Screen screen = null;
@@ -16,7 +18,13 @@ public class ATM implements ATMListener {
 
   private boolean debugMode = false;
 
-  public ATM(boolean debug) throws FileNotFoundException, IOException {
+  public static ATM getInstance(boolean debugMode) throws FileNotFoundException, IOException {
+    if (uniqueinstance == null)
+      uniqueinstance = new ATM(debugMode);
+    return uniqueinstance;
+  }
+
+  private ATM(boolean debug) throws FileNotFoundException, IOException {
 
     // set debug mode
     debugMode = debug;
@@ -24,10 +32,6 @@ public class ATM implements ATMListener {
     // initialize Screen and BankDatabase
     screen = new Screen(this, "ATM-Machine");
     bankDatabase = new BankDatabase(pathToAccounts);
-  }
-
-  public ATM() throws FileNotFoundException, IOException {
-    this(false);
   }
 
   public void start() {
