@@ -1,6 +1,6 @@
 package Interfaces;
 
-import Exceptions.InvalidMenuException;
+import Exceptions.InvalidModeException;
 
 public interface ATMListener {
 
@@ -12,7 +12,7 @@ public interface ATMListener {
 
   public void atmSwitchModeAction(ATM_Mode mode);
 
-  public default ATM_Mode getModeFromString(String input) throws InvalidMenuException {
+  public default ATM_Mode getModeFromString(String input) throws InvalidModeException {
     switch (input) {
       case "1":
         return ATM_Mode.BALANCE;
@@ -23,7 +23,7 @@ public interface ATMListener {
       case "4":
         return ATM_Mode.LOGIN;
       default:
-        throw new InvalidMenuException("Invalid menu input: " + input);
+        throw new InvalidModeException("Invalid menu input: " + input);
     }
 
   }
