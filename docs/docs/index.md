@@ -1,18 +1,19 @@
 # ATM Dokumentation Startseite
 
+## Abstract
 
-### Inhalte der Dokumentation:
+abstract text
 
-1. Anforderungsdokumentation
+<br>
 
-2. Architekturdokumentation
+## Das Team
 
-3. Testdokumentation
+Wir sind die Panzerknacker.
 
-4. Abnahmedokumentation
-
-5. Benutzerdokumentation
-
-6. Projektdokumentation
-
-7. Codedokumentation
+| Mitglied        | Spezialisierung                            |
+| --------------- | ------------------------------------------ |
+| Michél Franz    | UX                                         |
+| Juri Kaemper    | Text & QS                                  |
+| Christian Lopéz | Programmierung                             |
+| Felix Möhler    | Requirements Engineering                   |
+| Julian Thiele   | UML/Kollab.-Werkzeug, Entwicklungsumgebung |

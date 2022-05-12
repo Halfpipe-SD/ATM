@@ -12,7 +12,6 @@ nav:
   - Codedokumentation:
       - Ist-Dokumentation: codedocs/is-docs.md
       - Delta-Dokumentation: codedocs/delta-docs.md
-  - Über das Team: about.md
 
 theme:
   name: material
