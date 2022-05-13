@@ -4,15 +4,15 @@ import Exceptions.InvalidModeException;
 
 public interface ATMListener {
 
-  public static enum ATM_Mode {
+  enum ATM_Mode {
     LOGIN, MENU, BALANCE, WITHDRAWAL, DEPOSIT, ADMIN
   };
 
-  public void atmEnterAction(String input);
+  void atmEnterAction(String input);
 
-  public void atmSwitchModeAction(ATM_Mode mode);
+  void atmSwitchModeAction(ATM_Mode mode);
 
-  public default ATM_Mode getModeFromString(String input) throws InvalidModeException {
+  default ATM_Mode getModeFromString(String input) throws InvalidModeException {
     switch (input) {
       case "1":
         return ATM_Mode.BALANCE;
