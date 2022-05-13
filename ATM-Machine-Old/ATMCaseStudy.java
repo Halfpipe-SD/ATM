@@ -1,6 +1,15 @@
-
+/**
+ * Erstellt eine ATM Instanz und startet diese, wenn noch keine vorhanden
+ * 
+ * @author DanH957
+ */
 public class ATMCaseStudy {
 
+   /**
+    * Startfunktion des Programms
+    * 
+    * @param args Komandozeilen-Argumente
+    */
    public static void main(String[] args) {
 
       ATM theATM = ATM.getinstance();

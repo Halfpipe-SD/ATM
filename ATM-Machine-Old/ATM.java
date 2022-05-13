@@ -6,6 +6,14 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+/**
+ * Stellt die Hauptklasse des ATMs dar
+ * Sobald Enter betätigt wird, wird die PIN überprüft (login)
+ * Wenn man eingeloggt ist, wird das Menü angezeigt,
+ * wenn man als Admin eingeloggt ist, wird das Admin-Menü angezeigt
+ * 
+ * @author DanH957
+ */
 public class ATM {
 	private boolean userAuthenticated;
 	private int currentAccountNumber;
@@ -25,8 +33,10 @@ public class ATM {
 	private static final int DEPOSIT = 3;
 	private static final int EXIT = 4;
 
+	/**
+	 * Initialisiert die UI mit Keypad, CashDispenser, DepositSlot und Bankdatabase
+	 */
 	public ATM() {
-
 		userAuthenticated = false;
 		currentAccountNumber = 0;
 		screen = new Screen();
@@ -38,13 +48,18 @@ public class ATM {
 		bankDatabase = new BankDatabase();
 	}
 
+	/**
+	 * Startet den ATM und zeigt UI-Elemente an
+	 * 
+	 */
 	public void run() {
-
 		startlogin();
 	}
 
+	/**
+	 * Zeigt den Login-Bildschirm an und initilaisiert den A
+	 */
 	void startlogin() {
-
 		position = 0;
 		screen.createlogin();
 		userinput = "";
@@ -65,6 +80,13 @@ public class ATM {
 		screen.Mainframe.revalidate();
 	}
 
+	/**
+	 * Überprüft, ob die eingegebene Pin einem Nutzer gehört
+	 * Wenn ein Nutzer gefunden wurde, wird das Menü angezeigt
+	 * Falls der Nutzer ein Administrator ist, wird das Admin-Menü angezeigt
+	 * 
+	 * @param pin Eingegebene Pin des Nutzers
+	 */
 	public void authenticateuser(int pin) {
 		userAuthenticated = bankDatabase.authenticateUser(pin);
 
@@ -79,7 +101,11 @@ public class ATM {
 				screen.Mainframe.add(keypad.addkeypad(), BorderLayout.CENTER);
 				screen.Mainframe.revalidate();
 			}
-
+			/**
+			 * Im else zweig wird nur die createAdminGUI() funktion aufgerufen, wegen eins
+			 * Klammerfehlers
+			 * 
+			 */
 			else
 
 				createAdminGUI();
@@ -94,6 +120,10 @@ public class ATM {
 					"Invalid account number or PIN. Please try again.");
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Liest die Nutzerpin ein und ruft die Funktion "authenticate()" auf
+	 */
 	private class authenticate implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 
@@ -103,6 +133,10 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Event fügt einen Nutzer hinzu
+	 */
 	private class Addcheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 
@@ -111,6 +145,10 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Löscht User der akutellen Position
+	 */
 	private class Deletecheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 
@@ -120,6 +158,9 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * GUI für das Menü wird angezeigt
+	 */
 	public void createmenu() {
 		screen.setSize(300, 150);
 		balancecheck check1 = new balancecheck();
@@ -142,6 +183,10 @@ public class ATM {
 		screen.Mainframe.revalidate();
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Führt Transaktion 1 aus
+	 */
 	private class balancecheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			userinput = "";
@@ -149,6 +194,10 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Führt Transaktion 3 aus
+	 */
 	private class Depositcheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			userinput = "";
@@ -156,6 +205,10 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Führt Transaktion 2 aus
+	 */
 	private class Withdrawcheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			userinput = "";
@@ -163,12 +216,21 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Führt Login aus
+	 */
 	private class Exitcheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			startlogin();
 		}
 	}
 
+	/**
+	 * Ausführen einer Transaktion
+	 * 
+	 * @param a Transaktions-Typ
+	 */
 	private void performTransactions(int a) {
 
 		Transaction currentTransaction = null;
@@ -187,6 +249,10 @@ public class ATM {
 
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Zeigt das Menu an
+	 */
 	public class Backcheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 
@@ -198,6 +264,12 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * Erstellt eine Transaktion BalanceInquiry, WIthdrawal oder Deposit
+	 * 
+	 * @param type Transaktions-Typ
+	 * @return Transaction Gibt erstellte Transaktion zurück
+	 */
 	private Transaction createTransaction(int type) {
 		Transaction temp = null;
 		screen.getContentPane().removeAll();
@@ -218,6 +290,10 @@ public class ATM {
 		return temp;
 	}
 
+	/**
+	 * Admin GUI wird angezeigt
+	 * 
+	 */
 	public void createAdminGUI() {
 
 		screen.Mainframe.getContentPane().removeAll();
@@ -233,6 +309,9 @@ public class ATM {
 
 	}
 
+	/**
+	 * Weißt jedem Button einen Event-Handler zu
+	 */
 	public void addkeypadlisteners() {
 		BCheck BC = new BCheck();
 		BClear BC1 = new BClear();
@@ -249,6 +328,10 @@ public class ATM {
 		keypad.BClear.addActionListener(BC1);
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Sobald eine Zahl betätigt wird, wird der userinput verändert
+	 */
 	public class BCheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			JButton b = (JButton) e.getSource();
@@ -260,6 +343,11 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Cleart den Userinput
+	 * 
+	 */
 	public class BClear implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 
@@ -268,6 +356,11 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Erstellt ein Iterator-Objekt aus der BankDatabase, mit dem man die Accounts
+	 * wechseln kann
+	 */
 	public class Nextcheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 
@@ -275,6 +368,11 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * Innere Klasse, die einen ActionListeners implementiert
+	 * Erstellt ein Iterator-Objekt aus der BankDatabase, mit dem man die Accounts
+	 * wechseln kann
+	 */
 	public class Prevcheck implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 
@@ -282,6 +380,11 @@ public class ATM {
 		}
 	}
 
+	/**
+	 * Zeigt die Balance Info für den nächsten User an
+	 * 
+	 * @param Iterator Iterator-Objekt
+	 */
 	public void IterateUser(Iterator Iterator) {
 		if (Iterator.hasNext(position) == true) {
 			position = position + 1;
@@ -294,6 +397,11 @@ public class ATM {
 
 	}
 
+	/**
+	 * Zeigt die Balance Info für den vorherigen User an
+	 * 
+	 * @param Iterator Iterator-Objekt
+	 */
 	public void prevIterateUser(Iterator Iterator) {
 		if (Iterator.hasPrev(position) == true) {
 			position = position - 1;
@@ -306,6 +414,12 @@ public class ATM {
 
 	}
 
+	/**
+	 * Erstellt eine Instanz, falls noch keine vorhanden
+	 * Falls eine Instanz vorhanden ist, gebe diese zurück
+	 * 
+	 * @return ATM
+	 */
 	public static ATM getinstance() {
 		if (uniqueinstance == null) {
 			uniqueinstance = new ATM();
