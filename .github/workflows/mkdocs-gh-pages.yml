@@ -34,7 +34,7 @@ jobs:
         with:
           upload_url: ${{steps.create-new-release.outputs.upload_url}}
           asset_path: ./MkDocsPDF.zip
-          asseet_name: docs-v${{github.run_number}}.zip
+          asset_name: docs-v${{github.run_number}}.zip
           asset_content_type: application/zip
 
   build:
