@@ -1,6 +1,12 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Diese Klasse stellt eine Subklasse einer Transaktion dar und wird verwendet,
+ * um den Kontostand auf dem Bildschirm anzuzeigen
+ * 
+ * @author DanH957
+ */
 public class BalanceInquiry extends Transaction {
 
    public BalanceInquiry(int userAccountNumber, Screen atmScreen,
@@ -8,6 +14,9 @@ public class BalanceInquiry extends Transaction {
       super(userAccountNumber, atmScreen, atmBankDatabase);
    }
 
+   /**
+    * Diese Methode wird aufgerufen, wenn der Benutzer den Kontostand abruft
+    */
    @Override
    public void execute() {
 

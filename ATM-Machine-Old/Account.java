@@ -1,4 +1,9 @@
-
+/**
+ * Beinhaltet alle Informationen eines Kontos und stellt Methoden zur Verfügung,
+ * um diese zu manipulieren.
+ * 
+ * @author DanH957
+ */
 public class Account {
    private int accountNumber;
    private int pin;
@@ -7,6 +12,17 @@ public class Account {
    private int admin;
    private String username;
 
+   /**
+    * Erstellt ein neues Konto mit dem angegebenen Kontonummern, PIN und
+    * Kontostand.
+    * 
+    * @param Username            Username
+    * @param theAccountNumber    Kontonummer
+    * @param thePIN              PIN
+    * @param theAvailableBalance Zur Zeit verfügbarer Kontostand
+    * @param theTotalBalance     Gesamter Kontostand
+    * @param isadmin             Ist der Benutzer Admin?
+    */
    public Account(String Username, int theAccountNumber, int thePIN,
          double theAvailableBalance, double theTotalBalance, int isadmin) {
       setUsername(Username);
@@ -17,6 +33,11 @@ public class Account {
       setAdmin(isadmin);
    }
 
+   /**
+    * Überprüft, ob die mitgegebene PIN der PIN des aktuellen Accounts entspricht.
+    * 
+    * @return true, wenn die PIN korrekt ist, sonst false
+    */
    public boolean validatePIN(int userPIN) {
       if (userPIN == getPin())
          return true;
@@ -32,10 +53,20 @@ public class Account {
       return totalBalance;
    }
 
+   /**
+    * Fügt einen Betrag zum gesamten Kontostand hinzu.
+    * 
+    * @param amount der hinzuzufügende Betrag
+    */
    public void credit(double amount) {
       setTotalBalance(getTotalBalance() + amount);
    }
 
+   /**
+    * Zieht einen Betrag von dem verfügbaren Kontostand ab.
+    * 
+    * @param amount der abzuziehende Betrag
+    */
    public void debit(double amount) {
       setAvailableBalance(getAvailableBalance() - amount);
       setTotalBalance(getTotalBalance() - amount);

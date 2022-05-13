@@ -1,4 +1,9 @@
 
+/**
+ * Klasse, die einen Account erzeugt
+ * 
+ * @author DanH957
+ */
 public class AccountFactory extends Account {
 
 	public AccountFactory(String Username, int theAccountNumber, int thePIN, double theAvailableBalance,
