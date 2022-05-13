@@ -1,4 +1,9 @@
-
+/**
+ * Diese abstrakte Klasse stellt die Grundfunktionalität einer Transaktion
+ * bereit.
+ * 
+ * @author DanH957
+ */
 public abstract class Transaction {
    private int accountNumber;
    protected Screen screen;
@@ -23,6 +28,9 @@ public abstract class Transaction {
       return bankDatabase;
    }
 
+   /**
+    * Jede Transaktion muss diese Methode implementieren
+    */
    abstract public void execute();
 }
 
