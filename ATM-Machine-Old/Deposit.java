@@ -2,6 +2,10 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Die Klasse Deposit erbt von Transaction und überschreibt die Execute-Funktion
+ * Execute-Funktion zeigt die UI zum Geldeinzahlen an
+ */
 public class Deposit extends Transaction {
    private double amount;
    private Keypad keypad;
@@ -23,6 +27,11 @@ public class Deposit extends Transaction {
       promptForDepositAmount();
    }
 
+   /**
+    * makedeposit prüft, ob wirklich eingezahlt wurde
+    * 
+    * @param amount Geld das eingezahlt wird
+    */
    public void makedeposit(double amount) {
       BankDatabase bankDatabase = getBankDatabase();
       Screen screen = getScreen();
@@ -49,6 +58,10 @@ public class Deposit extends Transaction {
       }
    }
 
+   /**
+    * promptForDepositAmount startet das GUI zum einzahlen
+    * 
+    */
    private void promptForDepositAmount() {
       Screen screen = getScreen();
 
@@ -60,6 +73,10 @@ public class Deposit extends Transaction {
 
    }
 
+   /**
+    * Innere Klasse die ActionListener implementiert
+    * 
+    */
    private class Depositcheck implements ActionListener {
       public void actionPerformed(ActionEvent e) {
 
