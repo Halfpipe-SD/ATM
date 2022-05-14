@@ -2,6 +2,10 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Klasse erbt von Transaction und überschreibt die Execute-Funktion
+ * 
+ */
 public class Withdrawal extends Transaction {
    private int amount;
    private Keypad keypad;
@@ -19,12 +23,52 @@ public class Withdrawal extends Transaction {
       cashDispenser = atmCashDispenser;
    }
 
+   /**
+    * Die Execute-Funktion zeigt die Buttons zur Scheinauswahl an
+    * 
+    */
    @Override
    public void execute() {
 
       displayMenuOfAmounts();
    }
 
+   private void withdrawCash(int amount) {
+      int billsRequired;
+      int billsToDispense;
+
+      billsRequired = cashDispenser.getCashCount() / amount;
+
+      if (billsRequired > 0) {
+         billsToDispense = bankDatabase.getAvailableBalance(getAccountNumber())
+               / amount;
+
+         if (billsRequired <= billsToDispense) {
+            cashDispenser.dispenseCash(amount);
+            bankDatabase.debit(getAccountNumber(), amount);
+            screen.displayMessageLine("\n" + amount + " $ dispensed.");
+         } else {
+            screen.displayMessageLine(
+                  "\nInsufficient funds in the ATM.\n\nPlease choose a smaller amount.");
+            screen.displayMessageLine("\nPress Enter to continue...");
+            keypad.waitForEnter();
+            screen.clearMessage();
+         }
+      } else {
+         screen.displayMessageLine(
+               "\nInsufficient cash in the ATM.\n\nPlease choose a smaller amount.");
+         screen.displayMessageLine("\nPress Enter to continue...");
+         keypad.waitForEnter();
+         screen.clearMessage();
+      }
+   }
+
+   /**
+    * Die Transaction-Funktion ermöglicht das abheben von Geld, wenn genügend auf
+    * Bankkonto und im CashDispenser vorhanden ist
+    *
+    * @param amount Geld das abgehoben werden soll
+    */
    public void transaction(int amount) {
       BankDatabase bankDatabase = getBankDatabase();
       Screen screen = getScreen();
@@ -55,6 +99,10 @@ public class Withdrawal extends Transaction {
       }
    }
 
+   /**
+    * displayMenuOfAmounts zeigt das GUI-Menü zu scheinauswahl an
+    * 
+    */
    private void displayMenuOfAmounts() {
 
       int userChoice = 0;
@@ -76,30 +124,50 @@ public class Withdrawal extends Transaction {
       screen.Mainframe.revalidate();
    }
 
+   /**
+    * Innere Klasse, die einen ActionListeners implementiert
+    * Wird ausgeführt wenn 20€ gewählt wurde
+    */
    public class withdraw1 implements ActionListener {
       public void actionPerformed(ActionEvent e) {
          transaction(20);
       }
    }
 
+   /**
+    * Innere Klasse, die einen ActionListeners implementiert
+    * Wird ausgeführt wenn 40€ gewählt wurde
+    */
    public class withdraw2 implements ActionListener {
       public void actionPerformed(ActionEvent e) {
          transaction(40);
       }
    }
 
+   /**
+    * Innere Klasse, die einen ActionListeners implementiert
+    * Wird ausgeführt wenn 60€ gewählt wurde
+    */
    public class withdraw3 implements ActionListener {
       public void actionPerformed(ActionEvent e) {
          transaction(60);
       }
    }
 
+   /**
+    * Innere Klasse, die einen ActionListeners implementiert
+    * Wird ausgeführt wenn 100€ gewählt wurde
+    */
    public class withdraw4 implements ActionListener {
       public void actionPerformed(ActionEvent e) {
          transaction(100);
       }
    }
 
+   /**
+    * Innere Klasse, die einen ActionListeners implementiert
+    * Wird ausgeführt wenn 200€ gewählt wurde
+    */
    public class withdraw5 implements ActionListener {
       public void actionPerformed(ActionEvent e) {
          transaction(200);
