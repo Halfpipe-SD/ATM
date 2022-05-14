@@ -1,8 +1,17 @@
 import java.util.ArrayList;
 
+/**
+* 
+* 
+*/
+
 public class BankDatabase {
    static ArrayList<Account> accounts = new ArrayList<Account>();
 
+   /**
+    * BankDatabase Initialisiert alle Accounts
+    * 
+    */
    public BankDatabase() {
 
       Account accounts1 = new Account("Customer1", 12345, 11111, 1000.0, 1200.0, 0);
@@ -15,6 +24,10 @@ public class BankDatabase {
       accounts.add(accounts4);
    }
 
+   /**
+    * @param accountnumber
+    * @return Account
+    */
    public Account getAccount(int accountnumber) {
 
       for (Account currentAccount : accounts) {
@@ -26,6 +39,10 @@ public class BankDatabase {
       return null;
    }
 
+   /**
+    * @param PIN
+    * @return Account
+    */
    private Account getAccountpin(int PIN) {
 
       for (Account currentAccount : accounts) {
@@ -37,6 +54,10 @@ public class BankDatabase {
       return null;
    }
 
+   /**
+    * @param userPIN
+    * @return boolean
+    */
    public boolean authenticateUser(int userPIN) {
 
       Account userAccount = getAccountpin(userPIN);
@@ -47,30 +68,59 @@ public class BankDatabase {
          return false;
    }
 
+   /**
+    * @param userAccountNumber
+    * @return double
+    */
    public double getAvailableBalance(int userAccountNumber) {
       return getAccount(userAccountNumber).getAvailableBalance();
    }
 
+   /**
+    * @param userAccountNumber
+    * @return double
+    */
    public double getTotalBalance(int userAccountNumber) {
       return getAccount(userAccountNumber).getTotalBalance();
    }
 
+   /**
+    * @param userAccountNumber
+    * @param amount
+    */
    public void credit(int userAccountNumber, double amount) {
       getAccount(userAccountNumber).credit(amount);
    }
 
+   /**
+    * @param userAccountNumber
+    * @param amount
+    */
    public void debit(int userAccountNumber, double amount) {
       getAccount(userAccountNumber).debit(amount);
    }
 
+   /**
+    * @param userAccountNumber
+    * @return int
+    */
    public int getadmin(int userAccountNumber) {
       return getAccountpin(userAccountNumber).getISadmin();
    }
 
+   /**
+    * @return Iterator-Objekt
+    */
    public static Iterator createIterator() {
       return new AccountIterator(accounts);
    }
 
+   /**
+    * getaccpin funtioniert nicht
+    * 
+    * @param PIN
+    * @return int
+    */
    public int getaccpin(int PIN) {
       for (Account currentAccount : accounts) {
 
@@ -82,6 +132,10 @@ public class BankDatabase {
       return PIN;
    }
 
+   /**
+    * Adduser fügt einen neuen Account hinzu
+    * 
+    */
    public static void Adduser() {
       String name = Screen.Inputfield1.getText();
       int accountnumber = Integer.parseInt(Screen.Inputfield2.getText());
@@ -97,6 +151,11 @@ public class BankDatabase {
       Screen.Inputfield4.setText("");
    }
 
+   /**
+    * Löscht User der aktuellen Possition im Admin Menü
+    * 
+    * @param position
+    */
    public static void Deleteuser(int position) {
       accounts.remove(position);
 
