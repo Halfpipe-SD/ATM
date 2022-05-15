@@ -83,7 +83,7 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 6. Als **Benutzer** möchte ich **die Länge meiner Pin ändern können**, um die Sicherheit zu verbessern
 7. Als **Benutzer** möchte ich eine **Stückelung auswählen** können, um gewünschte Scheine zu erhalten
 8. Als **Benutzer** möchte ich mich **einloggen können**, um getätigte Transaktionen zu sehen
-9. Als **Mitglied einer anderen Bank** möchte ich **gegen Gebühren Geld abheben können**, um flexibel zu sein
+9. Als **Mitglied einer anderen Bank** möchte ich **gegen Gebühren Geld abheben können**, um örtlich flexibel zu sein
 10. Als **Administrator** der Bank möchte ich eine **vollständige und detaillierte Dokumentation**, um im Fehlerfall schnell handeln zu können
 
   
