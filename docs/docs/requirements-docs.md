@@ -77,10 +77,14 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 
 1. Als **Benutzer** möchte ich **verschiedene Geldbeträge eingeben**, um diese abzuheben
 2. Als **Benutzer** möchte ich **sehen, wie viel Geld auf meinem Konto** ist, um zu wissen, wie viel ich noch abheben kann
-3. Als **Benutzer** möchte ich eine **vierstellige Pin zu meiner Karte eingeben müssen**, um zu wissen, dass mein Bankkonto sicher ist
-4. Als **Benutzer** möchte ich eine **Stückelung auswählen** können, um gewünschte Scheine zu erhalten
-5. Als **Benutzer** möchte ich mich **einloggen können**, um getätigte Transaktionen zu sehen
-6. Als **Administrator** der Bank möchte ich eine **vollständige und detaillierte Dokumentation**, um im Fehlerfall schnell handeln zu können
+3. Als **Benutzer** möchte ich eine **maximal Debit Betrag pro Tag festlegen können**, um bei Diebstahl den Verlust zu minimieren
+4. Als **Benutzer** möchte ich eine **vierstellige Pin zu meiner Karte eingeben müssen**, um Gelddiebstahl von meinem Konto zu vermeiden
+5. Als **Benutzer** möchte ich meine **Pin ändern können**, um sie mir besser merken zu können
+6. Als **Benutzer** möchte ich **die Länge meiner Pin ändern können**, um die Sicherheit zu verbessern
+7. Als **Benutzer** möchte ich eine **Stückelung auswählen** können, um gewünschte Scheine zu erhalten
+8. Als **Benutzer** möchte ich mich **einloggen können**, um getätigte Transaktionen zu sehen
+9. Als **Mitglied einer anderen Bank** möchte ich **gegen Gebühren Geld abheben können**, um flexibel zu sein
+10. Als **Administrator** der Bank möchte ich eine **vollständige und detaillierte Dokumentation**, um im Fehlerfall schnell handeln zu können
 
   
 ## Aufgaben
