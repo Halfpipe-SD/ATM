@@ -2,11 +2,10 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import Interfaces.KeypadListener;
-
-import javax.swing.JButton;
 
 public class Keypad extends JPanel {
 
