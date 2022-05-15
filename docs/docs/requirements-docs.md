@@ -111,21 +111,13 @@ coming soon
 | **Bezeichnung**    | **Beschreibung**                           | **Menge** | **Einheit** |
 | ------------------ | ------------------------------------------ | --------- | ----------- |
 | **Pin**            | Stellenanzahl der Pin                      | 4         | Stellen     |
-| **Geldautomaten**  | Anzahl Geldautoamten in Aschaffenburg      | 43        | Stück       |
+| **Geldautomaten**  | Anzahl Geldautomaten in Aschaffenburg      | 43        | Stück       |
 | **Debit**          | Maximale Auszahlung pro Tag                | 1000      | Euro        |
 | **Nutzer**         | Maximale Nutzer gleichzeitig               | 1         | Person      |
 |                    | Maximal registrierte Nutzer                | -         | -           |
 | **Transaktion**    | Maximale Transaktion pro Minute            | -         | -           |
 | **-**              | -                                          | -         | -           |
 
-- Pin-Länge: Immer genau 4 Stellen
-- Anzahl der Geldautomaten
-- Maximaler Betrag pro Account an einem Tag abheben: 1000€?
-- Maximale Nutzer gleichzeitig: ???
-- Maximale Transaktionen pro Minute: ???
-- Maximal registrierte Nutzer: ???
-
-  
 ## Use Cases
 
 coming soon
