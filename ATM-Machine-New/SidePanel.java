@@ -1,16 +1,15 @@
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import Interfaces.ATMListener;
 import Interfaces.ATMListener.ATM_Mode;
-
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Color;
-import java.awt.Font;
 
 public class SidePanel extends JPanel {
 
