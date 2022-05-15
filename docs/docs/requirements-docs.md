@@ -102,8 +102,8 @@ coming soon
 | **Withdrawal**     | Geld abheben                      | -                |
 | **Account Pin**    | Geheimpin eines Accounts (unique) | -                |
 | **Account number** | Nummer eines Accounts (unique)    | -                |
-| **Credit**         | Maximale Auszahlung pro Tag       | -                |
-| **Debit**          | Lastschrift                       | -                |
+| **Credit**         | Gutschrift                        | -                |
+| **Debit**          | Maximale Auszahlung pro Tag       | -                |
 
   
 ## Mengengerüst
@@ -120,5 +120,5 @@ coming soon
 
 ## Use Cases
 
-test
+
 coming soon
