@@ -105,17 +105,20 @@ public class Screen extends JFrame implements KeypadListener {
   }
 
   public void showWithdrawal() {
-    tfTop.setText("Choose an amount wo withdraw.");
-    sidePanel.setLabelHTML("Not yet implemented.");
+    tfTop.setText("Choose an amount to withdraw.");
+    sidePanel.setLabelHTML("<br>"
+        + "Available Balance is: <br>"
+        + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>");
     sidePanel.showBackButton();
-    sidePanel.hideTextField();
   }
 
   public void showDeposit() {
     tfTop.setText("Choose an amount to deposit.");
-    sidePanel.setLabelHTML("Not yet implemented.");
+    sidePanel.setLabelHTML("Available Balance is: <br>"
+        + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
+        + "Total Balance: <br>"
+        + atm.getCurrentAccount().getTotalBalance() + " €");
     sidePanel.showBackButton();
-    sidePanel.hideTextField();
   }
 
   public SidePanel getSidePanel() {
@@ -124,5 +127,9 @@ public class Screen extends JFrame implements KeypadListener {
 
   public String getText() {
     return tfTop.getText();
+  }
+
+  public void setText(String text) {
+    tfTop.setText(text);
   }
 }

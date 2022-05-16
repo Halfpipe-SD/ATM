@@ -60,8 +60,10 @@ public class ATM implements ATMListener {
         case BALANCE:
           break;
         case WITHDRAWAL:
+          this.withdrawMoney(input);
           break;
         case DEPOSIT:
+          this.depositMoney(input);
           break;
         case ADMIN:
           break;
@@ -71,6 +73,39 @@ public class ATM implements ATMListener {
 
     } catch (InvalidModeException e) {
       screen.setErrorMessage(e.getMessage());
+    }
+  }
+
+
+  // Prototypen für withdraw und deposit Funktion. Bis jetzt kann man jeden Betrag auswählen (nicht nur Scheine)
+  public void withdrawMoney(String input) {
+    int withdrawAmount = Integer.parseInt(input);
+
+    if (withdrawAmount > getCurrentAccount().getAvailableBalance()) {
+      screen.setErrorMessage("You don't have sufficient funds to withdraw " + input + "€.");
+    } else if (withdrawAmount > 1000) {
+      screen.setErrorMessage("You can't withdraw more than 1000€ at once.");
+    } else {
+      getCurrentAccount().debit(withdrawAmount);
+      screen.getSidePanel().setLabelHTML("<br>"
+          + "Available Balance is: <br>"
+          + getCurrentAccount().getAvailableBalance() + " €<br><br>");
+      screen.setText("You withdrew " + withdrawAmount + "€.");
+    }
+  }
+
+  public void depositMoney(String input) {
+    int depositAmount = Integer.parseInt(input);
+
+    if (depositAmount > 5000) {
+      screen.setErrorMessage("You deposit withdraw more than 1000€ at once.");
+    } else if (depositAmount > 0) {
+      getCurrentAccount().credit(depositAmount);
+      screen.getSidePanel().setLabelHTML("Available Balance is: <br>"
+          + getCurrentAccount().getAvailableBalance() + " €<br><br>"
+          + "Total Balance: <br>"
+          + getCurrentAccount().getTotalBalance() + " €");
+      screen.setText("You deposited " + depositAmount + "€.");
     }
   }
 
@@ -96,7 +131,7 @@ public class ATM implements ATMListener {
         screen.showWithdrawal();
         break;
       case DEPOSIT:
-      screen.showDeposit();
+        screen.showDeposit();
         break;
       case ADMIN:
         break;
