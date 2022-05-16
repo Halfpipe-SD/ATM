@@ -29,6 +29,7 @@ public class SidePanel extends JPanel {
     tf.setFont(tfFont);
 
     backButton.setVisible(false);
+    backButton.setFocusable(false);
     backButton.addActionListener(e -> atm.atmSwitchModeAction(ATM_Mode.MENU));
 
     add(tf);

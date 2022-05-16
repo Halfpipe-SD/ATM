@@ -21,6 +21,7 @@ public class Keypad extends JPanel {
     // create buttons and add them to the panel
     for (String value : buttonValues) {
       JButton button = new JButton(value);
+      button.setFocusable(false);
       button.addActionListener(e -> bl.buttonPressed(button.getText()));
       add(button);
     }
