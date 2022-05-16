@@ -26,22 +26,23 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 
 ### Personas
 
-| Name                    | Gertrude Gabel                          |
-| ----------------------- | --------------------------------------- |
-| Rolle                   | Benutzer                                |
-| Alter                   | 65                                      |
-| Geschlecht              | weiblich                                |
-| Tätigkeit               | Rentnerin                               |
-| Familienstand           | verheiratet                             |
-| Bildung                 | Mittelschule                            |
-| Computerkenntnisse      | Keine                                   |
-| Interessen und Hobbies  | Wandern, Kaffee trinken                 |
-| Einstellung zum Produkt | "Eine tolle Maschine, tut was sie soll" |
-| Wünsche                 | Einfache Bedienung, wenig zum Merken    |
+| Gertrude Gabel          | ![Gertrude](..\images\gertrude.jpg "Gertrude") |
+| ----------------------- | ---------------------------------------------- |
+| Rolle                   | Benutzer                                       |
+| Alter                   | 65                                             |
+| Geschlecht              | weiblich                                       |
+| Tätigkeit               | Rentnerin                                      |
+| Familienstand           | verheiratet                                    |
+| Bildung                 | Mittelschule                                   |
+| Computerkenntnisse      | Keine                                          |
+| Interessen und Hobbies  | Wandern, Kaffee trinken                        |
+| Einstellung zum Produkt | "Eine tolle Maschine, tut was sie soll"        |
+| Wünsche                 | Einfache Bedienung, wenig zum Merken           |
 
 <br>
 
-| Name                    | Peter Pecks                                         |
+
+| Peter Lustig            | ![Peter](..\images\peter.jpg "Peter")               |
 | ----------------------- | --------------------------------------------------- |
 | Rolle                   | Benutzer                                            |
 | Alter                   | 38                                                  |
@@ -56,7 +57,7 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 
 <br>
 
-| Name                    | Andy Auman                                    |
+| Andy Auman              | ![Andy](..\images\andy.jpg "Andy")            |
 | ----------------------- | --------------------------------------------- |
 | Rolle                   | Administrator                                 |
 | Alter                   | 29                                            |
