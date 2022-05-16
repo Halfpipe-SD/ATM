@@ -32,6 +32,7 @@ public class Screen extends JFrame implements KeypadListener {
 
     // initialize main screen
     setSize(1000, 1000);
+    setResizable(false);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     // setup textfields
@@ -99,6 +100,20 @@ public class Screen extends JFrame implements KeypadListener {
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
         + "Total Balance: <br>"
         + atm.getCurrentAccount().getTotalBalance() + " €");
+    sidePanel.showBackButton();
+    sidePanel.hideTextField();
+  }
+
+  public void showWithdrawal() {
+    tfTop.setText("Choose an amount wo withdraw.");
+    sidePanel.setLabelHTML("Not yet implemented.");
+    sidePanel.showBackButton();
+    sidePanel.hideTextField();
+  }
+
+  public void showDeposit() {
+    tfTop.setText("Choose an amount to deposit.");
+    sidePanel.setLabelHTML("Not yet implemented.");
     sidePanel.showBackButton();
     sidePanel.hideTextField();
   }

@@ -93,8 +93,10 @@ public class ATM implements ATMListener {
         screen.showBalance();
         break;
       case WITHDRAWAL:
+        screen.showWithdrawal();
         break;
       case DEPOSIT:
+      screen.showDeposit();
         break;
       case ADMIN:
         break;
