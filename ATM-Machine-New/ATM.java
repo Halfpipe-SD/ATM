@@ -1,3 +1,5 @@
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -8,15 +10,25 @@ import Interfaces.ATMListener;
 public class ATM implements ATMListener {
 
   private static ATM uniqueinstance;
+  private boolean debugMode = false;
 
   private final String pathToAccounts = "/accounts.json";
+  private final String title = "ATM Machine";
 
+  // Komponenten der Hauptklasse
   private Screen screen = null;
   private BankDatabase bankDatabase = null;
   private Account currentAccount = null;
   private ATM_Mode currentMode = null;
 
-  private boolean debugMode = false;
+  private ATM(boolean debug) throws FileNotFoundException, IOException {
+    // setze debug modus
+    debugMode = debug;
+
+    // initialisiere Bildschirm und Bank-Datenbank
+    screen = new Screen(this, title);
+    bankDatabase = new BankDatabase(pathToAccounts);
+  }
 
   public static ATM getInstance(boolean debugMode) throws FileNotFoundException, IOException {
     if (uniqueinstance == null)
@@ -24,18 +36,8 @@ public class ATM implements ATMListener {
     return uniqueinstance;
   }
 
-  private ATM(boolean debug) throws FileNotFoundException, IOException {
-
-    // set debug mode
-    debugMode = debug;
-
-    // initialize Screen and BankDatabase
-    screen = new Screen(this, "ATM-Machine");
-    bankDatabase = new BankDatabase(pathToAccounts);
-  }
-
+  // starte im Login Modus
   public void start() {
-    // start in login mode
     this.atmSwitchModeAction(ATM_Mode.LOGIN);
   }
 
@@ -44,7 +46,7 @@ public class ATM implements ATMListener {
     if (debugMode)
       System.out.println("Enter action in mode: " + currentMode + " with input: " + input);
 
-    // clear sidepanel text field and error message
+    // Lösche Eingabe im Textfeld und lösche Fehlermeldung
     screen.getSidePanel().clearTextField();
     screen.clearErrorMessage();
 
@@ -52,7 +54,11 @@ public class ATM implements ATMListener {
       switch (currentMode) {
         case LOGIN:
           currentAccount = bankDatabase.validateAccount(input);
-          this.atmSwitchModeAction(ATM_Mode.MENU);
+          // wechsle in den admin modus, wenn der account ein Administrator ist
+          if (currentAccount.getAdmin())
+            this.atmSwitchModeAction(ATM_Mode.ADMIN);
+          else
+            this.atmSwitchModeAction(ATM_Mode.MENU);
           break;
         case MENU:
           this.atmSwitchModeAction(this.getModeFromString(input));
@@ -66,6 +72,7 @@ public class ATM implements ATMListener {
           this.depositMoney(input);
           break;
         case ADMIN:
+          screen.setErrorMessage("You have to close the Admin View first!");
           break;
       }
     } catch (LoginFailedException e) {
@@ -76,8 +83,8 @@ public class ATM implements ATMListener {
     }
   }
 
-
-  // Prototypen für withdraw und deposit Funktion. Bis jetzt kann man jeden Betrag auswählen (nicht nur Scheine)
+  // Prototypen für withdraw und deposit Funktion. Bis jetzt kann man jeden Betrag
+  // auswählen (nicht nur Scheine)
   public void withdrawMoney(String input) {
     int withdrawAmount = Integer.parseInt(input);
 
@@ -134,6 +141,7 @@ public class ATM implements ATMListener {
         screen.showDeposit();
         break;
       case ADMIN:
+        new AdminView(this, title + " - Admin View");
         break;
     }
   }

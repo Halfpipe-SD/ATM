@@ -18,7 +18,7 @@ public class Account {
   }
 
   private double roundToTwoDecimals(double d) {
-    // TODO Implement rounding functionality
+    // TODO Implementierung einer Funktion, die auf zwei Nachkommastellen rundet
     return d;
   }
 
