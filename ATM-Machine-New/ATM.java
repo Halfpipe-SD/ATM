@@ -98,7 +98,7 @@ public class ATM implements ATMListener {
     int depositAmount = Integer.parseInt(input);
 
     if (depositAmount > 5000) {
-      screen.setErrorMessage("You deposit withdraw more than 1000€ at once.");
+      screen.setErrorMessage("You can't deposit more than 5000€ at once.");
     } else if (depositAmount > 0) {
       getCurrentAccount().credit(depositAmount);
       screen.getSidePanel().setLabelHTML("Available Balance is: <br>"
