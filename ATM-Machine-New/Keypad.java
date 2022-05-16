@@ -18,7 +18,7 @@ public class Keypad extends JPanel {
     setBackground(backgroundColor);
     setLayout(new FlowLayout());
 
-    // create buttons and add them to the panel
+    // Erstellen und Hinzufügen der Buttons und zuweisen des Eventhandlers
     for (String value : buttonValues) {
       JButton button = new JButton(value);
       button.setFocusable(false);

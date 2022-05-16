@@ -16,8 +16,7 @@ public class Screen extends JFrame implements KeypadListener {
   private JTextField tfTop = new JTextField(20);
   private JTextField tfBottom = new JTextField(20);
 
-  private final Font tfFontTop = new Font("", Font.PLAIN, 12);
-  private final Font tfFontBottom = new Font("", Font.PLAIN, 12);
+  private final Font tfFont = new Font("", Font.PLAIN, 12);
 
   private ATM atm;
   private String baseTitle;
@@ -30,21 +29,20 @@ public class Screen extends JFrame implements KeypadListener {
     sidePanel = new SidePanel(atm, 180, 160);
     keypad = new Keypad(this, 180, 160);
 
-    // initialize main screen
-    setSize(1000, 1000);
+    // Initialisiere Hauptbildschirm
     setResizable(false);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    // setup textfields
+    // Einstellen der Textfelder
     tfTop.setHorizontalAlignment(JLabel.CENTER);
-    tfTop.setFont(tfFontTop);
+    tfTop.setFont(tfFont);
     tfTop.setEditable(false);
     tfBottom.setHorizontalAlignment(JLabel.CENTER);
-    tfBottom.setFont(tfFontBottom);
+    tfBottom.setFont(tfFont);
     tfBottom.setEditable(false);
     tfBottom.setForeground(Color.RED);
 
-    // add components to main screen
+    // Hinzufügen der UI-Komponenten
     add(tfTop, BorderLayout.NORTH);
     add(keypad, BorderLayout.CENTER);
     add(sidePanel, BorderLayout.LINE_END);
