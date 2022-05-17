@@ -1,18 +1,16 @@
 # Anforderungsdokumentation
 
-
 ## Produktvision und Produktziele
 
 ### Produktvision
 
-Eine regionale Bank hat unser externes Software-Entwicklerteam für einen Auftrag eingestellt. Bei dem uns übertragenem Projekt handelt es sich um die fehlerhafte Software einer ATM (Automated Teller Machine) zu deutsch Bankautomat. Der bereits existente Programmcode wurde von einem externen Unternehmen entwickelt, so dass der Kunde kein Expertenwissen zum Programm verfügt, außerdem fehlt auch die Dokumentation vollständig. 
+Eine regionale Bank hat unser externes Software-Entwicklerteam für einen Auftrag eingestellt. Bei dem uns übertragenem Projekt handelt es sich um die fehlerhafte Software einer ATM (Automated Teller Machine) zu deutsch Bankautomat. Der bereits existente Programmcode wurde von einem externen Unternehmen entwickelt, so dass der Kunde kein Expertenwissen zum Programm verfügt, außerdem fehlt auch die Dokumentation vollständig.
 
 Um dem Bankunternehmen nun die Verwendung des Systems zu ermöglichen, muss das Programm komplett überarbeitet werden, darüber hinaus soll eine detaillierte Dokumentation (vollständig in deutsch) für die Bank erstellt werden. Das fehlerfreie Programm mit den bereits integrierten Features und einer strukturierten Dokumentation ist unser Basisfaktor. Das Programm ist für die Bankautomaten der Bank in Deutschland vorgesehen. Die Dokumentation soll die Entwicklung sowie die Funktionen der Software zusammenfassen und den zuständigen Mitarbeiter verständlich machen.
 
 ### Produktziele
 
 Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeiten, dass dieser voll funktionsfähig ist und eine sichere Laufzeit gewährleistet werden kann. Zur Entwicklung der Software ist eine vollständig deutsche Dokumentation vorgesehen mit **Anforderungs**-, **Architektur**-, **Test**-, **Abnahme**-, **Benutzer**-, **Projekt**-, und **Codedokumentation**.
-
 
 ## Rollen und Personas
 
@@ -22,7 +20,6 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 | ------------- | ------------------------------------------------------------------------------------------- |
 | Benutzer      | Die Benutzer sind Kunden der Bank, die den Geldautomaten zur Verfügung stellt               |
 | Administrator | Administratoren des Bankautomatensystems, die Verwaltungsrechte über alle Benutzer besitzen |
-
 
 ### Personas
 
@@ -40,7 +37,6 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 | Wünsche                 | Einfache Bedienung, wenig zum Merken        |
 
 <br>
-
 
 | Peter Lustig            | ![Peter](images\peter.jpg "Peter")                  |
 | ----------------------- | --------------------------------------------------- |
@@ -70,8 +66,6 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 | Einstellung zum Produkt | ""                                            |
 | Wünsche                 | Viele Funktionen, Wenig Konfigurationsaufwand |
 
-
-
 ## User Stories
 
 > Als **[Rolle]** möchte ich **[Ziel/Wunsch]**, um **[Nutzen]**
@@ -87,12 +81,18 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 9. Als **Mitglied einer anderen Bank** möchte ich **gegen Gebühren Geld abheben** können, um örtlich flexibel zu sein
 10. Als **Administrator** der Bank möchte ich eine **vollständige und detaillierte Dokumentation**, um im Fehlerfall schnell handeln zu können
 
-  
 ## Aufgaben
 
-coming soon
+In progress!!
 
-  
+Ist-Dokumentation:
+
+- Es sollte klar herauskommen, welche Funktionen die einzelnen Bausteine des Codes übernehmen, sodass Fachfremde ihn verstehen können (z.B. Konstruktor/Methode/…, übernimmt die Aufgabe des/erzeugt/implementiert/…, stellt die Funktion … zur Verfügung).
+
+Delta-Dokumentation:  
+
+- Erstellen Sie eine Optimierungsempfehlung des Codes: An welcher Stelle könnte dieser verbessert werden, hinsichtlich Bedienbarkeit, Wartbarkeit, Sicherheit usw. Implementieren sie die Verbesserungen und erstellen sie eine Delta-Dokumentation
+
 ## Begriffslexikon
 
 | **Begriff**        | **Bedeutung**                     | **Beschreibung** |
@@ -106,7 +106,6 @@ coming soon
 | **Credit**         | Gutschrift                        | -                |
 | **Debit**          | Maximale Auszahlung pro Tag       | -                |
 
-  
 ## Mengengerüst
 
 | **Bezeichnung**   | **Beschreibung**                      | **Menge** | **Einheit** |
@@ -120,6 +119,5 @@ coming soon
 | **-**             | -                                     | -         | -           |
 
 ## Use Cases
-
 
 coming soon
