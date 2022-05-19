@@ -1,0 +1,27 @@
+@startuml usecase
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Benutzer" as AB
+actor "Administrator" as AA
+
+AB <- AA
+
+rectangle ATM {
+  AB -- (Kontostand anzeigen)
+  (Kontostand anzeigen) -.> (Login) : "<<include>>"
+  AB -- (Geld abheben)
+  (Geld abheben) -.> (Login) : "<<include>>"
+  AB -- (Geld einzahlen)
+  (Geld einzahlen) -.> (Login) : "<<include>>"
+  AB -- (Logout)
+  AA -- (Logout)
+  AA -- (Admin-Ansicht)
+  (Admin-Ansicht) -.> (Login) : "<<include>>"
+  (Admin-Ansicht) <.- (Account hinzufügen) : "<<extend>>"
+  (Admin-Ansicht) <.- (Account löschen) : "<<extend>>"
+  (Admin-Ansicht) <.- (Accountguthaben bearbeiten) : "<<extend>>"
+}
+
+@enduml
