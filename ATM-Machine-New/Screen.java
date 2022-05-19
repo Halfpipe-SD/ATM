@@ -32,6 +32,7 @@ public class Screen extends JFrame implements KeypadListener {
     // Initialisiere Hauptbildschirm
     setResizable(false);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setLocationRelativeTo(null);
 
     // Einstellen der Textfelder
     tfTop.setHorizontalAlignment(JLabel.CENTER);
