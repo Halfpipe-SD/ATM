@@ -66,6 +66,21 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 | Einstellung zum Produkt | ""                                            |
 | Wünsche                 | Viele Funktionen, Wenig Konfigurationsaufwand |
 
+<br>
+
+| Ernst Haft              |                                     |
+| ----------------------- | ----------------------------------- |
+| Rolle                   | Benutzer                            |
+| Alter                   | 19                                  |
+| Geschlecht              | männlich                            |
+| Tätigkeit               | Student                             |
+| Familienstand           | ledig                               |
+| Bildung                 | Abitur                              |
+| Computerkenntnisse      | Grundkenntnisse                     |
+| Interessen und Hobbies  | BWL / Wirtschaft                    |
+| Einstellung zum Produkt | ""                                  |
+| Wünsche                 | Schnelle und Einfache Transaktionen |
+
 ## User Stories
 
 > Als **[Rolle]** möchte ich **[Ziel/Wunsch]**, um **[Nutzen]**
