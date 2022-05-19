@@ -1,4 +1,9 @@
-
+/**
+ * Diese Klasse ist für die Geldausgabe zuständig und enthält den Geldbetrag des
+ * Geldautomaten
+ * 
+ * @author DanH957
+ */
 public class CashDispenser {
 
    private final static int INITIAL_COUNT = 500;
@@ -8,11 +13,23 @@ public class CashDispenser {
       count = INITIAL_COUNT;
    }
 
+   /**
+    * Diese Methode gibt Geld in 10$ Scheinen aus.
+    * 
+    * @param amount Menge an Geld
+    */
    public void dispenseCash(int amount) {
       int billsRequired = amount / 20;
       count -= billsRequired;
    }
 
+   /**
+    * Diese Methode stellt fest, ob noch genügend Geld für eine Auszahlung
+    * vorhanden ist
+    * 
+    * @param amount Menge an Geld für die Auszahlung
+    * @return boolean
+    */
    public boolean isSufficientCashAvailable(int amount) {
       int billsRequired = amount / 20;
 
