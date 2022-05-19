@@ -12,6 +12,12 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
+/**
+ * Diese Klasse ist für die swing UI Elemente zuständig und enthält Funktionen
+ * um das UI zu aktualisierten
+ * 
+ * @author DanH957
+ */
 public class Screen extends JFrame {
 	public JFrame Mainframe;
 	public static JTextField Inputfield1;
@@ -50,6 +56,9 @@ public class Screen extends JFrame {
 		System.out.printf("$%,.2f", amount);
 	}
 
+	/**
+	 * Diese Methode erstellt die UI Komponenten für den Login
+	 */
 	public void createlogin() {
 
 		Mainframe = new JFrame("ATM");
@@ -75,6 +84,9 @@ public class Screen extends JFrame {
 
 	}
 
+	/**
+	 * Diese Methode erstellt die UI Komponenten für das Menü
+	 */
 	public void createmenu() {
 		Mainframe.getContentPane().removeAll();
 		messageJLabel = new JLabel("Welcome");
@@ -91,6 +103,9 @@ public class Screen extends JFrame {
 		Mainframe.repaint();
 	}
 
+	/**
+	 * Diese Methode erstellt die UI Komponenten für den Login
+	 */
 	public void creatBalanceGUI() {
 		Mainframe.getContentPane().removeAll();
 		messageJLabel = new JLabel("Balance Information:        ");
@@ -105,6 +120,9 @@ public class Screen extends JFrame {
 		Mainframe.repaint();
 	}
 
+	/**
+	 * Diese Methode erstellt die UI Komponenten für die Geldabhebung
+	 */
 	public void createWithdrawGUI() {
 		Mainframe.getContentPane().removeAll();
 		Mainframe.revalidate();
@@ -129,6 +147,9 @@ public class Screen extends JFrame {
 
 	}
 
+	/**
+	 * Diese Methode erstellt die UI Komponenten für die Geldeinzahlung
+	 */
 	public void CreateDepositGUI() {
 		Mainframe.getContentPane().removeAll();
 		messageJLabel2 = new JLabel("Please enter a deposit amount in CENTS");
@@ -148,6 +169,9 @@ public class Screen extends JFrame {
 		repaint();
 	}
 
+	/**
+	 * Diese Methode erstellt die UI Komponenten für die Admin-Ansicht
+	 */
 	public void createAdminpage() {
 		messageJLabel = new JLabel("View Users:");
 		messageJLabel2 = new JLabel("Account number:");

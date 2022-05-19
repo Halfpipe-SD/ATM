@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 
 /**
-* 
-* 
-*/
-
+ * Diese Klasse erzeugt alle Konten und stellt sie in einer ArrayList zur
+ * Verfügung.
+ * 
+ * @author DanH957
+ */
 public class BankDatabase {
    static ArrayList<Account> accounts = new ArrayList<Account>();
 
    /**
     * BankDatabase Initialisiert alle Accounts
-    * 
     */
    public BankDatabase() {
 
@@ -25,6 +25,8 @@ public class BankDatabase {
    }
 
    /**
+    * Gibt einen Account anhand seiner Accountnummer zurück
+    * 
     * @param accountnumber
     * @return Account
     */
@@ -40,6 +42,8 @@ public class BankDatabase {
    }
 
    /**
+    * Gibt einen Account anhand seiner PIN zurück
+    * 
     * @param PIN
     * @return Account
     */
@@ -55,6 +59,8 @@ public class BankDatabase {
    }
 
    /**
+    * Stellt fest, ob eine Pin zu einem Usernamen gehört
+    * 
     * @param userPIN
     * @return boolean
     */
@@ -68,47 +74,31 @@ public class BankDatabase {
          return false;
    }
 
-   /**
-    * @param userAccountNumber
-    * @return double
-    */
+   /* Getter und Setter für Eigenschaften der Accounts */
+
    public double getAvailableBalance(int userAccountNumber) {
       return getAccount(userAccountNumber).getAvailableBalance();
    }
 
-   /**
-    * @param userAccountNumber
-    * @return double
-    */
    public double getTotalBalance(int userAccountNumber) {
       return getAccount(userAccountNumber).getTotalBalance();
    }
 
-   /**
-    * @param userAccountNumber
-    * @param amount
-    */
    public void credit(int userAccountNumber, double amount) {
       getAccount(userAccountNumber).credit(amount);
    }
 
-   /**
-    * @param userAccountNumber
-    * @param amount
-    */
    public void debit(int userAccountNumber, double amount) {
       getAccount(userAccountNumber).debit(amount);
    }
 
-   /**
-    * @param userAccountNumber
-    * @return int
-    */
    public int getadmin(int userAccountNumber) {
       return getAccountpin(userAccountNumber).getISadmin();
    }
 
    /**
+    * Erzeugt ein Iterator-Objekt
+    * 
     * @return Iterator-Objekt
     */
    public static Iterator createIterator() {
@@ -116,7 +106,7 @@ public class BankDatabase {
    }
 
    /**
-    * getaccpin funtioniert nicht
+    * Funktion funktioniert nicht, da nur 1 Durchgang durch die Liste stattfindet
     * 
     * @param PIN
     * @return int
@@ -133,8 +123,7 @@ public class BankDatabase {
    }
 
    /**
-    * Adduser fügt einen neuen Account hinzu
-    * 
+    * Erstellt einen Neuen Benutzer
     */
    public static void Adduser() {
       String name = Screen.Inputfield1.getText();
@@ -152,7 +141,7 @@ public class BankDatabase {
    }
 
    /**
-    * Löscht User der aktuellen Possition im Admin Menü
+    * Löscht User der aktuellen Position im Admin Menü
     * 
     * @param position
     */

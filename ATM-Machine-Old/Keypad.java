@@ -15,6 +15,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 
+/**
+ * Diese Klasse erstellt das Tastenfeld für die Benutzereingabe
+ * 
+ * @author DanH957
+ */
 public class Keypad {
    private Scanner input;
    private String userinput;
@@ -39,6 +44,9 @@ public class Keypad {
       return input.nextInt();
    }
 
+   /**
+    * Diese Methode initialisiert die Tasten
+    */
    public void setbuttons() {
 
       B1 = new JButton("1");
@@ -57,6 +65,9 @@ public class Keypad {
 
    }
 
+   /**
+    * Diese Methode fügt die Tasten zum Panel hinzu
+    */
    public JPanel addkeypad() {
       JPanel panel = new JPanel();
       panel.setPreferredSize(new Dimension(180, 160));
