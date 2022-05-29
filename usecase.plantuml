@@ -9,16 +9,18 @@ actor "Administrator" as AA
 AB <- AA
 
 rectangle ATM {
-  AB -- (Kontostand anzeigen)
-  (Kontostand anzeigen) -.> (Login) : "<<include>>"
-  AB -- (Geld abheben)
-  (Geld abheben) -.> (Login) : "<<include>>"
-  AB -- (Geld einzahlen)
-  (Geld einzahlen) -.> (Login) : "<<include>>"
+
+  AB -- (Login)
   AB -- (Logout)
+
+  (Login) <.- (Kontostand anzeigen) : "<<extend>>"
+  (Login) <.- (Geld abheben) : "<<extend>>"
+  (Login) <.- (Geld einzahlen) : "<<extend>>"
+
+  AA -- (Login)
   AA -- (Logout)
   AA -- (Admin-Ansicht)
-  (Admin-Ansicht) -.> (Login) : "<<include>>"
+
   (Admin-Ansicht) <.- (Account hinzufügen) : "<<extend>>"
   (Admin-Ansicht) <.- (Account löschen) : "<<extend>>"
   (Admin-Ansicht) <.- (Accountguthaben bearbeiten) : "<<extend>>"
