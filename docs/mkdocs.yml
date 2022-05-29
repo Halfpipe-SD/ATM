@@ -4,7 +4,10 @@ site_url: https://atm.node5.de
 nav:
   - Startseite: index.md
   - Anforderungsdokumentation: requirements-docs.md
-  - Architekturdokumentation: architecture-docs.md
+  - Architekturdokumentation:
+      - Beschreibung der Systemarchitektur: architecture/system-architecture.md
+      - Systementwurf: architecture/system-design.md
+      - Mensch-Maschine-Schnittstelle: architecture/human-machine-interface.md
   - Testdokumentation: test-docs.md
   - Abnahmedokumentation: acceptance-docs.md
   - Benutzerdokumentation: user-docs.md
