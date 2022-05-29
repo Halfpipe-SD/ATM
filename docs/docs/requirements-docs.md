@@ -98,15 +98,15 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 
 ## Aufgaben
 
-In progress!!
-
-Ist-Dokumentation:
-
-- Es sollte klar herauskommen, welche Funktionen die einzelnen Bausteine des Codes übernehmen, sodass Fachfremde ihn verstehen können (z.B. Konstruktor/Methode/…, übernimmt die Aufgabe des/erzeugt/implementiert/…, stellt die Funktion … zur Verfügung).
-
-Delta-Dokumentation:  
-
-- Erstellen Sie eine Optimierungsempfehlung des Codes: An welcher Stelle könnte dieser verbessert werden, hinsichtlich Bedienbarkeit, Wartbarkeit, Sicherheit usw. Implementieren sie die Verbesserungen und erstellen sie eine Delta-Dokumentation
+- Anfertigen einer Ist-Dokumentation des Codes 
+- Funktionen aus User Stories implementieren
+- Codeverbesserungen in Delta-Dokumentation beschreiben
+- Anfertigen einer Anforderungsdokumentation
+- Anfertigen einer Systemdokumentation
+- Anfertigen einer Testdokumentation
+- Anfertigen einer Abnahmedokumentation
+- Anfertigen einer Benutzerdokumentation
+- Anfertigen einer Projektdokumentation
 
 ## Begriffslexikon
 
@@ -129,9 +129,8 @@ Delta-Dokumentation:
 | **Geldautomaten** | Anzahl Geldautomaten in Aschaffenburg | 43        | Stück       |
 | **Debit**         | Maximale Auszahlung pro Tag           | 1000      | Euro        |
 | **Nutzer**        | Maximale Nutzer gleichzeitig          | 1         | Person      |
-|                   | Maximal registrierte Nutzer           | -         | -           |
-| **Transaktion**   | Maximale Transaktion pro Minute       | -         | -           |
-| **-**             | -                                     | -         | -           |
+| **Nutzer**        | Maximal registrierte Nutzer           |           |             |
+| **Transaktion**   | Maximale Transaktion pro Minute       |           |             |
 
 ## Use Cases
 
