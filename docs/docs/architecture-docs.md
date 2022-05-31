@@ -4,9 +4,9 @@
 
 ### Priorisierung der nicht funktionalen Anforderungen
 
-> Beschreibt wie gut ein System/Produkt eine Funktion erfüllt
+> Beschreibt wie gut ein System/Produkt eine bestimmte Funktion erfüllt
 
-- Gute Benutzerfreundlichkeit
+- Gute Benutzerfreundlichkeit und Bedienbarkeit
 - Hohe Performance bei Operationen wie Guthaben abrufen, einzahlen und auszahlen
 - Kurze Start-Zeit (Account-Initialisierung)
 
@@ -31,7 +31,7 @@
 
 ### Systemdekomposition
 
-### Designalternativenund –Entscheidungen
+### Designalternativen und –Entscheidungen
 
 ### Cross-Cutting-Concerns, NFRs
 
