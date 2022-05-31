@@ -137,5 +137,5 @@ Logout
 
 
 
-![InterkationsDiagramm](images/InteraktionsDiagramm.png "InterkationsDiagramm") 
+![InterkationsDiagramm](images/IMDiagramm.png "InterkationsDiagramm") 
 
