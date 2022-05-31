@@ -45,14 +45,14 @@ Die Mensch-Maschine-Schnittstelle, oder auch Benutzerschnittstelle, bezieht sich
 Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Peripherieeinheiten des Geldautomaten, welche eine digitale Information an die Recheneinheit des Geldautomaten weiterleiten. Die von der Recheneinheit entgegengenommene Information wird mittels der aufgespielten Software verarbeitet und eine Ausgabe-Information wird erzeugt. Die Recheneinheit steuert digital die Peripherieeinheiten des Geldautomaten an, welche eine optische (Bildschirm-Ausgabe) und mechanische Ausgabe Information (Geldauszahlung) erzeugen. Die Rückgabe-Informationen werden vom Menschen visuell (Bildschirm-Information) und haptisch (Annahme des ausgezahlten Geldes) verarbeitet.
 
 
-| Ein-/Ausgabe    | **Mensch Schnittstelle**     | **Hardware Schnittstelle**   | **Software Schnittstelle**   |
-| --------------- | ---------------------------- | ---------------------------- | ---------------------------- |
-| **Eingabe**     | Hände                        | Encrypting PIN Pad           | Tastenabfrage                |
-|                 | Augen                        | ID-Kartenleser               | Touchbildschirm Abfrage      |
-|                 | -                            | Softkeys oder Touchscreen    |                              |
-|                 | ---------------------------- | ---------------------------- | ---------------------------- |
-| **Ausgabe**     | Hände                        | Bildschirm                   | Grafikausgabe                |
-|                 | Augen                        | Auszahlmodul                 | Peripherie Ansteuerung       |
+| Ein-/Ausgabe | **Mensch Schnittstelle**     | **Hardware Schnittstelle**   | **Software Schnittstelle**   |
+| ------------ | ---------------------------- | ---------------------------- | ---------------------------- |
+| **Eingabe**  | Hände                        | Encrypting PIN Pad           | Tastenabfrage                |
+|              | Augen                        | ID-Kartenleser               | Touchbildschirm Abfrage      |
+|              | -                            | Softkeys oder Touchscreen    |                              |
+|              | ---------------------------- | ---------------------------- | ---------------------------- |
+| **Ausgabe**  | Hände                        | Bildschirm                   | Grafikausgabe                |
+|              | Augen                        | Auszahlmodul                 | Peripherie Ansteuerung       |
 
 
 
@@ -80,3 +80,9 @@ Geld einzahlen
 7.	Benutzer drückt „Bestätigen“. ATM schließt den Deposit-Slot, validiert die Eingabe und bei nicht erfolgreicher Prüfung wird Deposit-Slot wieder geöffnet. 
 8.	Benutzer entnimmt das Bargeld. ATM wirft Bankkarte aus und zeigt Willkommens Bildschirm an. 
 9.	Der Benutzer nimmt die Karte. ATM zeigt Willkommens Bildschirm an.
+
+Kontostand anzeigen
+1.	Der Benutzer Inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.
+2.	Der Benutzer gibt sein Passwort ein um sich zu authentifizieren. ATM Zeigt das Menü zu weiteren Auswahl an.
+3.	Benutzer drückt „Kontostand anzeigen“. ATM zeigt Bildschirm mit Kontostand und Datum.
+4.	Benutzer drückt „Weitere Auswahl“. ATM zeigt Bildschirm zur weiteren Auswahl an.
