@@ -68,7 +68,7 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 
 Gestaltungsprinzipien
 
-Gesetze 
+Gesetze:
 >1.	Gesetz der Nähe
 >>•	Logisch zusammengehörige Informationen
 werden auch örtlich zusammen gruppiert.
@@ -80,6 +80,19 @@ z. B. Feldbezeichner, werden gleichartig
 dargestellt.
 >3.	Gesetz der guten Gestalt
 >>•	Der Mensch bevorzugt in seiner Wahrnehmung gute Gestalten (symmetrisch...)
+
+Eigenschaften:
+>1.	Einfachheit
+>2.	Regelmäßigkeit
+>3.	Symmetrie
+>4.	Inners Gleichgewicht
+
+Der Benutzer soll jederzeit sehen können:
+>1.	Wo bin ich?
+>2.	Wie kam ich hierhin?
+>3.	Was kann ich hier tun?
+>4.	Wohin und wie kann ich navigieren?
+
 
 
 ### Interatkionsmodellierung
