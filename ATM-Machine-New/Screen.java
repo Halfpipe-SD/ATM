@@ -1,6 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Point;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -130,5 +131,10 @@ public class Screen extends JFrame implements KeypadListener {
 
   public void setText(String text) {
     tfTop.setText(text);
+  }
+
+  public Point getScreenLocation() {
+    Point screenLocation = getLocation();
+    return screenLocation;
   }
 }

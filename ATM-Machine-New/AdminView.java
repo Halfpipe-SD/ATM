@@ -1,5 +1,4 @@
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.WindowEvent;
@@ -18,9 +17,8 @@ import javax.swing.SpringLayout;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import Utilities.SpringUtilities;
-
 import Interfaces.ATMListener.ATM_Mode;
+import Utilities.SpringUtilities;
 
 public class AdminView extends JFrame implements ListSelectionListener {
 
@@ -85,6 +83,7 @@ public class AdminView extends JFrame implements ListSelectionListener {
     rightPanel.add(lTotalBalance);
     rightPanel.add(tfTotalBalance);
 
+    btnSave.setFocusable(false);
     btnSave.setHorizontalAlignment(JTextField.CENTER);
     btnSave.addActionListener(e -> btnSave());
 
@@ -100,7 +99,7 @@ public class AdminView extends JFrame implements ListSelectionListener {
 
     handleWindowEvents();
 
-    setLocationRelativeTo(null);
+    setLocation(atm.getScreen().getScreenLocation());
     setPreferredSize(new Dimension(width, height));
     pack();
     setVisible(true);
