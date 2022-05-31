@@ -61,4 +61,20 @@ public class Account {
   public boolean getAdmin() {
     return isAdmin;
   }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public void setAccountNumber(String accountNumber) {
+    this.accountNumber = accountNumber;
+  }
+
+  public void setAvailableBalance(double availableBalance) {
+    this.availableBalance = availableBalance;
+  }
+
+  public void setTotalBalance(double totalBalance) {
+    this.totalBalance = totalBalance;
+  }
 }
