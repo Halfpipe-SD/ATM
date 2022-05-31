@@ -151,4 +151,8 @@ public class ATM implements ATMListener {
   public BankDatabase getBankDatabase() {
     return bankDatabase;
   }
+
+  public Screen getScreen() {
+    return screen;
+  }
 }
