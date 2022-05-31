@@ -105,4 +105,4 @@ Logout
 
 Administrator:
 
-![InterkationsDiagramm](images/InteraktionsDiagramm.png "IM") 
+![InterkationsDiagramm](images/InteraktionsDiagramm.png "InterkationsDiagramm") 
