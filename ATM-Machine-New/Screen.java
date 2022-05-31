@@ -75,29 +75,29 @@ public class Screen extends JFrame implements KeypadListener {
   }
 
   public void showLogin() {
-    tfTop.setText("Insert your credit/debit card, then enter your PIN number: ");
+    tfTop.setText("Bitte Karte einlegen und PIN eingeben: ");
     sidePanel.setLabelHTML("");
     sidePanel.hideBackButton();
     sidePanel.showTextField();
   }
 
   public void showMenu() {
-    tfTop.setText("Welcome to the ATM, " + atm.getCurrentAccount().getUsername() + "!");
-    sidePanel.setLabelHTML("Please select an option: <br>"
-        + "1 - Balance<br>"
-        + "2 - Withdrawal<br>"
-        + "3 - Deposit<br>"
-        + "4 - Logout");
+    tfTop.setText("Willkommen am ATM, " + atm.getCurrentAccount().getUsername() + "!");
+    sidePanel.setLabelHTML("Bitte wähle eine Option: <br>"
+        + "1 - Guthaben anzeigen<br>"
+        + "2 - Geld abheben<br>"
+        + "3 - Geld einzahlen<br>"
+        + "4 - Abbrechen");
     sidePanel.hideBackButton();
     sidePanel.showTextField();
   }
 
   public void showBalance() {
-    tfTop.setText("Balance Information of " + atm.getCurrentAccount().getUsername());
+    tfTop.setText("Guthaben von " + atm.getCurrentAccount().getUsername());
     sidePanel.setLabelHTML("<br>"
-        + "Available Balance is: <br>"
+        + "Verfügbares Guthaben: <br>"
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
-        + "Total Balance: <br>"
+        + "Gesamtes Guthaben: <br>"
         + atm.getCurrentAccount().getTotalBalance() + " €");
     sidePanel.showBackButton();
     sidePanel.hideTextField();
@@ -106,16 +106,16 @@ public class Screen extends JFrame implements KeypadListener {
   public void showWithdrawal() {
     tfTop.setText("Choose an amount to withdraw.");
     sidePanel.setLabelHTML("<br>"
-        + "Available Balance is: <br>"
+        + "Verfügbares Guthaben: <br>"
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>");
     sidePanel.showBackButton();
   }
 
   public void showDeposit() {
     tfTop.setText("Choose an amount to deposit.");
-    sidePanel.setLabelHTML("Available Balance is: <br>"
+    sidePanel.setLabelHTML("Verfügbares Guthaben: <br>"
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
-        + "Total Balance: <br>"
+        + "Gesamtes Guthaben: <br>"
         + atm.getCurrentAccount().getTotalBalance() + " €");
     sidePanel.showBackButton();
   }

@@ -49,7 +49,7 @@ public class BankDatabase {
 
   public Account validateAccount(String pin) throws LoginFailedException {
     if (pin.length() != 4)
-      throw new LoginFailedException("PIN should be 4 characters long");
+      throw new LoginFailedException("Die PIN muss 4 Zeichen lang sein!");
 
     Account found = null;
     for (Account acc : accounts) {
@@ -57,7 +57,7 @@ public class BankDatabase {
         found = acc;
     }
     if (found == null)
-      throw new LoginFailedException("Error Validating PIN: " + pin);
+      throw new LoginFailedException("Account wurde nicht gefunden!");
 
     return found;
   }
