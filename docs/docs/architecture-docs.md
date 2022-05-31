@@ -48,3 +48,14 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 ### Gestaltungsprinzipien und Style-Guide
 
 ### Interatkionsmodellierung
+
+Benutzer:
+
+Geld abheben
+1.	Der Benutzer Inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.
+2.	Der Benutzer gibt sein Passwort ein um sich zu authentifizieren. ATM Zeigt das Menü zu weiteren Auswahl an.
+3.	Der Benutzer drückt auf „Geld abheben“. ATM zeigt Menü zur Auswahl des Betrags und der Stückelung an. 
+4.	Der Benutzer drückt „Abbruch“. ATM zeigt Menü zur weiteren Auswahl an.
+5.	Der Benutzer Wählt Betrag und Stückelung. ATM zahlt Betrag in gewünschter Stückelung aus, zeigt neuen Kontostand an und wirft Bankkarte aus.
+6.	Der Benutzer nimmt die Karte. ATM zeigt Willkommens Bildschirm
+
