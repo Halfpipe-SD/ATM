@@ -99,7 +99,7 @@ public class AdminView extends JFrame implements ListSelectionListener {
 
     handleWindowEvents();
 
-    setLocation(atm.getScreen().getScreenLocation());
+    setLocation(atm.getScreen().getLocation());
     setPreferredSize(new Dimension(width, height));
     pack();
     setVisible(true);
