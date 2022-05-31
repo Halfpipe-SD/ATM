@@ -37,7 +37,7 @@ public class BankDatabase {
     return gson.fromJson(fr, t);
   }
 
-  private void saveAccountsToFile(ArrayList<Account> accs) throws IOException {
+  public void saveAccountsToFile(ArrayList<Account> accs) throws IOException {
     FileWriter fw = new FileWriter(accountsFilePath);
     gson.toJson(accs, fw);
     fw.close();
@@ -48,6 +48,9 @@ public class BankDatabase {
   }
 
   public Account validateAccount(String pin) throws LoginFailedException {
+    if (pin.length() != 4)
+      throw new LoginFailedException("PIN should be 4 characters long");
+
     Account found = null;
     for (Account acc : accounts) {
       if (pin.equals(acc.getPin()))
@@ -65,5 +68,9 @@ public class BankDatabase {
         return acc;
     }
     return null;
+  }
+
+  public ArrayList<Account> getAccounts() {
+    return accounts;
   }
 }

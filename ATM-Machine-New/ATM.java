@@ -147,4 +147,8 @@ public class ATM implements ATMListener {
   public Account getCurrentAccount() {
     return currentAccount;
   }
+
+  public BankDatabase getBankDatabase() {
+    return bankDatabase;
+  }
 }
