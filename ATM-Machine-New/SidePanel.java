@@ -16,11 +16,12 @@ public class SidePanel extends JPanel {
   private final Color backgroundColor = Color.lightGray;
   private final Font tfFont = new Font("", Font.BOLD, 20);
 
-  private JTextField tf = new JTextField(5);
+  private JTextField tf = new JTextField(3);
   private JLabel tl = new JLabel();
   private JButton backButton = new JButton("Back");
 
   public SidePanel(ATM atm, int width, int height) {
+
     setPreferredSize(new Dimension(width, height));
     setBackground(backgroundColor);
     setLayout(new FlowLayout());
