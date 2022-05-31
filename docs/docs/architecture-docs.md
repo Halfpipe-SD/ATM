@@ -22,7 +22,7 @@
 
 - UI mit den Java-Swing GUI Bibliotheken
 - `KeypadListener.java` für Kommunikationsschnittstelle zwischen dem Tastenfeld und dem Bildschirm Objekt
-- `ATMListener.java` ist die Schnittstelle zum Haupt-ATM-Objekt, in der Aktionen wie ein Wechsel in einen anderen Modus oder das Betätigen der Enter-Taste behandelt werden
+- `ATMListener.java` ist die Schnittstelle zum Haupt-ATM-Objekt, in der Aktionen, wie ein Wechsel in einen anderen Modus oder das Betätigen der Enter-Taste behandelt werden
 
 ### Big Picture der Systemarchitektur
 
@@ -43,26 +43,13 @@
 Die Mensch-Maschine-Schnittstelle, oder auch Benutzerschnittstelle, bezieht sich auf die Kommunikation zwischen einem Nutzer (Mensch) und dem Geldautomaten (Maschine).
 Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Peripherieeinheiten des Geldautomaten, welche eine digitale Information an die Recheneinheit des Geldautomaten weiterleiten. Die von der Recheneinheit entgegengenommene Information wird mittels der aufgespielten Software verarbeitet und eine Ausgabe-Information wird erzeugt. Die Recheneinheit steuert digital die Peripherieeinheiten des Geldautomaten an, welche eine optische (Bildschirm-Ausgabe) und mechanische Ausgabe Information (Geldauszahlung) erzeugen. Die Rückgabe-Informationen werden vom Menschen visuell (Bildschirm-Information) und haptisch (Annahme des ausgezahlten Geldes) verarbeitet.
 
-<<<<<<< HEAD
 
-| Ein-/Ausgabe | **Mensch Schnittstelle**     | **Hardware Schnittstelle**   | **Software Schnittstelle**   |
-| ------------ | ---------------------------- | ---------------------------- | ---------------------------- |
-| **Eingabe**  | Hände                        | Encrypting PIN Pad           | Tastenabfrage                |
-|              | Augen                        | ID-Kartenleser               | Touchbildschirm Abfrage      |
-|              | -                            | Softkeys oder Touchscreen    |                              |
-|              | ---------------------------- | ---------------------------- | ---------------------------- |
-| **Ausgabe**  | Hände                        | Bildschirm                   | Grafikausgabe                |
-|              | Augen                        | Auszahlmodul                 | Peripherie Ansteuerung       |
-=======
-| Ein-/Ausgabe | **Mensch Schnittstelle**     | **Hardware Schnittstelle**   | **Software Schnittstelle**   |
-| ------------ | ---------------------------- | ---------------------------- | ---------------------------- |
-| **Eingabe**  | Hände                        | Encrypting PIN Pad           | Tastenabfrage                |
-|              | Augen                        | ID-Kartenleser               | Touchbildschirm Abfrage      |
-|              |                              | Softkeys oder Touchscreen    |                              |
-|              | ---------------------------- | ---------------------------- | ---------------------------- |
-| **Ausgabe**  | Hände                        | Bildschirm                   | Grafikausgabe                |
-|              | Augen                        | Auszahlmodul                 | Peripherie Ansteuerung       |
->>>>>>> 5f44fefdafbaeede31f98b0f7bd0a133bb5c0411
+| Ein-/Ausgabe | **Mensch Schnittstelle** | **Hardware Schnittstelle**                | **Software Schnittstelle** |
+| ------------ | ------------------------ | ----------------------------------------- | -------------------------- |
+| **Eingabe**  | Hände                    | Encrypting PIN Pad                        | Tastenabfrage              |
+|              | Augen                    | ID-Kartenleser, Softkeys oder Touchscreen | Touchbildschirm Abfrage    |
+| **Ausgabe**  | Hände                    | Bildschirm                                | Grafikausgabe              |
+|              | Augen                    | Auszahlmodul                              | Peripherie Ansteuerung     |
 
 ### Gestaltungsprinzipien und Style-Guide
 
