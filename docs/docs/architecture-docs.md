@@ -96,4 +96,12 @@ Kontostand anzeigen
 3.	Benutzer drückt „Kontostand anzeigen“. ATM zeigt Bildschirm mit Kontostand und Datum.
 4.	Benutzer drückt „Weitere Auswahl“. ATM zeigt Bildschirm zur weiteren Auswahl an.
 
+Logout
+1.	Der Benutzer Inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.
+2.	Der Benutzer gibt sein Passwort ein um sich zu authentifizieren. ATM Zeigt das Menü zu weiteren Auswahl an.
+3.	Der Benutzer drückt „Logout“. ATM wirft Bankkarte aus.
+4.	Der Benutzer nimmt die Karte. ATM zeigt Willkommens Bildschirm an. 
+
+
+Administrator:
 
