@@ -70,7 +70,7 @@ public class ATM implements ATMListener {
           this.depositMoney(input);
           break;
         case ADMIN:
-          screen.setErrorMessage("You have to close the Admin View first!");
+          screen.setErrorMessage("Die Admin-Ansicht muss zuerst geschlossen werden!");
           break;
       }
     } catch (LoginFailedException e) {
@@ -139,7 +139,7 @@ public class ATM implements ATMListener {
         screen.showDeposit();
         break;
       case ADMIN:
-        new AdminView(this, title + " - Admin View");
+        new AdminView(this, "Admin-Ansicht");
         break;
     }
   }
