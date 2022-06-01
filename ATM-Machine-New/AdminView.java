@@ -91,8 +91,8 @@ public class AdminView extends JFrame {
     updateRightPanelWithAccount(list.getSelectedIndex());
 
     add(tfTop, BorderLayout.NORTH);
-    add(list, BorderLayout.CENTER);
-    add(rightPanel, BorderLayout.LINE_END);
+    add(list, BorderLayout.WEST);
+    add(rightPanel, BorderLayout.EAST);
     add(btnSave, BorderLayout.SOUTH);
 
     handleWindowEvents();
