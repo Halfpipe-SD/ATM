@@ -14,33 +14,31 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
 import Interfaces.ATMListener.ATM_Mode;
 import Utilities.SpringUtilities;
 
-public class AdminView extends JFrame implements ListSelectionListener {
+public class AdminView extends JFrame {
 
   private ATM atm;
 
   private JTextField tfTop = new JTextField(20);
   private final Font tfFont = new Font("", Font.PLAIN, 12);
 
-  private final int width = 300;
+  private final int width = 400;
   private final int height = 200;
 
-  private JLabel lAccountNumber = new JLabel("Accountnumber", JLabel.TRAILING);
-  private JLabel lUsername = new JLabel("Username", JLabel.TRAILING);
-  private JLabel lAvailableBalance = new JLabel("Available Balance", JLabel.TRAILING);
-  private JLabel lTotalBalance = new JLabel("Total Balance", JLabel.TRAILING);
+  private JLabel lAccountNumber = new JLabel("Account-Nummer", JLabel.TRAILING);
+  private JLabel lUsername = new JLabel("Benutzername", JLabel.TRAILING);
+  private JLabel lAvailableBalance = new JLabel("Verfügbares Guthaben", JLabel.TRAILING);
+  private JLabel lTotalBalance = new JLabel("Gesamtes Guthaben", JLabel.TRAILING);
 
-  private JTextField tfAccountNumber = new JTextField(20);
-  private JTextField tfUsername = new JTextField(20);
-  private JTextField tfAvailableBalance = new JTextField(20);
-  private JTextField tfTotalBalance = new JTextField(20);
+  private JTextField tfAccountNumber = new JTextField(30);
+  private JTextField tfUsername = new JTextField(30);
+  private JTextField tfAvailableBalance = new JTextField(30);
+  private JTextField tfTotalBalance = new JTextField(30);
 
-  private JButton btnSave = new JButton("Save");
+  private JButton btnSave = new JButton("Speichern");
 
   private JPanel rightPanel = new JPanel();
 
@@ -56,7 +54,7 @@ public class AdminView extends JFrame implements ListSelectionListener {
     tfTop.setHorizontalAlignment(JTextField.CENTER);
     tfTop.setFont(tfFont);
     tfTop.setEditable(false);
-    tfTop.setText("Welcome, " + atm.getCurrentAccount().getUsername() + "!");
+    tfTop.setText("Willkommen, " + atm.getCurrentAccount().getUsername() + "!");
 
     // Initialisierung der Liste mit Hilfe eines DefaultListModels
     DefaultListModel<String> model = new DefaultListModel<>();
@@ -64,11 +62,11 @@ public class AdminView extends JFrame implements ListSelectionListener {
       model.add(i, accounts.get(i).getUsername());
     }
     list = new JList<String>(model);
-    list.addListSelectionListener(this);
+    list.addListSelectionListener(e -> updateRightPanelWithAccount(list.getSelectedIndex()));
     list.setSelectedIndex(0);
 
     // Initialisierung des rechten Panels
-    rightPanel.setPreferredSize(new Dimension(200, height));
+    rightPanel.setPreferredSize(new Dimension(width - 100, height));
     rightPanel.setLayout(new SpringLayout());
     lAccountNumber.setLabelFor(tfAccountNumber);
     lUsername.setLabelFor(tfUsername);
@@ -93,8 +91,8 @@ public class AdminView extends JFrame implements ListSelectionListener {
     updateRightPanelWithAccount(list.getSelectedIndex());
 
     add(tfTop, BorderLayout.NORTH);
-    add(list, BorderLayout.CENTER);
-    add(rightPanel, BorderLayout.LINE_END);
+    add(list, BorderLayout.WEST);
+    add(rightPanel, BorderLayout.EAST);
     add(btnSave, BorderLayout.SOUTH);
 
     handleWindowEvents();
@@ -126,11 +124,6 @@ public class AdminView extends JFrame implements ListSelectionListener {
     tfUsername.setText(a.getUsername());
     tfAvailableBalance.setText(String.valueOf(a.getAvailableBalance()));
     tfTotalBalance.setText(String.valueOf(a.getTotalBalance()));
-  }
-
-  @Override
-  public void valueChanged(ListSelectionEvent e) {
-    updateRightPanelWithAccount(list.getSelectedIndex());
   }
 
   private void handleWindowEvents() {
