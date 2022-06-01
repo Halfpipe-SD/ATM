@@ -23,7 +23,7 @@ public interface ATMListener {
       case "4":
         return ATM_Mode.LOGIN;
       default:
-        throw new InvalidModeException("Invalid menu input: " + input);
+        throw new InvalidModeException("Ungültiger Menu-Modus: " + input);
     }
 
   }
