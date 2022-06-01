@@ -4,8 +4,6 @@
 
 ### Priorisierung der nicht funktionalen Anforderungen
 
-> Beschreibt wie gut ein System/Produkt eine bestimmte Funktion erfüllt
-
 - Gute Benutzerfreundlichkeit und Bedienbarkeit
 - Hohe Performance bei Operationen wie Guthaben abrufen, einzahlen und auszahlen
 - Kurze Start-Zeit (Account-Initialisierung)
@@ -13,10 +11,23 @@
 ### Architekturprinzipien
 
 > Nach welchen Kriterien soll das System in Komponenten unterteilt werden?
-> Welche Aspekte sollen in Komponenten zusammengefasst werden?
-> Welche Dienstleistungen sollen Komponenten nach außen an ihrer Schnittstelle anbieten, welche Aspekte müssen geschützt sein?
-> Wie sollen die Komponenten miteinander interagieren?
 > Wie sollen Komponenten strukturiert und verfeinert werden?
+
+Das System wurde in verschiedene Komponenten unterteilt, die sich jeweils auf eine bestimmte Aufgabe beziehen, um eine enge Kopplung der Module untereinander zu reduzieren.
+Der verschachtelte Aufbau der UI Komponenten bildet eine Struktur, die leicht erweitert werden kann.
+
+> Welche Aspekte sollen in Komponenten zusammengefasst werden?
+
+In der `ATM.java` Klasse werden die Änderungen von einem Modus in den Nächsten behandelt.
+Dem entsprechend wird die `Screen.java` Klasse angesteuert, um die UI Elemente zu aktualisieren.
+
+Die Klasse `Screen.java` beinhaltet alle Funktionen, die zum Ändern der UI Elemente benötigt werden. In ihr werden die Klassen `Keypad.java` und `SidePanel.java` verwendet.
+
+> Welche Dienstleistungen sollen Komponenten nach außen an ihrer Schnittstelle anbieten?
+> Wie sollen die Komponenten miteinander interagieren?
+
+Die Komponente `Keypad.java` gibt über das `KeypadListener.java` Interface alle Events für Tastendrücke an die `Screen.java` Klasse weiter.
+Die Komponente `Screen.java` gibt über das Interface `ATMListener.java` Events wie z.B. einen Modus-Wechsel oder das Betätigen der Enter-Taste an die `ATM.java` Klasse weiter.
 
 ### Schnittstellen
 
@@ -26,6 +37,7 @@
 
 ### Big Picture der Systemarchitektur
 
+Der Aufbau der Systemarchitektur ist weitestgehend modular gestaltet, gut geeignet für Tests und leicht erweiterbar.
 
 ## Systementwurf
 
