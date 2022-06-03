@@ -27,7 +27,7 @@ public class Screen extends JFrame implements KeypadListener {
     this.atm = atm;
 
     sidePanel = new SidePanel(atm, 180, 160);
-    keypad = new Keypad(this, 180, 160);
+    keypad = new Keypad(this, 150, 160);
 
     // Initialisiere Hauptbildschirm
     setResizable(false);
@@ -55,7 +55,7 @@ public class Screen extends JFrame implements KeypadListener {
   @Override
   public void buttonPressed(String value) {
     if (value == "Clear")
-      sidePanel.clearTextField();
+      sidePanel.setTextField("");
     else if (value == "Enter")
       atm.atmEnterAction(sidePanel.getTextField());
     else
@@ -74,11 +74,20 @@ public class Screen extends JFrame implements KeypadListener {
     tfBottom.setText("");
   }
 
+  public void showCardPrompt() {
+    tfTop.setText("Bitte Karte einführen");
+    sidePanel.setLabelHTML("<br><br><br>Bite Bankkarte einführen<br><br>");
+    sidePanel.setBackButtonVisible(false);
+    sidePanel.setOkButtonVisible(true);
+    sidePanel.setTextFieldVisible(false);
+  }
+
   public void showLogin() {
-    tfTop.setText("Bitte Karte einlegen und PIN eingeben: ");
+    tfTop.setText("Bitte geben Sie ihre PIN ein: ");
     sidePanel.setLabelHTML("");
-    sidePanel.hideBackButton();
-    sidePanel.showTextField();
+    sidePanel.setBackButtonVisible(false);
+    sidePanel.setOkButtonVisible(false);
+    sidePanel.setTextFieldVisible(true);
   }
 
   public void showMenu() {
@@ -88,8 +97,9 @@ public class Screen extends JFrame implements KeypadListener {
         + "2 - Geld abheben<br>"
         + "3 - Geld einzahlen<br>"
         + "4 - Abbrechen");
-    sidePanel.hideBackButton();
-    sidePanel.showTextField();
+    sidePanel.setBackButtonVisible(false);
+    sidePanel.setOkButtonVisible(false);
+    sidePanel.setTextFieldVisible(true);
   }
 
   public void showBalance() {
@@ -99,8 +109,9 @@ public class Screen extends JFrame implements KeypadListener {
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
         + "Gesamtes Guthaben: <br>"
         + atm.getCurrentAccount().getTotalBalance() + " €");
-    sidePanel.showBackButton();
-    sidePanel.hideTextField();
+    sidePanel.setBackButtonVisible(true);
+    sidePanel.setOkButtonVisible(false);
+    sidePanel.setTextFieldVisible(false);
   }
 
   public void showWithdrawal() {
@@ -108,7 +119,9 @@ public class Screen extends JFrame implements KeypadListener {
     sidePanel.setLabelHTML("<br>"
         + "Verfügbares Guthaben: <br>"
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>");
-    sidePanel.showBackButton();
+    sidePanel.setBackButtonVisible(true);
+    sidePanel.setOkButtonVisible(false);
+    sidePanel.setTextFieldVisible(false);
   }
 
   public void showDeposit() {
@@ -117,7 +130,9 @@ public class Screen extends JFrame implements KeypadListener {
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
         + "Gesamtes Guthaben: <br>"
         + atm.getCurrentAccount().getTotalBalance() + " €");
-    sidePanel.showBackButton();
+    sidePanel.setBackButtonVisible(true);
+    sidePanel.setOkButtonVisible(false);
+    sidePanel.setTextFieldVisible(false);
   }
 
   public SidePanel getSidePanel() {

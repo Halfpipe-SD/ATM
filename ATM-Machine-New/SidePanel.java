@@ -19,6 +19,7 @@ public class SidePanel extends JPanel {
   private JTextField tf = new JTextField(3);
   private JLabel tl = new JLabel();
   private JButton backButton = new JButton("Back");
+  private JButton okButton = new JButton("Ok");
 
   public SidePanel(ATM atm, int width, int height) {
 
@@ -33,29 +34,26 @@ public class SidePanel extends JPanel {
     backButton.setFocusable(false);
     backButton.addActionListener(e -> atm.atmSwitchModeAction(ATM_Mode.MENU));
 
+    okButton.setVisible(false);
+    okButton.setFocusable(false);
+    okButton.addActionListener(e -> atm.atmSwitchModeAction(ATM_Mode.LOGIN));
+
     add(tf);
     add(tl);
     add(backButton);
+    add(okButton);
   }
 
-  public void hideTextField() {
-    tf.setVisible(false);
+  public void setOkButtonVisible(boolean visible) {
+    okButton.setVisible(visible);
   }
 
-  public void showTextField() {
-    tf.setVisible(true);
+  public void setTextFieldVisible(boolean visible) {
+    tf.setVisible(visible);
   }
 
-  public void hideBackButton() {
-    backButton.setVisible(false);
-  }
-
-  public void showBackButton() {
-    backButton.setVisible(true);
-  }
-
-  public void clearTextField() {
-    tf.setText("");
+  public void setBackButtonVisible(boolean visible) {
+    backButton.setVisible(visible);
   }
 
   public void addTextFieldChar(String s) {
