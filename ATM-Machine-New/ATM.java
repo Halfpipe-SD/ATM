@@ -34,9 +34,9 @@ public class ATM implements ATMListener {
     return uniqueinstance;
   }
 
-  // starte im Login Modus
+  // starte im CARD_REQ Modus
   public void start() {
-    this.atmSwitchModeAction(ATM_Mode.LOGIN);
+    this.atmSwitchModeAction(ATM_Mode.CARD_REQ);
   }
 
   @Override
@@ -45,7 +45,7 @@ public class ATM implements ATMListener {
       System.out.println("Enter action in mode: " + currentMode + " with input: " + input);
 
     // Lösche Eingabe im Textfeld und lösche Fehlermeldung
-    screen.getSidePanel().clearTextField();
+    screen.getSidePanel().setTextField("");
     screen.clearErrorMessage();
 
     try {
@@ -71,6 +71,8 @@ public class ATM implements ATMListener {
           break;
         case ADMIN:
           screen.setErrorMessage("Die Admin-Ansicht muss zuerst geschlossen werden!");
+          break;
+        case CARD_REQ: // do nothing
           break;
       }
     } catch (LoginFailedException e) {
@@ -116,13 +118,17 @@ public class ATM implements ATMListener {
 
   @Override
   public void atmSwitchModeAction(ATM_Mode newMode) {
-    if (debugMode)
+    if (debugMode) {
       System.out.println("Switched mode from: " + currentMode + " to: " + newMode);
+      screen.setAdditionalTitle(newMode.toString());
+    }
 
     currentMode = newMode;
-    screen.setAdditionalTitle(currentMode.toString());
 
     switch (newMode) {
+      case CARD_REQ:
+        screen.showCardPrompt();
+        break;
       case LOGIN:
         screen.showLogin();
         break;

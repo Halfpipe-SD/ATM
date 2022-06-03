@@ -5,7 +5,7 @@ import Exceptions.InvalidModeException;
 public interface ATMListener {
 
   enum ATM_Mode {
-    LOGIN, MENU, BALANCE, WITHDRAWAL, DEPOSIT, ADMIN
+    CARD_REQ, LOGIN, MENU, BALANCE, WITHDRAWAL, DEPOSIT, ADMIN
   };
 
   void atmEnterAction(String input);
@@ -21,7 +21,7 @@ public interface ATMListener {
       case "3":
         return ATM_Mode.DEPOSIT;
       case "4":
-        return ATM_Mode.LOGIN;
+        return ATM_Mode.CARD_REQ;
       default:
         throw new InvalidModeException("Ungültiger Menu-Modus: " + input);
     }
