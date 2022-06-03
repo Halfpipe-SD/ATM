@@ -14,6 +14,7 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
+import javax.swing.JOptionPane;
 
 import Interfaces.ATMListener.ATM_Mode;
 import Utilities.SpringUtilities;
@@ -27,6 +28,7 @@ public class AdminView extends JFrame {
 
   private final int width = 400;
   private final int height = 200;
+  private final int rightPanelWidth = width - 100;
 
   private JLabel lAccountNumber = new JLabel("Account-Nummer", JLabel.TRAILING);
   private JLabel lUsername = new JLabel("Benutzername", JLabel.TRAILING);
@@ -39,6 +41,7 @@ public class AdminView extends JFrame {
   private JTextField tfTotalBalance = new JTextField(30);
 
   private JButton btnSave = new JButton("Speichern");
+  private JButton btnCreateNew = new JButton("Neuer Account");
 
   private JPanel rightPanel = new JPanel();
 
@@ -66,7 +69,7 @@ public class AdminView extends JFrame {
     list.setSelectedIndex(0);
 
     // Initialisierung des rechten Panels
-    rightPanel.setPreferredSize(new Dimension(width - 100, height));
+    rightPanel.setPreferredSize(new Dimension(rightPanelWidth, height));
     rightPanel.setLayout(new SpringLayout());
     lAccountNumber.setLabelFor(tfAccountNumber);
     lUsername.setLabelFor(tfUsername);
@@ -84,6 +87,10 @@ public class AdminView extends JFrame {
     btnSave.setFocusable(false);
     btnSave.setHorizontalAlignment(JTextField.CENTER);
     btnSave.addActionListener(e -> btnSave());
+
+    btnCreateNew.setFocusable(false);
+    btnCreateNew.setHorizontalAlignment(JTextField.CENTER);
+    btnCreateNew.addActionListener(e -> btnCreateNew());
 
     SpringUtilities.makeCompactGrid(rightPanel, 4, 2, 6, 6, 6, 6);
 
@@ -103,17 +110,48 @@ public class AdminView extends JFrame {
     setVisible(true);
   }
 
+  private void btnCreateNew() {
+
+  }
+
   private void btnSave() {
     Account selected = accounts.get(list.getSelectedIndex());
-    selected.setUsername(tfUsername.getText());
-    selected.setAvailableBalance(Double.parseDouble(tfAvailableBalance.getText()));
-    selected.setTotalBalance(Double.parseDouble(tfTotalBalance.getText()));
 
-    accounts.set(list.getSelectedIndex(), selected);
     try {
+      String username = tfUsername.getText();
+      String accountNumber = tfAccountNumber.getText();
+
+      if (username.equals("") || accountNumber.equals(""))
+        throw new NumberFormatException("Kontonummer und Benutzername dürfen nicht leer sein!");
+
+      if (username.length() > 15 || accountNumber.length() > 15)
+        throw new NumberFormatException("Kontonummer und Benutzername dürfen nicht länger als 15 Zeichen sein!");
+
+      double aBalance = Double.parseDouble(tfAvailableBalance.getText());
+      double tBalance = Double.parseDouble(tfTotalBalance.getText());
+
+      if (aBalance < 0 || tBalance < 0)
+        throw new NumberFormatException("Guthaben darf nicht negativ sein!");
+
+      if (aBalance > tBalance)
+        throw new NumberFormatException("Verfügbares Guthaben darf nicht größer als das gesamte Guthaben sein!");
+
+      selected.setAccountNumber(accountNumber);
+      selected.setUsername(username);
+      selected.setAvailableBalance(aBalance);
+      selected.setTotalBalance(tBalance);
+
+      accounts.set(list.getSelectedIndex(), selected);
       atm.getBankDatabase().saveAccountsToFile(accounts);
-      System.out.println("Accounts saved!");
-    } catch (IOException e) {
+
+      JOptionPane.showMessageDialog(this, "Account wurde erfolgreich gespeichert!");
+
+    } catch (NumberFormatException nfe) {
+      JOptionPane.showMessageDialog(this, "Ungültige Eingabe!\n" + nfe.getMessage(), "Fehler",
+          JOptionPane.ERROR_MESSAGE);
+
+    } catch (Exception e) {
+      JOptionPane.showMessageDialog(this, "Fehlgeschlagen!");
       e.printStackTrace();
     }
   }
