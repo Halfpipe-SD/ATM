@@ -4,10 +4,10 @@
 
 ### Priorisierung der nicht funktionalen Anforderungen
 
-- Gute Benutzerfreundlichkeit und Bedienbarkeit
-- Hohe Performance bei Operationen wie Guthaben abrufen, einzahlen und auszahlen
-- Kurze Start-Zeit (Account-Initialisierung)
+**Änderbarkeit** und **Wiederverwendbarkeit** waren uns besonders wichtig, da wir zu Beginn Schwierigkeiten hatten, uns einen Überblick über den bestehenden Code zu verschaffen. Aus diesem Grund entschieden wir uns, den Code noch einmal von Grund auf neu zu erstellen.
 
+Eine weitere nicht funktionale Anforderung ist die **Bedienbarkeit** oder **Benutzerfreundlichkeit** des Programms. Da diese Anwendung für eine sehr große Menge an Benutzern ausgelegt ist, wurde die Bedienbarkeit und Benutzerfreundlichkeit des Programms auf eine höhere Priorität gesetzt. So wird gewährleistet, dass Benutzer aller Altersgruppen gut mit der Anwendung interagieren können.
+  
 ### Architekturprinzipien
 
 > Nach welchen Kriterien soll das System in Komponenten unterteilt werden?
@@ -31,19 +31,23 @@ Die Komponente `Screen.java` gibt über das Interface `ATMListener.java` Events 
 
 ### Schnittstellen
 
+Hier werden alle Schnittstellen des Systems beschrieben.
+
 - UI mit den Java-Swing GUI Bibliotheken
 - `KeypadListener.java` für Kommunikationsschnittstelle zwischen dem Tastenfeld und dem Bildschirm Objekt
 - `ATMListener.java` ist die Schnittstelle zum Haupt-ATM-Objekt, in der Aktionen, wie ein Wechsel in einen anderen Modus oder das Betätigen der Enter-Taste behandelt werden
 
 ### Big Picture der Systemarchitektur
 
-Der Aufbau der Systemarchitektur ist weitestgehend modular gestaltet, gut geeignet für Tests und leicht erweiterbar.
+Der Aufbau der Systemarchitektur ist weitestgehend modular gestaltet und ist hier in einem Klassendiagramm dargestellt.
+
+TODO Klassendiagram
 
 ## Systementwurf
 
 ### Systemdekomposition
 
-Im Folgenden Abschnitt werden die einzelnen Komponenten des Systems und ihre Funktionen beschrieben.
+Im folgenden Abschnitt werden die einzelnen Komponenten des Systems und ihre Funktionen beschrieben.
 
 Das System lässt sich hauptsächlich durch die Bestandteile `Guthaben anzeigen`, `Geld abheben` und `Geld einzahlen` beschreiben. Zusätzlich gibt es ein `Menü` eine `Admin-Ansicht` und eine `Login`, sowie eine `Logout` Funktion.
 
