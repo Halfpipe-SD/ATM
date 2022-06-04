@@ -83,6 +83,7 @@ public class Screen extends JFrame implements KeypadListener {
   }
 
   public void showLogin() {
+    sidePanel.setTextField("");
     tfTop.setText("Bitte geben Sie ihre PIN ein: ");
     sidePanel.setLabelHTML("");
     sidePanel.setBackButtonVisible(false);

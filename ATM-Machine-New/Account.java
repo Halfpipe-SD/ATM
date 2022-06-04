@@ -77,4 +77,8 @@ public class Account {
   public void setTotalBalance(double totalBalance) {
     this.totalBalance = totalBalance;
   }
+
+  public void setPin(String pin) {
+    this.pin = pin;
+  }
 }

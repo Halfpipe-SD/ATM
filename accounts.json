@@ -30,5 +30,21 @@
     "availableBalance": 0.0,
     "totalBalance": 0.0,
     "isAdmin": true
+  },
+  {
+    "username": "Benutzer1",
+    "accountNumber": "6969",
+    "pin": "1234",
+    "availableBalance": 123.0,
+    "totalBalance": 123.0,
+    "isAdmin": false
+  },
+  {
+    "username": "Benutzer2",
+    "accountNumber": "1789",
+    "pin": "9999",
+    "availableBalance": 100.0,
+    "totalBalance": 1000.0,
+    "isAdmin": false
   }
 ]
