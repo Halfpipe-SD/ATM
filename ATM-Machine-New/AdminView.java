@@ -148,9 +148,9 @@ public class AdminView extends JFrame {
 
   private void btnCreateNew() {
     Account newAcc = new Account("Neuer Benutzer", "", "", 0, 0, false);
-
     accounts.add(newAcc);
     list.setModel(getDefaultListModelFromAccounts(accounts));
+    list.setSelectedIndex(accounts.size() - 1);
 
     updateRightPanelWithAccount(accounts.size() - 1);
   }
@@ -169,6 +169,9 @@ public class AdminView extends JFrame {
       if (username.length() > 15 || accountNumber.length() > 15)
         throw new NumberFormatException("Kontonummer und Benutzername dürfen nicht länger als 15 Zeichen sein!");
 
+      if (pin.length() < 4 || pin.length() > 4)
+        throw new NumberFormatException("Die Pin muss 4 Zeichen lang sein!");
+
       double aBalance = Double.parseDouble(tfAvailableBalance.getText());
       double tBalance = Double.parseDouble(tfTotalBalance.getText());
 
@@ -177,9 +180,6 @@ public class AdminView extends JFrame {
 
       if (aBalance > tBalance)
         throw new NumberFormatException("Verfügbares Guthaben darf nicht größer als das gesamte Guthaben sein!");
-
-      if (pin.length() < 4 || pin.length() > 4)
-        throw new NumberFormatException("Die Pin muss 4 Zeichen lang sein!");
 
       selected.setAccountNumber(accountNumber);
       selected.setUsername(username);
@@ -203,7 +203,7 @@ public class AdminView extends JFrame {
   }
 
   private void updateRightPanelWithAccount(int index) {
-    // Herausfiltern von ungültigen Index-Werten im Event
+    // Herausfiltern von ungültigen Index-Werten von den Listen-Events
     if (index < 0 || index >= accounts.size())
       return;
 
