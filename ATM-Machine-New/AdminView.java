@@ -170,8 +170,8 @@ public class AdminView extends JFrame {
       if (username.length() > 15 || accountNumber.length() > 15)
         throw new NumberFormatException("Kontonummer und Benutzername dürfen nicht länger als 15 Zeichen sein!");
 
-      if (pin.length() < 4 || pin.length() > 4)
-        throw new NumberFormatException("Die Pin muss 4 Zeichen lang sein!");
+      if (!pin.matches("\\d{4}"))
+        throw new NumberFormatException("Die Pin muss 4 Ziffern lang sein!");
 
       double aBalance = Double.parseDouble(tfAvailableBalance.getText());
       double tBalance = Double.parseDouble(tfTotalBalance.getText());
