@@ -114,7 +114,13 @@ public class AdminView extends JFrame {
     add(rightPanel, BorderLayout.EAST);
     add(bottomMenu, BorderLayout.SOUTH);
 
-    handleWindowEvents();
+    // Wechsle zurück in den CARD_REQ Modus, sobald die Admin-View geschlossen wird
+    addWindowListener(new WindowAdapter() {
+      @Override
+      public void windowClosing(WindowEvent e) {
+        atm.atmSwitchModeAction(ATM_Mode.CARD_REQ);
+      }
+    });
 
     setLocation(atm.getScreen().getLocation());
     setPreferredSize(new Dimension(width, height));
@@ -136,7 +142,7 @@ public class AdminView extends JFrame {
 
       try {
         atm.getBankDatabase().saveAccountsToFile(accounts);
-        updateRightPanelWithAccount(accounts.size() - 1);
+        list.setSelectedIndex(accounts.size() - 1);
 
         JOptionPane.showMessageDialog(this, "Account wurde gelöscht!");
 
@@ -150,10 +156,9 @@ public class AdminView extends JFrame {
   private void btnCreateNew() {
     Account newAcc = new Account("Neuer Benutzer", "", "", 0, 0, false);
     accounts.add(newAcc);
+
     list.setModel(getDefaultListModelFromAccounts(accounts));
     list.setSelectedIndex(accounts.size() - 1);
-
-    updateRightPanelWithAccount(accounts.size() - 1);
   }
 
   private void btnSave() {
@@ -222,15 +227,5 @@ public class AdminView extends JFrame {
       model.add(i, " " + a.get(i).getUsername());
     }
     return model;
-  }
-
-  private void handleWindowEvents() {
-    addWindowListener(new WindowAdapter() {
-
-      @Override
-      public void windowClosing(WindowEvent e) {
-        atm.atmSwitchModeAction(ATM_Mode.CARD_REQ);
-      }
-    });
   }
 }
