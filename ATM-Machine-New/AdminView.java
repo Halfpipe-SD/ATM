@@ -2,8 +2,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
@@ -225,35 +225,11 @@ public class AdminView extends JFrame {
   }
 
   private void handleWindowEvents() {
-    addWindowListener(new WindowListener() {
+    addWindowListener(new WindowAdapter() {
 
       @Override
       public void windowClosing(WindowEvent e) {
-        atm.atmSwitchModeAction(ATM_Mode.LOGIN);
-      }
-
-      @Override
-      public void windowOpened(WindowEvent e) {
-      }
-
-      @Override
-      public void windowClosed(WindowEvent e) {
-      }
-
-      @Override
-      public void windowIconified(WindowEvent e) {
-      }
-
-      @Override
-      public void windowDeiconified(WindowEvent e) {
-      }
-
-      @Override
-      public void windowActivated(WindowEvent e) {
-      }
-
-      @Override
-      public void windowDeactivated(WindowEvent e) {
+        atm.atmSwitchModeAction(ATM_Mode.CARD_REQ);
       }
     });
   }
