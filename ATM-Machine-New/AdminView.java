@@ -118,6 +118,7 @@ public class AdminView extends JFrame {
 
     setLocation(atm.getScreen().getLocation());
     setPreferredSize(new Dimension(width, height));
+    setResizable(false);
     pack();
     setVisible(true);
   }
