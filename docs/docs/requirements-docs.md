@@ -12,9 +12,12 @@ Um dem Bankunternehmen nun die Verwendung des Systems zu ermöglichen, muss das 
 
 Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeiten, dass dieser voll funktionsfähig ist und eine sichere Laufzeit gewährleistet werden kann. Zur Entwicklung der Software ist eine vollständig deutsche Dokumentation vorgesehen mit **Anforderungs**-, **Architektur**-, **Test**-, **Abnahme**-, **Benutzer**-, **Projekt**-, und **Codedokumentation**.
 
+
 ## Rollen und Personas
 
 ### Rollen
+
+Hier werden die Rollen beschrieben, denen ein Benutzer angehören kann.
 
 | Rollen        | Beschreibung                                                                                |
 | ------------- | ------------------------------------------------------------------------------------------- |
@@ -22,6 +25,9 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 | Administrator | Administratoren des Bankautomatensystems, die Verwaltungsrechte über alle Benutzer besitzen |
 
 ### Personas
+
+Personas veranschaulichen typische Vertreter Ihrer Zielgruppe.
+
 
 | Gertrude Gabel          | ![Gertrude](images/gertrude.png "Gertrude") |
 | ----------------------- | ------------------------------------------- |
@@ -83,6 +89,8 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 
 ## User Stories
 
+User Stories sind Wünsche an eine Software, die aus Sicht des Endbenutzers verfasst wurden.
+
 > Als **[Rolle]** möchte ich **[Ziel/Wunsch]**, um **[Nutzen]**
 
   1. Als **Benutzer** möchte ich **verschiedene Geldbeträge eingeben**, um diese abzuheben
@@ -98,6 +106,8 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 
 ## Aufgaben
 
+Auflistung aller Aufgaben dieses Projektes.
+
 - Anfertigen einer Ist-Dokumentation des Codes 
 - Funktionen aus User Stories implementieren
 - Codeverbesserungen in Delta-Dokumentation beschreiben
@@ -109,6 +119,8 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 - Anfertigen einer Projektdokumentation
 
 ## Begriffslexikon
+
+Hier werden alle fachspezifische Begriffe aufgelistet, die in diesem Projekt verwendet werden.
 
 | **Begriff**        | **Bedeutung**                     | **Beschreibung** |
 | ------------------ | --------------------------------- | ---------------- |
@@ -123,6 +135,8 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 
 ## Mengengerüst
 
+Das Mengengerüst beschreibt quantitativ die Komponenten eines Projektes.
+
 | **Bezeichnung**   | **Beschreibung**                      | **Menge** | **Einheit** |
 | ----------------- | ------------------------------------- | --------- | ----------- |
 | **Pin**           | Stellenanzahl der Pin                 | 4         | Stellen     |
@@ -133,5 +147,7 @@ Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeite
 | **Transaktion**   | Maximale Transaktion pro Minute       |           |             |
 
 ## Use Cases
+
+In diesem Anwendungsfalldiagramm wird das nach außen sichtbare Verhalten des Systems aus Sicht der Nutzer beschrieben.
 
 ![df](images/usecase.png)
