@@ -10,7 +10,7 @@ public class ATM implements ATMListener {
   private static ATM uniqueinstance;
   private boolean debugMode = false;
 
-  private final String pathToAccounts = "/accounts.json";
+  private final String pathToAccounts = "\\ATM-Machine-New\\Assets\\accounts.json";
   private final String title = "ATM Machine";
 
   // Komponenten der Hauptklasse
@@ -20,12 +20,15 @@ public class ATM implements ATMListener {
   private ATM_Mode currentMode = null;
 
   private ATM(boolean debug) throws FileNotFoundException, IOException {
-    // setze debug modus
     debugMode = debug;
-
-    // initialisiere Bildschirm und Bank-Datenbank
     screen = new Screen(this, title);
     bankDatabase = new BankDatabase(pathToAccounts);
+  }
+
+  public ATM(String pathToJSON) throws FileNotFoundException, IOException {
+    debugMode = true;
+    screen = new Screen(this, title);
+    bankDatabase = new BankDatabase(pathToJSON);
   }
 
   public static ATM getInstance(boolean debugMode) throws FileNotFoundException, IOException {
