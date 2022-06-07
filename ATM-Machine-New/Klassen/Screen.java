@@ -1,3 +1,5 @@
+package klassen;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -6,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import Interfaces.KeypadListener;
+import interfaces.KeypadListener;
 
 public class Screen extends JFrame implements KeypadListener {
 

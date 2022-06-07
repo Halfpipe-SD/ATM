@@ -1,3 +1,5 @@
+package klassen;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -16,8 +18,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 
-import Interfaces.ATMListener.ATM_Mode;
-import Utilities.SpringUtilities;
+import interfaces.ATMListener.ATM_Mode;
+import utilities.SpringUtilities;
 
 public class AdminView extends JFrame {
 

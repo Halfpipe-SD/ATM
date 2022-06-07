@@ -1,3 +1,4 @@
+package klassen;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -9,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import Interfaces.ATMListener.ATM_Mode;
+import interfaces.ATMListener.ATM_Mode;
 
 public class SidePanel extends JPanel {
 

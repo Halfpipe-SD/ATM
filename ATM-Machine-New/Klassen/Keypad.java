@@ -1,3 +1,5 @@
+package klassen;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -5,7 +7,7 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import Interfaces.KeypadListener;
+import interfaces.KeypadListener;
 
 public class Keypad extends JPanel {
 
