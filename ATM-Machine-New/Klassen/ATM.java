@@ -166,4 +166,8 @@ public class ATM implements ATMListener {
   public Screen getScreen() {
     return screen;
   }
+
+  public ATM_Mode getCurrentMode() {
+    return currentMode;
+  }
 }

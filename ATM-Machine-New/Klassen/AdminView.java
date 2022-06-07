@@ -131,7 +131,7 @@ public class AdminView extends JFrame {
     setVisible(true);
   }
 
-  private void btnDeleteAcc() {
+  public void btnDeleteAcc() {
     Account selectedAccount = accounts.get(list.getSelectedIndex());
 
     int reply = JOptionPane.showConfirmDialog(this,
@@ -155,7 +155,7 @@ public class AdminView extends JFrame {
     }
   }
 
-  private void btnCreateNew() {
+  public void btnCreateNew() {
     Account newAcc = new Account("Neuer Benutzer", "", "", 0, 0, false);
     accounts.add(newAcc);
 
@@ -163,7 +163,7 @@ public class AdminView extends JFrame {
     list.setSelectedIndex(accounts.size() - 1);
   }
 
-  private void btnSave() {
+  public void btnSave() {
     Account selected = accounts.get(list.getSelectedIndex());
 
     try {
@@ -210,7 +210,7 @@ public class AdminView extends JFrame {
     }
   }
 
-  private void updateRightPanelWithAccount(int index) {
+  public void updateRightPanelWithAccount(int index) {
     // Herausfiltern von ungültigen Index-Werten von den Listen-Events
     if (index < 0 || index >= accounts.size())
       return;
@@ -223,11 +223,15 @@ public class AdminView extends JFrame {
     tfPin.setText(acc.getPin());
   }
 
-  private DefaultListModel<String> getDefaultListModelFromAccounts(ArrayList<Account> a) {
+  public DefaultListModel<String> getDefaultListModelFromAccounts(ArrayList<Account> a) {
     DefaultListModel<String> model = new DefaultListModel<>();
     for (int i = 0; i < a.size(); i++) {
       model.add(i, " " + a.get(i).getUsername());
     }
     return model;
+  }
+
+  public ArrayList<Account> getAccounts() {
+    return accounts;
   }
 }
