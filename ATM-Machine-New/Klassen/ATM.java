@@ -1,16 +1,18 @@
+package klassen;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import Exceptions.InvalidModeException;
-import Exceptions.LoginFailedException;
-import Interfaces.ATMListener;
+import exceptions.InvalidModeException;
+import exceptions.LoginFailedException;
+import interfaces.ATMListener;
 
 public class ATM implements ATMListener {
 
   private static ATM uniqueinstance;
   private boolean debugMode = false;
 
-  private final String pathToAccounts = "\\ATM-Machine-New\\Assets\\accounts.json";
+  private final String pathToAccounts = "\\ATM-Machine-New\\assets\\accounts.json";
   private final String title = "ATM Machine";
 
   // Komponenten der Hauptklasse

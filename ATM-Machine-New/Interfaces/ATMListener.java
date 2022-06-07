@@ -1,6 +1,6 @@
-package Interfaces;
+package interfaces;
 
-import Exceptions.InvalidModeException;
+import exceptions.InvalidModeException;
 
 public interface ATMListener {
 
