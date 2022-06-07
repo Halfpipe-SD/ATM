@@ -69,7 +69,7 @@ public class SidePanel extends JPanel {
     tl.setText("<html>" + html + "</html>");
   }
 
-  public String getTextField() {
+  public String getTextFieldText() {
     return tf.getText();
   }
 

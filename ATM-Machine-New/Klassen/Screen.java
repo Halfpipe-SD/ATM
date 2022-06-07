@@ -59,7 +59,7 @@ public class Screen extends JFrame implements KeypadListener {
     if (value == "Clear")
       sidePanel.setTextField("");
     else if (value == "Enter")
-      atm.atmEnterAction(sidePanel.getTextField());
+      atm.atmEnterAction(sidePanel.getTextFieldText());
     else
       sidePanel.addTextFieldChar(value);
   }

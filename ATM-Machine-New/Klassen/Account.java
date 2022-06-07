@@ -32,6 +32,7 @@ public class Account {
   }
 
   public void credit(double amount) {
+    availableBalance += amount;
     totalBalance += amount;
   }
 
