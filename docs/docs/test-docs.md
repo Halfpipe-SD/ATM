@@ -10,6 +10,7 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | Vorbedingung  | ATM-Instanz wird erzeugt                                      |
 | Nachbedingung | Screen und bankDatabase des ATM sindinitialisiert             |
 | Testschritte  | Stelle sicher, dass Komponenten nicht null sind               |
+
 </br>
 
 | Name          | Wechsel in BALANCE Modus                                                    |
@@ -18,6 +19,7 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | Vorbedingung  | ATM-Instanz wird erzeugt</br>User loggt sich ein</br>Momentan im MENU Modus |
 | Nachbedingung | Guthaben wird angezeigt</br>ATM im BALANCE Modus                            |
 | Testschritte  | Funktion atm.atmEnterAction() wird mit Input "1" aufgerufen                 |
+
 </br>
 
 | Name          | Falscher Input in Menü                                                      |
@@ -26,6 +28,7 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | Vorbedingung  | ATM-Instanz wird erzeugt</br>User loggt sich ein</br>Momentan im MENU Modus |
 | Nachbedingung | ATM gibt Fehlermeldung, resettet das Textfeld und bleibt im selben Modus    |
 | Testschritte  | Funktion atm.atmEnterAction() wird mit falschem Input aufgerufen            |
+
 </br>
 
 | Name          | "Back" Button                                                                                                                                                          |
@@ -34,6 +37,7 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | Vorbedingung  | ATM-Instanz wird erzeugt</br>User loggt sich ein</br>Momentan im MENU Modus                                                                                            |
 | Nachbedingung | ATM befindet sich wieder im MENU Modus                                                                                                                                 |
 | Testschritte  | Wechsel in BALANCE Modus, Drücken auf "Back" Button</br>Wechsel in WITHDRAWAL Modus, Drücken auf "Back" Button</br>Wechsel in DEPOSIT Modus, Drücken auf "Back" Button |
+
 </br>
 
 | Name          | "Clear" Button                                                                |
@@ -42,6 +46,7 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | Vorbedingung  | ATM-Instanz wird erzeugt</br>User loggt sich ein</br>Momentan im MENU Modus   |
 | Nachbedingung | Das Textfeld ist leer                                                         |
 | Testschritte  | Beliebiger Input wird in Textfeld eingegeben</br>"Clear"-Button wird gedrückt |
+
 </br>
 
 | Name          | Ungültiger Pin Input                                                                                                                               |
@@ -50,6 +55,7 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | Vorbedingung  | ATM-Instanz wird erzeugt</br>Ein neuer Account wird erstellt                                                                                       |
 | Nachbedingung | ATM hat keinen Pin akzeptiert, da Pins aus 4 Ziffern bestehen müssen</br>ATM befindet sich noch im LOGIN Modus                                     |
 | Testschritte  | Anmeldungsversuche mit verschieden ungültigen Pins</br>Zuerst ein Pin mit Buchstaben, dann ein Pin mit 5 Ziffern und zuletzt ein Pin mit 3 Ziffern |
+
 </br>
 
 | Name          | Neuen Account erstellen                                                                                                                                                         |
@@ -58,6 +64,7 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | Vorbedingung  | ATM-Instanz wird erzeugt                                                                                                                                                        |
 | Nachbedingung | Neuer Account wurde angelegt</br>ATM im ADMIN Modus                                                                                                                             |
 | Testschritte  | Neuer Admin-Account wird erstellt und der Datenbank hinzugefügt</br>Der Admin loggt sich mit seiner Pin ein</br>Überprüfen, ob die Länge der Account Liste sich um 1 erhöht hat |
+
 </br>
 
 | Name          | Credit und Debit Funktion                                                                                                                                          |
@@ -66,4 +73,3 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | Vorbedingung  | ATM-Instanz wird erzeugt</br>Neuer Account "a1" wird angelegt                                                                                                      |
 | Nachbedingung | Guthaben ist gleich hoch wie vor der Durchführung des Tests                                                                                                        |
 | Testschritte  | a1.credit(5) wird aufgerufen</br>Überprüfen, ob sich Guthaben um 5 erhöht hat</br>a1.debit(5) wird aufgerufen</br>Überprüfen, ob sich Guthaben um 5 verringert hat |
-</br>
