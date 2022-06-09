@@ -12,7 +12,6 @@ Um dem Bankunternehmen nun die Verwendung des Systems zu ermöglichen, muss das 
 
 Die Aufgabe unseres Teams ist es den bereits vorhandenen Code so zu überarbeiten, dass dieser voll funktionsfähig ist und eine sichere Laufzeit gewährleistet werden kann. Zur Entwicklung der Software ist eine vollständig deutsche Dokumentation vorgesehen mit **Anforderungs**-, **Architektur**-, **Test**-, **Abnahme**-, **Benutzer**-, **Projekt**-, und **Codedokumentation**.
 
-
 ## Rollen und Personas
 
 ### Rollen
@@ -28,7 +27,6 @@ Hier werden die Rollen beschrieben, denen ein Benutzer angehören kann.
 
 Personas veranschaulichen typische Vertreter Ihrer Zielgruppe.
 
-
 | Gertrude Gabel          | ![Gertrude](images/gertrude.png "Gertrude") |
 | ----------------------- | ------------------------------------------- |
 | Rolle                   | Benutzer                                    |
@@ -42,7 +40,7 @@ Personas veranschaulichen typische Vertreter Ihrer Zielgruppe.
 | Einstellung zum Produkt | "Eine tolle Maschine, tut was sie soll"     |
 | Wünsche                 | Einfache Bedienung, wenig zum Merken        |
 
-<br>
+</br>
 
 | Peter Lustig            | ![Peter](images/peter.png "Peter")                  |
 | ----------------------- | --------------------------------------------------- |
@@ -57,7 +55,7 @@ Personas veranschaulichen typische Vertreter Ihrer Zielgruppe.
 | Einstellung zum Produkt | "Hoffentlich werden die neuen Geldautomaten besser" |
 | Wünsche                 | Nützliche Funktionen, Schnelle Bedienbarkeit        |
 
-<br>
+</br>
 
 | Andy Auman              | ![Andy](images/andy.png "Andy")               |
 | ----------------------- | --------------------------------------------- |
@@ -72,7 +70,7 @@ Personas veranschaulichen typische Vertreter Ihrer Zielgruppe.
 | Einstellung zum Produkt | ""                                            |
 | Wünsche                 | Viele Funktionen, Wenig Konfigurationsaufwand |
 
-<br>
+</br>
 
 | Mathias Jung            | ![Mathias](images/mathias.png "Mathias") |
 | ----------------------- | ---------------------------------------- |
@@ -108,7 +106,7 @@ User Stories sind Wünsche an eine Software, die aus Sicht des Endbenutzers verf
 
 Auflistung aller Aufgaben dieses Projektes.
 
-- Anfertigen einer Ist-Dokumentation des Codes 
+- Anfertigen einer Ist-Dokumentation des Codes
 - Funktionen aus User Stories implementieren
 - Codeverbesserungen in Delta-Dokumentation beschreiben
 - Anfertigen einer Anforderungsdokumentation

@@ -104,7 +104,6 @@ public class ATMComponentsTest {
        atm.getScreen().getSidePanel().setTextField("54325");
 
        atm.getScreen().buttonPressed("Clear");
-       System.out.println(atm.getScreen().getSidePanel().getTextFieldText() );
 
        assertTrue(atm.getScreen().getSidePanel().getTextFieldText().equals(""));
     }
