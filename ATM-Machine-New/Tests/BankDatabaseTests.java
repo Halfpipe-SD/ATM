@@ -33,7 +33,7 @@ public class BankDatabaseTests {
     atm = new ATM(pathToJSON);
     bankDatabase = atm.getBankDatabase();
     account = new Account(username, accountNumber, pin, availableBalance, totalBalance, isAdmin);
-    
+
     ArrayList<Account> accounts = bankDatabase.getAccounts();
     accounts.add(account);
     bankDatabase.saveAccountsToFile(accounts);
@@ -41,11 +41,15 @@ public class BankDatabaseTests {
     atm.start();
   }
 
-  @Test 
+  @Test
   public void loginAccount() throws LoginFailedException {
     Account a = bankDatabase.validateAccount(pin);
 
     assertEquals(a.getAccountNumber(), account.getAccountNumber());
+  }
+
+  @Test
+  public void negativeLoginAccount() {
     assertThrows(LoginFailedException.class, () -> {
       bankDatabase.validateAccount("wrongPin");
     });
@@ -57,8 +61,8 @@ public class BankDatabaseTests {
     });
   }
 
-  @Test 
-  public void findAccountByAccountNumber()  {
+  @Test
+  public void findAccountByAccountNumber() {
     Account a = bankDatabase.getAccountByAccountNumber(accountNumber);
 
     assertEquals(a.getAccountNumber(), account.getAccountNumber());
