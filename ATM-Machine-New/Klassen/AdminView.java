@@ -114,7 +114,7 @@ public class AdminView extends JFrame {
     bottomMenu.add(btnSave);
 
     add(tfTop, BorderLayout.NORTH);
-    add(BorderLayout.WEST, new JScrollPane(list, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER));
+    add(new JScrollPane(list, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.WEST);
     add(rightPanel, BorderLayout.EAST);
     add(bottomMenu, BorderLayout.SOUTH);
 
