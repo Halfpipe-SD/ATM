@@ -142,5 +142,5 @@ Logout
 
 
 ![InterkationsDiagramm](images/AdminView.png "InterkationsDiagramm") 
-![InterkationsDiagramm](images/BenutzerView.png "InterkationsDiagramm")") 
+![InterkationsDiagramm](images/BenutzerView.png "InterkationsDiagramm") 
 
