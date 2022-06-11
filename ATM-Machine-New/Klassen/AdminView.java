@@ -15,7 +15,9 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
 import javax.swing.SpringLayout;
 
 import interfaces.ATMListener.ATM_Mode;
@@ -30,8 +32,8 @@ public class AdminView extends JFrame {
 
   private final int width = 400;
   private final int height = 250;
-  private final int listWidth = 100;
-  private final int rightPanelWidth = 280;
+  private final int listWidth = 115;
+  private final int rightPanelWidth = 250;
 
   private JLabel lAccountNumber = new JLabel("Account-Nummer", JLabel.TRAILING);
   private JLabel lUsername = new JLabel("Benutzername", JLabel.TRAILING);
@@ -112,7 +114,7 @@ public class AdminView extends JFrame {
     bottomMenu.add(btnSave);
 
     add(tfTop, BorderLayout.NORTH);
-    add(list, BorderLayout.WEST);
+    add(BorderLayout.WEST, new JScrollPane(list, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER));
     add(rightPanel, BorderLayout.EAST);
     add(bottomMenu, BorderLayout.SOUTH);
 
