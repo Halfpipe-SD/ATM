@@ -124,7 +124,7 @@ public class Screen extends JFrame implements KeypadListener {
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>");
     sidePanel.setBackButtonVisible(true);
     sidePanel.setOkButtonVisible(false);
-    sidePanel.setTextFieldVisible(false);
+    sidePanel.setTextFieldVisible(true);
   }
 
   public void showDeposit() {
@@ -135,7 +135,7 @@ public class Screen extends JFrame implements KeypadListener {
         + atm.getCurrentAccount().getTotalBalance() + " €");
     sidePanel.setBackButtonVisible(true);
     sidePanel.setOkButtonVisible(false);
-    sidePanel.setTextFieldVisible(false);
+    sidePanel.setTextFieldVisible(true);
   }
 
   public SidePanel getSidePanel() {
