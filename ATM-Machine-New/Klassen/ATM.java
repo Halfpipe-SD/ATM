@@ -3,7 +3,10 @@ package klassen;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import javax.swing.JOptionPane;
+
 import exceptions.InvalidModeException;
+import exceptions.InvalidTransactionException;
 import exceptions.LoginFailedException;
 import interfaces.ATMListener;
 
@@ -12,30 +15,28 @@ public class ATM implements ATMListener {
   private static ATM uniqueinstance;
   private boolean debugMode = false;
 
-  private final String pathToAccounts = "\\ATM-Machine-New\\assets\\accounts.json";
+  private final static String pathToJSONDefault = "\\ATM-Machine-New\\assets\\accounts.json";
   private final String title = "ATM Machine";
 
   // Komponenten der Hauptklasse
-  private Screen screen = null;
-  private BankDatabase bankDatabase = null;
-  private Account currentAccount = null;
-  private ATM_Mode currentMode = null;
+  private Screen screen;
+  private BankDatabase bankDatabase;
+  private Account currentAccount;
+  private ATM_Mode currentMode;
 
-  private ATM(boolean debug) throws FileNotFoundException, IOException {
+  public ATM(boolean debug, String pathToJSON) throws FileNotFoundException, IOException {
     debugMode = debug;
     screen = new Screen(this, title);
-    bankDatabase = new BankDatabase(pathToAccounts);
+    bankDatabase = new BankDatabase(debug, pathToJSON);
   }
 
-  public ATM(String pathToJSON) throws FileNotFoundException, IOException {
-    debugMode = true;
-    screen = new Screen(this, title);
-    bankDatabase = new BankDatabase(pathToJSON);
-  }
+  public static ATM getInstance(boolean debugMode, String pathToJSON) throws FileNotFoundException, IOException {
+    if (pathToJSON == null)
+      pathToJSON = pathToJSONDefault;
 
-  public static ATM getInstance(boolean debugMode) throws FileNotFoundException, IOException {
     if (uniqueinstance == null)
-      uniqueinstance = new ATM(debugMode);
+      uniqueinstance = new ATM(debugMode, pathToJSON);
+
     return uniqueinstance;
   }
 
@@ -49,15 +50,13 @@ public class ATM implements ATMListener {
     if (debugMode)
       System.out.println("Enter action in mode: " + currentMode + " with input: " + input);
 
-    // Lösche Eingabe im Textfeld und lösche Fehlermeldung
-    screen.getSidePanel().setTextField("");
-    screen.clearErrorMessage();
+    // Lösche Eingabe im Textfeld
+    screen.getSidePanel().setTfPin("");
 
     try {
       switch (currentMode) {
         case LOGIN:
           currentAccount = bankDatabase.validateAccount(input);
-          // wechsle in den admin modus, wenn der account ein Administrator ist
           if (currentAccount.getAdmin())
             this.atmSwitchModeAction(ATM_Mode.ADMIN);
           else
@@ -67,57 +66,41 @@ public class ATM implements ATMListener {
           this.atmSwitchModeAction(this.getModeFromString(input));
           break;
         case BALANCE:
-          break;
+          throw new InvalidModeException("Operation im Modus BALANCE nicht erlaubt!");
         case WITHDRAWAL:
-          this.withdrawMoney(input);
+          int replyWithdrawal = JOptionPane.showConfirmDialog(null,
+              "Wollen Sie " + input + "€ von Ihrem Konto abbuchen?",
+              "Geld auszahlen", JOptionPane.YES_NO_OPTION);
+          if (replyWithdrawal == JOptionPane.YES_OPTION)
+            this.withdrawTransaction(input);
           break;
         case DEPOSIT:
-          this.depositMoney(input);
+          int replyDeposit = JOptionPane.showConfirmDialog(null,
+              "Wollen Sie " + input + "€ auf Ihr Konto einzahlen?",
+              "Geld einzahlen", JOptionPane.YES_NO_OPTION);
+          if (replyDeposit == JOptionPane.YES_OPTION)
+            this.depositTransaction(input);
           break;
         case ADMIN:
-          screen.setErrorMessage("Die Admin-Ansicht muss zuerst geschlossen werden!");
-          break;
-        case CARD_REQ: // do nothing
+          throw new InvalidModeException("Die Admin-Ansicht muss zuerst geschlossen werden!");
+        case CARD_REQ:
+          this.atmSwitchModeAction(ATM_Mode.LOGIN);
           break;
       }
-    } catch (LoginFailedException e) {
-      screen.setErrorMessage(e.getMessage());
+    } catch (NumberFormatException nfe) {
+      JOptionPane.showMessageDialog(null, nfe.getMessage(), "Formatierungsfehler", JOptionPane.ERROR_MESSAGE);
 
-    } catch (InvalidModeException e) {
-      screen.setErrorMessage(e.getMessage());
-    }
-  }
+    } catch (InvalidTransactionException ite) {
+      JOptionPane.showMessageDialog(null, ite.getMessage(), "Transaktionsfehler", JOptionPane.ERROR_MESSAGE);
 
-  // Prototypen für withdraw und deposit Funktion. Bis jetzt kann man jeden Betrag
-  // auswählen (nicht nur Scheine)
-  public void withdrawMoney(String input) {
-    int withdrawAmount = Integer.parseInt(input);
+    } catch (LoginFailedException lfe) {
+      JOptionPane.showMessageDialog(null, lfe.getMessage(), "Anmeldefehler", JOptionPane.ERROR_MESSAGE);
 
-    if (withdrawAmount > 1000) {
-      screen.setErrorMessage("Sie können nicht mehr als 1000€ auf einmal abheben.");
-    } else if (withdrawAmount > getCurrentAccount().getAvailableBalance()) {
-      screen.setErrorMessage("Ihr aktueller Kontostand ist zu niedrig um " + withdrawAmount + "€ abzuheben.");
-    } else {
-      getCurrentAccount().debit(withdrawAmount);
-      screen.getSidePanel().setLabelHTML("<br>"
-          + "Verfügbares Guthaben: <br>"
-          + getCurrentAccount().getAvailableBalance() + " €<br><br>");
-      screen.setText("Sie haben " + withdrawAmount + "€ abgehoben.");
-    }
-  }
+    } catch (InvalidModeException ime) {
+      JOptionPane.showMessageDialog(null, ime.getMessage(), "Modusfehler", JOptionPane.ERROR_MESSAGE);
 
-  public void depositMoney(String input) {
-    int depositAmount = Integer.parseInt(input);
-
-    if (depositAmount > 5000) {
-      screen.setErrorMessage("Sie können nicht mehr als 5000€ auf einmal einzahlen.");
-    } else if (depositAmount > 0) {
-      getCurrentAccount().credit(depositAmount);
-      screen.getSidePanel().setLabelHTML("Verfügbares Guthaben: <br>"
-          + getCurrentAccount().getAvailableBalance() + " €<br><br>"
-          + "Gesamtes Guthaben: <br>"
-          + getCurrentAccount().getTotalBalance() + " €");
-      screen.setText("Sie haben " + depositAmount + "€ eingezahlt.");
+    } catch (IOException ioe) {
+      JOptionPane.showMessageDialog(null, ioe.getMessage(), "Speichern fehlgeschlagen", JOptionPane.ERROR_MESSAGE);
     }
   }
 
@@ -153,6 +136,22 @@ public class ATM implements ATMListener {
         new AdminView(this, "Admin-Ansicht");
         break;
     }
+  }
+
+  public void withdrawTransaction(String input) throws NumberFormatException, InvalidTransactionException, IOException {
+    bankDatabase.debitAccount(currentAccount, Double.parseDouble(input));
+    this.atmSwitchModeAction(ATM_Mode.MENU);
+    JOptionPane.showMessageDialog(null, "Erfolgreich " + input + "€ abgehoben!", "Transaktion erfolgreich",
+        JOptionPane.INFORMATION_MESSAGE);
+
+  }
+
+  public void depositTransaction(String input) throws NumberFormatException, InvalidTransactionException, IOException {
+    bankDatabase.creditAccount(currentAccount, Double.parseDouble(input));
+    this.atmSwitchModeAction(ATM_Mode.MENU);
+    JOptionPane.showMessageDialog(null, "Erfolgreich " + input + "€ eingezahlt!", "Transaktion erfolgreich",
+        JOptionPane.INFORMATION_MESSAGE);
+
   }
 
   public Account getCurrentAccount() {

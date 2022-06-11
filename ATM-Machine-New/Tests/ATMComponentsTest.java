@@ -24,18 +24,17 @@ public class ATMComponentsTest {
         atm.atmSwitchModeAction(ATM_Mode.LOGIN);
         atm.atmEnterAction("1111");
     }
-    
+
     @Test
     public void checkComponents() {
         assertTrue(atm.getScreen() != null);
         assertTrue(bankDatabase != null);
     }
-    
+
     @Test
     public void checkLogin() {
         assertTrue(atm.getCurrentAccount() == bankDatabase.getAccounts().get(0));
     }
-
 
     @Test
     public void checkShowBalance() {
@@ -69,17 +68,17 @@ public class ATMComponentsTest {
     public void checkFalseInput() {
         atm.atmEnterAction("65343743");
 
-        assertThrows(InvalidModeException.class, () ->{
+        assertThrows(InvalidModeException.class, () -> {
             atm.getModeFromString("0");
         });
-        assertThrows(InvalidModeException.class, () ->{
+        assertThrows(InvalidModeException.class, () -> {
             atm.getModeFromString("komplett falscher Input!");
         });
 
         // check if still in same mode
         assertTrue(atm.getCurrentMode() == ATM_Mode.MENU);
     }
-    
+
     @Test
     public void checkBackToMenuButton() {
         atm.atmEnterAction("1");
@@ -94,17 +93,15 @@ public class ATMComponentsTest {
         // simulate "back-button" press
         atm.atmSwitchModeAction(ATM_Mode.MENU);
 
-
-
         assertTrue(atm.getCurrentMode() == ATM_Mode.MENU);
     }
 
     @Test
     public void checkClearButton() {
-       atm.getScreen().getSidePanel().setTextField("54325");
+        atm.getScreen().getSidePanel().setTfPin("54325");
 
-       atm.getScreen().buttonPressed("Clear");
+        atm.getScreen().buttonPressed("Clear");
 
-       assertTrue(atm.getScreen().getSidePanel().getTextFieldText().equals(""));
+        assertTrue(atm.getScreen().getSidePanel().getTextFieldText().equals(""));
     }
 }
