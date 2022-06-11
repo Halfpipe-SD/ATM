@@ -110,7 +110,7 @@ public class ATM implements ATMListener {
     int depositAmount = Integer.parseInt(input);
 
     if (depositAmount > 5000) {
-      screen.setErrorMessage("Sie können nicht mehr als 5000€ auf einmal abheben.");
+      screen.setErrorMessage("Sie können nicht mehr als 5000€ auf einmal einzahlen.");
     } else if (depositAmount > 0) {
       getCurrentAccount().credit(depositAmount);
       screen.getSidePanel().setLabelHTML("Verfügbares Guthaben: <br>"
