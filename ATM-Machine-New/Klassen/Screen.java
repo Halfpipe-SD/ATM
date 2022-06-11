@@ -96,7 +96,7 @@ public class Screen extends JFrame implements KeypadListener {
   public void showMenu() {
     tfTop.setText("Willkommen am ATM, " + atm.getCurrentAccount().getUsername() + "!");
     sidePanel.setLabelHTML("Bitte wähle eine Option: <br>"
-        + "1 - Guthaben anzeigen<br>"
+        + "1 - Kontostand anzeigen<br>"
         + "2 - Geld abheben<br>"
         + "3 - Geld einzahlen<br>"
         + "4 - Abbrechen");
@@ -106,7 +106,7 @@ public class Screen extends JFrame implements KeypadListener {
   }
 
   public void showBalance() {
-    tfTop.setText("Guthaben von " + atm.getCurrentAccount().getUsername());
+    tfTop.setText("Kontostand von " + atm.getCurrentAccount().getUsername());
     sidePanel.setLabelHTML("<br>"
         + "Verfügbares Guthaben: <br>"
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
