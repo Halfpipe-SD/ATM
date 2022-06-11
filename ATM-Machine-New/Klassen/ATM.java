@@ -93,16 +93,16 @@ public class ATM implements ATMListener {
   public void withdrawMoney(String input) {
     int withdrawAmount = Integer.parseInt(input);
 
-    if (withdrawAmount > getCurrentAccount().getAvailableBalance()) {
-      screen.setErrorMessage("You don't have sufficient funds to withdraw " + input + "€.");
-    } else if (withdrawAmount > 1000) {
-      screen.setErrorMessage("You can't withdraw more than 1000€ at once.");
+    if (withdrawAmount > 1000) {
+      screen.setErrorMessage("Sie können nicht mehr als 1000€ auf einmal abheben.");
+    } else if (withdrawAmount > getCurrentAccount().getAvailableBalance()) {
+      screen.setErrorMessage("Ihr aktueller Kontostand ist zu niedrig um " + withdrawAmount + "€ abzuheben.");
     } else {
       getCurrentAccount().debit(withdrawAmount);
       screen.getSidePanel().setLabelHTML("<br>"
-          + "Available Balance is: <br>"
+          + "Verfügbares Guthaben: <br>"
           + getCurrentAccount().getAvailableBalance() + " €<br><br>");
-      screen.setText("You withdrew " + withdrawAmount + "€.");
+      screen.setText("Sie haben " + withdrawAmount + "€ abgehoben.");
     }
   }
 
@@ -110,14 +110,14 @@ public class ATM implements ATMListener {
     int depositAmount = Integer.parseInt(input);
 
     if (depositAmount > 5000) {
-      screen.setErrorMessage("You can't deposit more than 5000€ at once.");
+      screen.setErrorMessage("Sie können nicht mehr als 5000€ auf einmal abheben.");
     } else if (depositAmount > 0) {
       getCurrentAccount().credit(depositAmount);
-      screen.getSidePanel().setLabelHTML("Available Balance is: <br>"
+      screen.getSidePanel().setLabelHTML("Verfügbares Guthaben: <br>"
           + getCurrentAccount().getAvailableBalance() + " €<br><br>"
-          + "Total Balance: <br>"
+          + "Gesamtes Guthaben: <br>"
           + getCurrentAccount().getTotalBalance() + " €");
-      screen.setText("You deposited " + depositAmount + "€.");
+      screen.setText("Sie haben " + depositAmount + "€ eingezahlt.");
     }
   }
 
