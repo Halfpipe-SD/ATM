@@ -9,19 +9,19 @@ public class Main {
 
     // create new atm instance and start it
     try {
-      ATM atm = ATM.getInstance(true);
+      ATM atm = ATM.getInstance(true, null);
       atm.start();
 
     } catch (FileNotFoundException fnfe) {
-      System.out.println("File was not found!");
+      System.out.println("Datei wurde nicht gefunden!");
       System.exit(1);
 
     } catch (IOException ioe) {
-      System.out.println("IOException when reading accounts json!");
+      System.out.println("Fehler beim Lesen einer Datei!");
       System.exit(1);
 
     } catch (Exception e) {
-      System.out.println("Exception when starting ATM!");
+      System.out.println("Fehler: " + e.getMessage());
       e.printStackTrace();
     }
   }

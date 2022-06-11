@@ -1,7 +1,6 @@
 package klassen;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.JFrame;
@@ -16,8 +15,6 @@ public class Screen extends JFrame implements KeypadListener {
   private SidePanel sidePanel;
 
   private JTextField tfTop = new JTextField(20);
-  private JTextField tfBottom = new JTextField(20);
-
   private final Font tfFont = new Font("", Font.PLAIN, 12);
 
   private ATM atm;
@@ -40,16 +37,11 @@ public class Screen extends JFrame implements KeypadListener {
     tfTop.setHorizontalAlignment(JLabel.CENTER);
     tfTop.setFont(tfFont);
     tfTop.setEditable(false);
-    tfBottom.setHorizontalAlignment(JLabel.CENTER);
-    tfBottom.setFont(tfFont);
-    tfBottom.setEditable(false);
-    tfBottom.setForeground(Color.RED);
 
     // Hinzufügen der UI-Komponenten
     add(tfTop, BorderLayout.NORTH);
     add(keypad, BorderLayout.CENTER);
     add(sidePanel, BorderLayout.LINE_END);
-    add(tfBottom, BorderLayout.SOUTH);
     pack();
     setVisible(true);
   }
@@ -57,7 +49,7 @@ public class Screen extends JFrame implements KeypadListener {
   @Override
   public void buttonPressed(String value) {
     if (value == "Clear")
-      sidePanel.setTextField("");
+      sidePanel.setTfPin("");
     else if (value == "Enter")
       atm.atmEnterAction(sidePanel.getTextFieldText());
     else
@@ -68,29 +60,16 @@ public class Screen extends JFrame implements KeypadListener {
     setTitle(baseTitle + " - " + title);
   }
 
-  public void setErrorMessage(String message) {
-    tfBottom.setText(message);
-  }
-
-  public void clearErrorMessage() {
-    tfBottom.setText("");
-  }
-
   public void showCardPrompt() {
     tfTop.setText("Bitte Karte einführen");
     sidePanel.setLabelHTML("<br><br><br>Bite Bankkarte einführen<br><br>");
-    sidePanel.setBackButtonVisible(false);
-    sidePanel.setOkButtonVisible(true);
-    sidePanel.setTextFieldVisible(false);
+    sidePanel.setModeCardPrompt();
   }
 
   public void showLogin() {
-    sidePanel.setTextField("");
     tfTop.setText("Bitte geben Sie ihre PIN ein: ");
     sidePanel.setLabelHTML("");
-    sidePanel.setBackButtonVisible(false);
-    sidePanel.setOkButtonVisible(false);
-    sidePanel.setTextFieldVisible(true);
+    sidePanel.setModeLogin();
   }
 
   public void showMenu() {
@@ -100,9 +79,7 @@ public class Screen extends JFrame implements KeypadListener {
         + "2 - Geld abheben<br>"
         + "3 - Geld einzahlen<br>"
         + "4 - Abbrechen");
-    sidePanel.setBackButtonVisible(false);
-    sidePanel.setOkButtonVisible(false);
-    sidePanel.setTextFieldVisible(true);
+    sidePanel.setModeMenu();
   }
 
   public void showBalance() {
@@ -112,9 +89,7 @@ public class Screen extends JFrame implements KeypadListener {
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
         + "Gesamtes Guthaben: <br>"
         + atm.getCurrentAccount().getTotalBalance() + " €");
-    sidePanel.setBackButtonVisible(true);
-    sidePanel.setOkButtonVisible(false);
-    sidePanel.setTextFieldVisible(false);
+    sidePanel.setModeBalance();
   }
 
   public void showWithdrawal() {
@@ -122,20 +97,16 @@ public class Screen extends JFrame implements KeypadListener {
     sidePanel.setLabelHTML("<br>"
         + "Verfügbares Guthaben: <br>"
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>");
-    sidePanel.setBackButtonVisible(true);
-    sidePanel.setOkButtonVisible(false);
-    sidePanel.setTextFieldVisible(true);
+    sidePanel.setModeWithdrawal();
   }
 
   public void showDeposit() {
     tfTop.setText("Bitte wählen sie einen Betrag zum Einzahlen.");
     sidePanel.setLabelHTML("Verfügbares Guthaben: <br>"
-        + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
+        + atm.getCurrentAccount().getAvailableBalance() + " €<br>"
         + "Gesamtes Guthaben: <br>"
         + atm.getCurrentAccount().getTotalBalance() + " €");
-    sidePanel.setBackButtonVisible(true);
-    sidePanel.setOkButtonVisible(false);
-    sidePanel.setTextFieldVisible(true);
+    sidePanel.setModeDeposit();
   }
 
   public SidePanel getSidePanel() {
@@ -144,9 +115,5 @@ public class Screen extends JFrame implements KeypadListener {
 
   public String getText() {
     return tfTop.getText();
-  }
-
-  public void setText(String text) {
-    tfTop.setText(text);
   }
 }

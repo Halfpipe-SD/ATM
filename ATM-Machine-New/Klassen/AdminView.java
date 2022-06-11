@@ -114,7 +114,8 @@ public class AdminView extends JFrame {
     bottomMenu.add(btnSave);
 
     add(tfTop, BorderLayout.NORTH);
-    add(new JScrollPane(list, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.WEST);
+    add(new JScrollPane(list, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+        ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER), BorderLayout.WEST);
     add(rightPanel, BorderLayout.EAST);
     add(bottomMenu, BorderLayout.SOUTH);
 
@@ -198,7 +199,7 @@ public class AdminView extends JFrame {
       selected.setPin(pin);
 
       accounts.set(list.getSelectedIndex(), selected);
-      atm.getBankDatabase().saveAccountsToFile(accounts);
+      atm.getBankDatabase().saveAccount(selected);
 
       JOptionPane.showMessageDialog(this, "Account wurde erfolgreich gespeichert!");
 
@@ -207,7 +208,7 @@ public class AdminView extends JFrame {
           JOptionPane.ERROR_MESSAGE);
 
     } catch (Exception e) {
-      JOptionPane.showMessageDialog(this, "Speichern Fehlgeschlagen!");
+      JOptionPane.showMessageDialog(null, e.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
       e.printStackTrace();
     }
   }

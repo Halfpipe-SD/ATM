@@ -27,7 +27,7 @@ public class AccountTests {
   @Before
   public void setUp() throws FileNotFoundException, IOException {
 
-    atm = new ATM(pathToJSON);
+    atm = new ATM(true, pathToJSON);
     a1 = new Account(username, accountNumber, pin, availableBalance, totalBalance, isAdmin);
 
     atm.start();
@@ -38,13 +38,13 @@ public class AccountTests {
     assertTrue(a1.validatePIN(pin));
   }
 
-  @Test 
+  @Test
   public void checkCredit() {
     a1.credit(5);
     assertTrue(a1.getTotalBalance() == totalBalance + 5);
   }
 
-  @Test 
+  @Test
   public void checkDebit() {
     a1.debit(5);
     assertTrue(a1.getAvailableBalance() == availableBalance - 5);

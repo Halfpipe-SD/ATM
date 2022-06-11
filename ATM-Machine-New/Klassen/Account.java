@@ -31,16 +31,6 @@ public class Account {
       return false;
   }
 
-  public void credit(double amount) {
-    availableBalance += amount;
-    totalBalance += amount;
-  }
-
-  public void debit(double amount) {
-    availableBalance = availableBalance - amount;
-    totalBalance = totalBalance - amount;
-  }
-
   public double getAvailableBalance() {
     return roundToTwoDecimals(availableBalance);
   }
