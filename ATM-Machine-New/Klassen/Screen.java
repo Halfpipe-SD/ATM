@@ -118,7 +118,7 @@ public class Screen extends JFrame implements KeypadListener {
   }
 
   public void showWithdrawal() {
-    tfTop.setText("Choose an amount to withdraw.");
+    tfTop.setText("Bitte wählen Sie einen Betrag zum Abheben.");
     sidePanel.setLabelHTML("<br>"
         + "Verfügbares Guthaben: <br>"
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>");
@@ -128,7 +128,7 @@ public class Screen extends JFrame implements KeypadListener {
   }
 
   public void showDeposit() {
-    tfTop.setText("Choose an amount to deposit.");
+    tfTop.setText("Bitte wählen sie einen Betrag zum Einzahlen.");
     sidePanel.setLabelHTML("Verfügbares Guthaben: <br>"
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
         + "Gesamtes Guthaben: <br>"
