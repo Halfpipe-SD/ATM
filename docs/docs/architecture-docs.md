@@ -140,7 +140,9 @@ Logout
 
 
 
-
+Adminansicht:
 ![InterkationsDiagramm](images/AdminView.png "InterkationsDiagramm") 
+
+Benutzeransicht:
 ![InterkationsDiagramm](images/BenutzerView.png "InterkationsDiagramm") 
 
