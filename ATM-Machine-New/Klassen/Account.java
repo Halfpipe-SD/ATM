@@ -25,7 +25,7 @@ public class Account {
   }
 
   public boolean validatePIN(String userPIN) {
-    if (userPIN == pin)
+    if (pin.equals(userPIN))
       return true;
     else
       return false;
@@ -73,5 +73,14 @@ public class Account {
 
   public void setPin(String pin) {
     this.pin = pin;
+  }
+
+  public void printInfo() {
+    System.out.println("Username: " + username);
+    System.out.println("Account Number: " + accountNumber);
+    System.out.println("PIN: " + pin);
+    System.out.println("Available Balance: " + availableBalance);
+    System.out.println("Total Balance: " + totalBalance);
+    System.out.println("Admin: " + isAdmin);
   }
 }
