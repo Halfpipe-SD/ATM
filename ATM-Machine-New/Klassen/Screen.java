@@ -9,6 +9,12 @@ import javax.swing.JTextField;
 
 import interfaces.KeypadListener;
 
+/**
+ * Bildet die Präsentationsebene des ATM.
+ * Besitzt das Keypad und das Sidepanel.
+ * 
+ * @author Die Panzerknacker
+ */
 public class Screen extends JFrame implements KeypadListener {
 
   private Keypad keypad;
@@ -20,6 +26,14 @@ public class Screen extends JFrame implements KeypadListener {
   private ATM atm;
   private String baseTitle;
 
+  /**
+   * Initalisiert den Screen.
+   * Das Sidepanel und das Keypad bekommen eine bestimmte Größe und
+   * werden dem Frame hinzugefügt.
+   * 
+   * @param atm       Instanz der ATM Klasse.
+   * @param baseTitle String, der den Titel des JFrames bestimmt.
+   */
   public Screen(ATM atm, String baseTitle) {
     super(baseTitle);
     this.baseTitle = baseTitle;
@@ -46,6 +60,15 @@ public class Screen extends JFrame implements KeypadListener {
     setVisible(true);
   }
 
+  /**
+   * Implementierung der Methode aus dem KeypadListener Interface.
+   * Bei Druck auf den Clear-Knopf wird das Textfeld geleert.
+   * Bei Druck auf den Enter-Knopf wird die Funktion atmEnterAction() mit dem
+   * Input aufgerufen.
+   * Ansonsten wird der Wert des jeweiligen Knopfes dem Textfeld hinzugefügt.
+   * 
+   * @param value Wert des Knopfes der gedrückt wurde.
+   */
   @Override
   public void buttonPressed(String value) {
     if (value == "Clear")
@@ -56,16 +79,27 @@ public class Screen extends JFrame implements KeypadListener {
       sidePanel.addTextFieldChar(value);
   }
 
+  /**
+   * Fügt dem Titel des JFrames einen Zusatztitel hinzu.
+   * 
+   * @param title String, welcher als Titel für das JFrame genutzt wird.
+   */
   public void setAdditionalTitle(String title) {
     setTitle(baseTitle + " - " + title);
   }
 
+  /**
+   * Zeigt das Interface für den Karte einstecken Modus.
+   */
   public void showCardPrompt() {
     tfTop.setText("Bitte Karte einführen");
-    sidePanel.setLabelHTML("<br><br><br>Bite Bankkarte einführen<br><br>");
+    sidePanel.setLabelHTML("<br><br><br>Bitte Karte einführen<br><br>");
     sidePanel.setElementsVisible(false, false, true);
   }
 
+  /**
+   * Zeigt das Interface für den Login-Modus.
+   */
   public void showLogin() {
     tfTop.setText("Bitte geben Sie ihre PIN ein: ");
     sidePanel.setLabelHTML("");
@@ -73,6 +107,9 @@ public class Screen extends JFrame implements KeypadListener {
     sidePanel.setElementsVisible(true, false, false);
   }
 
+  /**
+   * Zeigt das Interface für den Menü-Modus.
+   */
   public void showMenu() {
     tfTop.setText("Willkommen am ATM, " + atm.getCurrentAccount().getUsername() + "!");
     sidePanel.setLabelHTML("Bitte wähle eine Option: <br>"
@@ -83,6 +120,9 @@ public class Screen extends JFrame implements KeypadListener {
     sidePanel.setElementsVisible(true, false, false);
   }
 
+  /**
+   * Zeigt das Interface für Guthaben anzeigen Modus.
+   */
   public void showBalance() {
     tfTop.setText("Kontostand von " + atm.getCurrentAccount().getUsername());
     sidePanel.setLabelHTML("Verfügbares Guthaben: <br>"
@@ -92,6 +132,9 @@ public class Screen extends JFrame implements KeypadListener {
     sidePanel.setElementsVisible(true, true, false);
   }
 
+  /**
+   * Zeigt das Interface für den Geld abheben Modus.
+   */
   public void showWithdrawal() {
     tfTop.setText("Bitte wählen Sie einen Betrag zum Abheben.");
     sidePanel.setLabelHTML("<br>"
@@ -100,6 +143,9 @@ public class Screen extends JFrame implements KeypadListener {
     sidePanel.setElementsVisible(true, true, false);
   }
 
+  /**
+   * Zeigt das Interface für den Geld einzahlen Modus.
+   */
   public void showDeposit() {
     tfTop.setText("Bitte wählen sie einen Betrag zum Einzahlen.");
     sidePanel.setLabelHTML("Verfügbares Guthaben: <br>"
