@@ -3,11 +3,19 @@ package klassen;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * Beinhaltet die main-Methode und startet den ATM.
+ */
 public class Main {
 
+  /**
+   * Versucht ein atm-Objekt zu initialisieren und zu starten.
+   * Fängt verschiedene Exceptions ab.
+   * 
+   * @param args
+   */
   public static void main(String[] args) {
 
-    // create new atm instance and start it
     try {
       ATM atm = ATM.getInstance(true, null);
       atm.start();
