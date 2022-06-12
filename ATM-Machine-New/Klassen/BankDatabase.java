@@ -119,7 +119,7 @@ public class BankDatabase {
         found = acc;
     }
     if (found == null)
-      throw new LoginFailedException("Account wurde nicht gefunden!");
+      throw new LoginFailedException("Fehlerhafte PIN!");
 
     return found;
   }
