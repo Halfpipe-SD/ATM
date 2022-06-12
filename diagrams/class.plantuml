@@ -9,11 +9,11 @@ class Main {
 class ATM implements ATMListener
 class BankDatabase
 class Account 
-class Keypad extends JPanel
+class Keypad 
 class CashDispenser
-class Screen extends JFrame implements KeypadListener
-class SidePanel extends JPanel
-class AdminView extends JFrame
+class Screen implements KeypadListener
+class SidePanel 
+class AdminView 
 
 Main --> ATM
 ATM o-- BankDatabase
