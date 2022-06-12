@@ -5,7 +5,7 @@ package exceptions;
  * sind oder wenn der betragt der ausgezahlt werden soll größer ist als der
  * verfügbare Betrag ist.
  * 
- * @author Die Panzerkanaker
+ * @author Die Panzerknacker
  */
 public class InvalidTransactionException extends Exception {
 
