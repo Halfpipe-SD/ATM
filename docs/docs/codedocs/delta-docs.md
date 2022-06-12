@@ -1,15 +1,5 @@
 # Delta-Dokumentation
 
-## Verbesserungsvorschläge
-
-- 4-stellige PIN
-- "Exit" schließt das Programm
-- Verbesserung des Event-Handlings mit Actionlisteners
-- Verbesserung der Klassenstruktur (weniger Klassen?)
-- Verbesserung des UI-Handlings mit JFrame und JPanel
-- Verbesserung der CashDispenser-Funktion
-- Bankautomat in Deutsch
-
 ## Durchgeführte Veränderungen
 
 - Änderung der PIN auf 4 Stellen
@@ -23,3 +13,10 @@
 - Die Sprache des Programms wurde auf Deutsch umgesetzt
 - Verbessertes Error-Handling 
 - Accounts werden mit einer .json Datei gelesen und gespeichert
+- Geld wird in Scheinen aus dem Vorrat im Cash Dispenser ausgegeben
+    - Es werden die höchstmöglichen Scheine gewählt
+
+## Verbesserungsvorschläge
+
+- Anbindung des Programms an eine Datenbank
+- Besserer Algorithmus für die Ausgabe der Geldscheine aus dem Cash Dispenser
