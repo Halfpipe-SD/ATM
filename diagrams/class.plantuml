@@ -24,9 +24,9 @@ BankDatabase o-- CashDispenser
 Screen *-- Keypad
 Screen *-- SidePanel
 
-' class InvalidModeException implements Exception
-' class InvalidTransactionException implements Exception
-' class LoginFailedException implements Exception
+' class InvalidModeException extends Exception
+' class InvalidTransactionException extends Exception
+' class LoginFailedException extends Exception
 
 
 @enduml

@@ -42,6 +42,7 @@ Hier werden alle Schnittstellen des Systems beschrieben.
 Der Aufbau der Systemarchitektur ist weitestgehend modular gestaltet und ist hier in einem Klassendiagramm dargestellt.
 
 ![Klassendiagramm](images/class.png "Klassendiagramm") 
+![Exceptions](images/class2.png "Exceptions") 
 
 ## Systementwurf
 
