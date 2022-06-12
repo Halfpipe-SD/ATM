@@ -10,6 +10,13 @@ import exceptions.InvalidTransactionException;
 import exceptions.LoginFailedException;
 import interfaces.ATMListener;
 
+/**
+ * Haupt-ATM-Klasse.
+ * Hier werden Funktionen wie Moduswechel, Enter-Taste gedrückt oder Ein- und
+ * Auszahlung behandelt.
+ * 
+ * @author Die Panzerknacker
+ */
 public class ATM implements ATMListener {
 
   private static ATM uniqueinstance;
@@ -24,12 +31,31 @@ public class ATM implements ATMListener {
   private Account currentAccount;
   private ATM_Mode currentMode;
 
+  /**
+   * Konstruktor für die Hauptklasse. Hier werden der Screen und die BankDatabase
+   * initialisiert.
+   * 
+   * @param debug      Debugmodus
+   * @param pathToJSON Pfad zu der JSON-Datei
+   * @throws FileNotFoundException
+   * @throws IOException
+   */
   public ATM(boolean debug, String pathToJSON) throws FileNotFoundException, IOException {
     debugMode = debug;
     screen = new Screen(this, title);
     bankDatabase = new BankDatabase(debug, pathToJSON);
   }
 
+  /**
+   * Funktion um die Instanz der Hauptklasse zu erhalten oder eine neue
+   * einzigartige Instanz zu erstellen.
+   * 
+   * @param debugMode  Debugmodus
+   * @param pathToJSON Pfad zu der JSON-Datei
+   * @return einzigartige Instanz der Hauptklasse
+   * @throws FileNotFoundException
+   * @throws IOException
+   */
   public static ATM getInstance(boolean debugMode, String pathToJSON) throws FileNotFoundException, IOException {
     if (pathToJSON == null)
       pathToJSON = pathToJSONDefault;
@@ -40,11 +66,19 @@ public class ATM implements ATMListener {
     return uniqueinstance;
   }
 
-  // starte im CARD_REQ Modus
+  /**
+   * Funktion um das ATM zu starten, wechselt direkt in den Karte-Modus.
+   */
   public void start() {
     this.atmSwitchModeAction(ATM_Mode.CARD_REQ);
   }
 
+  /**
+   * Hier wird eine Funktion aus dem ATMListener-Interface überschrieben. Diese
+   * Funktion wird aufgerufen, sobald die Enter-Taste betätigt wird.
+   * 
+   * @param input Eingabe des Benutzers
+   */
   @Override
   public void atmEnterAction(String input) {
     if (debugMode)
@@ -108,6 +142,13 @@ public class ATM implements ATMListener {
     }
   }
 
+  /**
+   * Hier wird eine Funktion aus dem ATMListener-Interface überschrieben. Diese
+   * Funktion wird aufgerufen, sobald sich ein Modus ändert. Dann wird der Screen
+   * aktualisiert.
+   * 
+   * @param newMode Neuer Modus
+   */
   @Override
   public void atmSwitchModeAction(ATM_Mode newMode) {
     if (debugMode) {
@@ -142,6 +183,14 @@ public class ATM implements ATMListener {
     }
   }
 
+  /**
+   * Mit dieser Funktion kann der Benutzer Geld von seinem Konto abbuchen.
+   * 
+   * @param input Geldbetrag
+   * @throws NumberFormatException
+   * @throws InvalidTransactionException
+   * @throws IOException
+   */
   public void withdrawTransaction(String input) throws NumberFormatException, InvalidTransactionException, IOException {
     bankDatabase.debitAccount(currentAccount, Double.parseDouble(input));
     this.atmSwitchModeAction(ATM_Mode.MENU);
@@ -150,6 +199,14 @@ public class ATM implements ATMListener {
 
   }
 
+  /**
+   * Mit dieser Funktion kann der Benutzer Geld auf seinem Konto einzahlen.
+   * 
+   * @param input Geldbetrag
+   * @throws NumberFormatException
+   * @throws InvalidTransactionException
+   * @throws IOException
+   */
   public void depositTransaction(String input) throws NumberFormatException, InvalidTransactionException, IOException {
     bankDatabase.creditAccount(currentAccount, Double.parseDouble(input));
     this.atmSwitchModeAction(ATM_Mode.MENU);
