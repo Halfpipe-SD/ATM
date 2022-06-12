@@ -196,7 +196,6 @@ public class ATM implements ATMListener {
     this.atmSwitchModeAction(ATM_Mode.MENU);
     JOptionPane.showMessageDialog(screen, "Erfolgreich " + input + "€ abgehoben!", "Transaktion erfolgreich",
         JOptionPane.INFORMATION_MESSAGE);
-
   }
 
   /**
@@ -212,7 +211,6 @@ public class ATM implements ATMListener {
     this.atmSwitchModeAction(ATM_Mode.MENU);
     JOptionPane.showMessageDialog(screen, "Erfolgreich " + input + "€ eingezahlt!", "Transaktion erfolgreich",
         JOptionPane.INFORMATION_MESSAGE);
-
   }
 
   public Account getCurrentAccount() {

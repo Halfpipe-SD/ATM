@@ -61,11 +61,4 @@ public class BankDatabaseTests {
     });
   }
 
-  @Test
-  public void findAccountByAccountNumber() {
-    Account a = bankDatabase.getAccountByAccountNumber(accountNumber);
-
-    assertEquals(a.getAccountNumber(), account.getAccountNumber());
-  }
-
 }
