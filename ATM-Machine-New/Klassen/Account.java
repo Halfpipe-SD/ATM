@@ -1,5 +1,10 @@
 package klassen;
 
+/**
+ * Die Klasse Account ist eine Klasse, die ein Konto repräsentiert.
+ * 
+ * @author Die Panzerkanaker
+ */
 public class Account {
 
   private String username;
@@ -8,6 +13,17 @@ public class Account {
   private double availableBalance;
   private double totalBalance;
   private boolean isAdmin;
+
+  /**
+   * Konstruktor der Klasse Account.
+   * 
+   * @param username         Der Benutzername des Accounts.
+   * @param accountNumber    Das Kontonummer des Accounts.
+   * @param pin              Das PIN-Code des Accounts.
+   * @param availableBalance Der verfügbare Kontostand.
+   * @param totalBalance     Der gesamte Kontostand.
+   * @param isAdmin          Ob das Konto ein Admin-Konto ist.
+   */
 
   public Account(String username, String accountNumber, String pin, double availableBalance, double totalBalance,
       boolean isAdmin) {
@@ -19,10 +35,12 @@ public class Account {
     this.isAdmin = isAdmin;
   }
 
-  private double roundToTwoDecimals(double d) {
-    // TODO Implementierung einer Funktion, die auf zwei Nachkommastellen rundet
-    return d;
-  }
+  /**
+   * Funktion überprüft den eingegebenen PIN-Code.
+   * 
+   * @param userPIN Der eingegebene PIN-Code.
+   * @return true, falls der PIN-Code korrekt ist, false falls nicht.
+   */
 
   public boolean validatePIN(String userPIN) {
     if (pin.equals(userPIN))
@@ -32,11 +50,11 @@ public class Account {
   }
 
   public double getAvailableBalance() {
-    return roundToTwoDecimals(availableBalance);
+    return availableBalance;
   }
 
   public double getTotalBalance() {
-    return roundToTwoDecimals(totalBalance);
+    return totalBalance;
   }
 
   public String getAccountNumber() {
@@ -75,6 +93,9 @@ public class Account {
     this.pin = pin;
   }
 
+  /**
+   * Funktion gibt Informationen zu einem Account aus.
+   */
   public void printInfo() {
     System.out.println("Username: " + username);
     System.out.println("Account Number: " + accountNumber);
