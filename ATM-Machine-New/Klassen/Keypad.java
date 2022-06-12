@@ -12,7 +12,7 @@ import interfaces.KeypadListener;
 /**
  * Die Klasse Keypad ist eine Klasse, die ein Keypad initalisiert.
  * 
- * @author Die Panzerkanaker
+ * @author Die Panzerknacker
  */
 public class Keypad extends JPanel {
 

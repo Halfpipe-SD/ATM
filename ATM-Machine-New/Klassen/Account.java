@@ -3,7 +3,7 @@ package klassen;
 /**
  * Die Klasse Account ist eine Klasse, die ein Konto repräsentiert.
  * 
- * @author Die Panzerkanaker
+ * @author Die Panzerknacker
  */
 public class Account {
 

@@ -9,7 +9,7 @@ import exceptions.InvalidTransactionException;
  * Die Klasse Cashdispenser speichert wieviele scheine auf lager sind, und
  * ermöglicht das einzahlen und auszahlen von scheinen.
  * 
- * @author Die Panzerkanaker
+ * @author Die Panzerknacker
  */
 public class CashDispenser {
 
