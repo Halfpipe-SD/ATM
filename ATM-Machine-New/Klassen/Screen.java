@@ -63,13 +63,14 @@ public class Screen extends JFrame implements KeypadListener {
   public void showCardPrompt() {
     tfTop.setText("Bitte Karte einführen");
     sidePanel.setLabelHTML("<br><br><br>Bite Bankkarte einführen<br><br>");
-    sidePanel.setModeCardPrompt();
+    sidePanel.setElementsVisible(false, false, true);
   }
 
   public void showLogin() {
     tfTop.setText("Bitte geben Sie ihre PIN ein: ");
     sidePanel.setLabelHTML("");
-    sidePanel.setModeLogin();
+    sidePanel.setTfPin("");
+    sidePanel.setElementsVisible(true, false, false);
   }
 
   public void showMenu() {
@@ -79,17 +80,16 @@ public class Screen extends JFrame implements KeypadListener {
         + "2 - Geld abheben<br>"
         + "3 - Geld einzahlen<br>"
         + "4 - Abbrechen");
-    sidePanel.setModeMenu();
+    sidePanel.setElementsVisible(true, false, false);
   }
 
   public void showBalance() {
     tfTop.setText("Kontostand von " + atm.getCurrentAccount().getUsername());
-    sidePanel.setLabelHTML("<br>"
-        + "Verfügbares Guthaben: <br>"
+    sidePanel.setLabelHTML("Verfügbares Guthaben: <br>"
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>"
         + "Gesamtes Guthaben: <br>"
         + atm.getCurrentAccount().getTotalBalance() + " €");
-    sidePanel.setModeBalance();
+    sidePanel.setElementsVisible(true, true, false);
   }
 
   public void showWithdrawal() {
@@ -97,7 +97,7 @@ public class Screen extends JFrame implements KeypadListener {
     sidePanel.setLabelHTML("<br>"
         + "Verfügbares Guthaben: <br>"
         + atm.getCurrentAccount().getAvailableBalance() + " €<br><br>");
-    sidePanel.setModeWithdrawal();
+    sidePanel.setElementsVisible(true, true, false);
   }
 
   public void showDeposit() {
@@ -106,7 +106,7 @@ public class Screen extends JFrame implements KeypadListener {
         + atm.getCurrentAccount().getAvailableBalance() + " €<br>"
         + "Gesamtes Guthaben: <br>"
         + atm.getCurrentAccount().getTotalBalance() + " €");
-    sidePanel.setModeDeposit();
+    sidePanel.setElementsVisible(true, true, false);
   }
 
   public SidePanel getSidePanel() {

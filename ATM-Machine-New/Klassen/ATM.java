@@ -68,18 +68,22 @@ public class ATM implements ATMListener {
         case BALANCE:
           throw new InvalidModeException("Operation im Modus BALANCE nicht erlaubt!");
         case WITHDRAWAL:
-          int replyWithdrawal = JOptionPane.showConfirmDialog(screen,
-              "Wollen Sie " + input + "€ von Ihrem Konto abbuchen?",
-              "Geld auszahlen", JOptionPane.YES_NO_OPTION);
-          if (replyWithdrawal == JOptionPane.YES_OPTION)
-            this.withdrawTransaction(input);
+          if (input.length() > 0) {
+            int replyWithdrawal = JOptionPane.showConfirmDialog(screen,
+                "Wollen Sie " + input + "€ von Ihrem Konto abbuchen?",
+                "Geld auszahlen", JOptionPane.YES_NO_OPTION);
+            if (replyWithdrawal == JOptionPane.YES_OPTION)
+              this.withdrawTransaction(input);
+          }
           break;
         case DEPOSIT:
-          int replyDeposit = JOptionPane.showConfirmDialog(screen,
-              "Wollen Sie " + input + "€ auf Ihr Konto einzahlen?",
-              "Geld einzahlen", JOptionPane.YES_NO_OPTION);
-          if (replyDeposit == JOptionPane.YES_OPTION)
-            this.depositTransaction(input);
+          if (input.length() > 0) {
+            int replyDeposit = JOptionPane.showConfirmDialog(screen,
+                "Wollen Sie " + input + "€ auf Ihr Konto einzahlen?",
+                "Geld einzahlen", JOptionPane.YES_NO_OPTION);
+            if (replyDeposit == JOptionPane.YES_OPTION)
+              this.depositTransaction(input);
+          }
           break;
         case ADMIN:
           throw new InvalidModeException("Die Admin-Ansicht muss zuerst geschlossen werden!");
