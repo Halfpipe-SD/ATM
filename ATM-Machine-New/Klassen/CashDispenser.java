@@ -4,15 +4,33 @@ import java.util.HashMap;
 
 import exceptions.InvalidTransactionException;
 
+/**
+ * 
+ * Die Klasse Cashdispenser speichert wieviele scheine auf lager sind, und
+ * ermöglicht das einzahlen und auszahlen von scheinen.
+ * 
+ * @author Die Panzerkanaker
+ */
 public class CashDispenser {
 
   private HashMap<String, Integer> moneyInventory = new HashMap<>();
   private boolean debugMode;
 
+  /**
+   * Konstruktor der Klasse CashDispenser.
+   * 
+   * @param debugMode Ob der Debug-Modus aktiviert ist.
+   */
   public CashDispenser() {
     this(false);
   }
 
+  /**
+   * 
+   * Konstruktor der Klasse CashDispenser.
+   * 
+   * @param debugMode
+   */
   public CashDispenser(boolean debugMode) {
     this.debugMode = debugMode;
 
@@ -26,6 +44,14 @@ public class CashDispenser {
       printInfo();
   }
 
+  /**
+   * Funktion zahlt den gegebenen Betrag aus wenn genügend Scheine vorhanden sind
+   * und der Kontostand auch ausreicht.
+   * 
+   * @param amount Der Betrag der ausgezahlt werden soll.
+   * @throws InvalidTransactionException Wird geworfen, falls der Betrag nicht
+   *                                     ausgezahlt werden kann.
+   */
   public void withdrawAmount(double amount) throws InvalidTransactionException {
     int[] amounts = { 0, 0, 0, 0, 0 };
 
@@ -77,6 +103,14 @@ public class CashDispenser {
       printInfo();
   }
 
+  /**
+   * Funktion für die Gutschrift eines Betrags auf ein Konto bei einer einzahlung
+   * zuständig ist.
+   * 
+   * @param amount Der Betrag der gutgeschrieben werden soll.
+   * @throws InvalidTransactionException Wird geworfen, falls der Betrag nicht
+   *                                     gutgeschrieben werden kann.
+   */
   public void depositAmount(double amount) throws InvalidTransactionException {
     int[] amounts = { 0, 0, 0, 0, 0 };
 
@@ -113,6 +147,9 @@ public class CashDispenser {
       printInfo();
   }
 
+  /**
+   * Funktion gibt die Anzahl der Scheine zurück, die im Dispenser vorhanden sind.
+   */
   public void printInfo() {
     System.out.println("CashDispenser Inhalt: " + moneyInventory.toString());
   }
