@@ -8,11 +8,13 @@ import java.io.IOException;
 import org.junit.Before;
 import org.junit.Test;
 
+import exceptions.InvalidTransactionException;
 import klassen.*;
 
 public class AccountTests {
 
   private ATM atm;
+  private BankDatabase bankDatabase;
   private String pathToJSON = "\\bin\\Assets\\accounts.json";
 
   private String username = "test1";
@@ -28,6 +30,7 @@ public class AccountTests {
   public void setUp() throws FileNotFoundException, IOException {
 
     atm = new ATM(true, pathToJSON);
+    bankDatabase = atm.getBankDatabase();
     a1 = new Account(username, accountNumber, pin, availableBalance, totalBalance, isAdmin);
 
     atm.start();
@@ -39,14 +42,14 @@ public class AccountTests {
   }
 
   @Test
-  public void checkCredit() {
-    a1.credit(5);
+  public void checkCredit() throws InvalidTransactionException, IOException {
+    bankDatabase.creditAccount(a1, 5);
     assertTrue(a1.getTotalBalance() == totalBalance + 5);
   }
 
   @Test
-  public void checkDebit() {
-    a1.debit(5);
+  public void checkDebit() throws InvalidTransactionException, IOException {
+    bankDatabase.debitAccount(a1, 5);
     assertTrue(a1.getAvailableBalance() == availableBalance - 5);
   }
 }

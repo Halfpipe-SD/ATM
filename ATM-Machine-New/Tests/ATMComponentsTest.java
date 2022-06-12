@@ -19,7 +19,7 @@ public class ATMComponentsTest {
 
     @Before
     public void setUp() throws FileNotFoundException, IOException {
-        atm = new ATM(pathToJSON);
+        atm = new ATM(false, pathToJSON);
         bankDatabase = atm.getBankDatabase();
         atm.atmSwitchModeAction(ATM_Mode.LOGIN);
         atm.atmEnterAction("1111");

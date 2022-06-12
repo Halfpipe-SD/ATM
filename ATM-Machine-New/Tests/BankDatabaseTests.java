@@ -30,7 +30,7 @@ public class BankDatabaseTests {
   @Before
   public void setUp() throws FileNotFoundException, IOException {
 
-    atm = new ATM(pathToJSON);
+    atm = new ATM(false, pathToJSON);
     bankDatabase = atm.getBankDatabase();
     account = new Account(username, accountNumber, pin, availableBalance, totalBalance, isAdmin);
 

@@ -34,7 +34,7 @@ public class AdminViewTests {
   @Before
   public void setUp() throws FileNotFoundException, IOException {
 
-    atm = new ATM(pathToJSON);
+    atm = new ATM(false, pathToJSON);
     bankDatabase = atm.getBankDatabase();
     a1 = new Account(username, accountNumber, pin, availableBalance, totalBalance, isAdmin);
 
