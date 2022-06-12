@@ -29,6 +29,9 @@ public class CashDispenser {
   public void withdrawAmount(double amount) throws InvalidTransactionException {
     int[] amounts = { 0, 0, 0, 0, 0 };
 
+    if (amount <= 0)
+      throw new InvalidTransactionException("Betrag kann nicht negativ oder null sein!");
+
     while (amount > 0) {
       if (amount >= 100) {
         amounts[4]++;
@@ -77,6 +80,9 @@ public class CashDispenser {
   public void depositAmount(double amount) throws InvalidTransactionException {
     int[] amounts = { 0, 0, 0, 0, 0 };
 
+    if (amount <= 0)
+      throw new InvalidTransactionException("Betrag kann nicht negativ oder null sein!");
+
     while (amount > 0) {
       if (amount >= 100) {
         amounts[4]++;
@@ -109,5 +115,9 @@ public class CashDispenser {
 
   public void printInfo() {
     System.out.println("CashDispenser Inhalt: " + moneyInventory.toString());
+  }
+
+  public HashMap<String, Integer> getMoneyInventory() {
+    return moneyInventory;
   }
 }
