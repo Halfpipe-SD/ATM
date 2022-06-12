@@ -12,7 +12,7 @@ import exceptions.InvalidModeException;
 import interfaces.ATMListener.ATM_Mode;
 import klassen.*;
 
-public class ATMComponentsTest {
+public class ATMComponentsTests {
     private ATM atm;
     private BankDatabase bankDatabase;
     private String pathToJSON = "\\bin\\Assets\\accounts.json";
