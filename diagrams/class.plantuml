@@ -1,0 +1,32 @@
+@startuml Klassendiagram
+
+interface ATMListener
+interface KeypadListener
+
+class Main {
+  {static} +main(String[])
+}
+class ATM implements ATMListener
+class BankDatabase
+class Account 
+class Keypad extends JPanel
+class CashDispenser
+class Screen extends JFrame implements KeypadListener
+class SidePanel extends JPanel
+class AdminView extends JFrame
+
+Main --> ATM
+ATM o-- BankDatabase
+ATM *-- Screen
+ATM o-- AdminView
+BankDatabase o-- Account
+BankDatabase o-- CashDispenser
+Screen *-- Keypad
+Screen *-- SidePanel
+
+' class InvalidModeException implements Exception
+' class InvalidTransactionException implements Exception
+' class LoginFailedException implements Exception
+
+
+@enduml

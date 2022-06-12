@@ -41,7 +41,7 @@ Hier werden alle Schnittstellen des Systems beschrieben.
 
 Der Aufbau der Systemarchitektur ist weitestgehend modular gestaltet und ist hier in einem Klassendiagramm dargestellt.
 
-TODO Klassendiagram
+![Klassendiagramm](images/class.png "Klassendiagramm") 
 
 ## Systementwurf
 
@@ -140,9 +140,11 @@ Logout
 
 
 
-Adminansicht:
+#### Adminansicht
+
 ![InterkationsDiagramm](images/AdminView.png "InterkationsDiagramm") 
 
-Benutzeransicht:
+#### Benutzeransicht
+
 ![InterkationsDiagramm](images/BenutzerView.png "InterkationsDiagramm") 
 
