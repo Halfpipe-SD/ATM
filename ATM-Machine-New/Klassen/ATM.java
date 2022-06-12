@@ -68,14 +68,14 @@ public class ATM implements ATMListener {
         case BALANCE:
           throw new InvalidModeException("Operation im Modus BALANCE nicht erlaubt!");
         case WITHDRAWAL:
-          int replyWithdrawal = JOptionPane.showConfirmDialog(null,
+          int replyWithdrawal = JOptionPane.showConfirmDialog(screen,
               "Wollen Sie " + input + "€ von Ihrem Konto abbuchen?",
               "Geld auszahlen", JOptionPane.YES_NO_OPTION);
           if (replyWithdrawal == JOptionPane.YES_OPTION)
             this.withdrawTransaction(input);
           break;
         case DEPOSIT:
-          int replyDeposit = JOptionPane.showConfirmDialog(null,
+          int replyDeposit = JOptionPane.showConfirmDialog(screen,
               "Wollen Sie " + input + "€ auf Ihr Konto einzahlen?",
               "Geld einzahlen", JOptionPane.YES_NO_OPTION);
           if (replyDeposit == JOptionPane.YES_OPTION)
@@ -88,19 +88,19 @@ public class ATM implements ATMListener {
           break;
       }
     } catch (NumberFormatException nfe) {
-      JOptionPane.showMessageDialog(null, nfe.getMessage(), "Formatierungsfehler", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(screen, nfe.getMessage(), "Formatierungsfehler", JOptionPane.ERROR_MESSAGE);
 
     } catch (InvalidTransactionException ite) {
-      JOptionPane.showMessageDialog(null, ite.getMessage(), "Transaktionsfehler", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(screen, ite.getMessage(), "Transaktionsfehler", JOptionPane.ERROR_MESSAGE);
 
     } catch (LoginFailedException lfe) {
-      JOptionPane.showMessageDialog(null, lfe.getMessage(), "Anmeldefehler", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(screen, lfe.getMessage(), "Anmeldefehler", JOptionPane.ERROR_MESSAGE);
 
     } catch (InvalidModeException ime) {
       System.out.println(ime.getMessage());
 
     } catch (IOException ioe) {
-      JOptionPane.showMessageDialog(null, ioe.getMessage(), "Speichern fehlgeschlagen", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(screen, ioe.getMessage(), "Speichern fehlgeschlagen", JOptionPane.ERROR_MESSAGE);
     }
   }
 
@@ -141,7 +141,7 @@ public class ATM implements ATMListener {
   public void withdrawTransaction(String input) throws NumberFormatException, InvalidTransactionException, IOException {
     bankDatabase.debitAccount(currentAccount, Double.parseDouble(input));
     this.atmSwitchModeAction(ATM_Mode.MENU);
-    JOptionPane.showMessageDialog(null, "Erfolgreich " + input + "€ abgehoben!", "Transaktion erfolgreich",
+    JOptionPane.showMessageDialog(screen, "Erfolgreich " + input + "€ abgehoben!", "Transaktion erfolgreich",
         JOptionPane.INFORMATION_MESSAGE);
 
   }
@@ -149,7 +149,7 @@ public class ATM implements ATMListener {
   public void depositTransaction(String input) throws NumberFormatException, InvalidTransactionException, IOException {
     bankDatabase.creditAccount(currentAccount, Double.parseDouble(input));
     this.atmSwitchModeAction(ATM_Mode.MENU);
-    JOptionPane.showMessageDialog(null, "Erfolgreich " + input + "€ eingezahlt!", "Transaktion erfolgreich",
+    JOptionPane.showMessageDialog(screen, "Erfolgreich " + input + "€ eingezahlt!", "Transaktion erfolgreich",
         JOptionPane.INFORMATION_MESSAGE);
 
   }

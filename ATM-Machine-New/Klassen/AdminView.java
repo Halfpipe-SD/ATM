@@ -208,7 +208,7 @@ public class AdminView extends JFrame {
           JOptionPane.ERROR_MESSAGE);
 
     } catch (Exception e) {
-      JOptionPane.showMessageDialog(null, e.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(this, e.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
       e.printStackTrace();
     }
   }
