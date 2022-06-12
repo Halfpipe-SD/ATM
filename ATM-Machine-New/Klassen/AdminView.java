@@ -23,6 +23,13 @@ import javax.swing.SpringLayout;
 import interfaces.ATMListener.ATM_Mode;
 import utilities.SpringUtilities;
 
+/**
+ * AdminView ist ein JFrame-Fenster, das sich öffnet, sobald sich ein
+ * Administrator einloggt. Hier kann der Administrator neue Benutzer erstellen,
+ * löschen oder bearbeiten.
+ * 
+ * @author Die Panzerknacker
+ */
 public class AdminView extends JFrame {
 
   private ATM atm;
@@ -56,6 +63,13 @@ public class AdminView extends JFrame {
   private JList<String> list;
   private ArrayList<Account> accounts;
 
+  /**
+   * Konstruktor für AdminView. Initialisiert die UI-Elemente und setzt die
+   * Listener der Buttons.
+   * 
+   * @param atm   Die AtM-Instanz zu der die AdminView gehört.
+   * @param title Der Titel des Fensters.
+   */
   public AdminView(ATM atm, String title) {
     super(title);
     this.atm = atm;
@@ -134,6 +148,10 @@ public class AdminView extends JFrame {
     setVisible(true);
   }
 
+  /**
+   * Die Funktion wird aufgerufen, sobald Löschen betätigt wird und löscht den
+   * ausgewählten Account.
+   */
   public void btnDeleteAcc() {
     Account selectedAccount = accounts.get(list.getSelectedIndex());
 
@@ -158,6 +176,10 @@ public class AdminView extends JFrame {
     }
   }
 
+  /**
+   * Die Funktion wird aufgerufen, wenn Neu betätigt wird und erstellt einen neuen
+   * Account.
+   */
   public void btnCreateNew() {
     Account newAcc = new Account("Neuer Benutzer", "", "", 0, 0, false);
     accounts.add(newAcc);
@@ -166,6 +188,10 @@ public class AdminView extends JFrame {
     list.setSelectedIndex(accounts.size() - 1);
   }
 
+  /**
+   * Die Funktion wird aufgerufen, wenn Speichern betätigt wird und speichert die
+   * Änderungen des ausgewählten Accounts.
+   */
   public void btnSave() {
     Account selected = accounts.get(list.getSelectedIndex());
 
@@ -213,6 +239,12 @@ public class AdminView extends JFrame {
     }
   }
 
+  /**
+   * Die Funktion wird aufgerufen, wenn ein Account ausgewählt wird und zeigt die
+   * Informationen des Accounts im rechten Fenster an.
+   * 
+   * @param index Index des Accounts
+   */
   public void updateRightPanelWithAccount(int index) {
     // Herausfiltern von ungültigen Index-Werten von den Listen-Events
     if (index < 0 || index >= accounts.size())
@@ -226,6 +258,12 @@ public class AdminView extends JFrame {
     tfPin.setText(acc.getPin());
   }
 
+  /**
+   * Mit dieser FUnktion wird ein DefaultListModel für die Liste erstellt.
+   * 
+   * @param a ArrayList mit Accounts für das Model erstellt werden soll.
+   * @return DefaultListModel
+   */
   public DefaultListModel<String> getDefaultListModelFromAccounts(ArrayList<Account> a) {
     DefaultListModel<String> model = new DefaultListModel<>();
     for (int i = 0; i < a.size(); i++) {
