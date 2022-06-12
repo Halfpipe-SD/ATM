@@ -97,7 +97,7 @@ public class ATM implements ATMListener {
       JOptionPane.showMessageDialog(null, lfe.getMessage(), "Anmeldefehler", JOptionPane.ERROR_MESSAGE);
 
     } catch (InvalidModeException ime) {
-      JOptionPane.showMessageDialog(null, ime.getMessage(), "Modusfehler", JOptionPane.ERROR_MESSAGE);
+      System.out.println(ime.getMessage());
 
     } catch (IOException ioe) {
       JOptionPane.showMessageDialog(null, ioe.getMessage(), "Speichern fehlgeschlagen", JOptionPane.ERROR_MESSAGE);

@@ -31,7 +31,9 @@ public class AccountTests {
 
     atm = new ATM(true, pathToJSON);
     bankDatabase = atm.getBankDatabase();
+
     a1 = new Account(username, accountNumber, pin, availableBalance, totalBalance, isAdmin);
+    bankDatabase.saveAccount(a1);
 
     atm.start();
   }

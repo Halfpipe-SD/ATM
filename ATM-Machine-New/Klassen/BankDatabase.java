@@ -33,7 +33,13 @@ public class BankDatabase {
   }
 
   public void saveAccount(Account a) throws IOException {
-    accounts.set(accounts.indexOf(a), a);
+    int index = accounts.indexOf(a);
+
+    if (index == -1)
+      accounts.add(a);
+    else
+      accounts.set(index, a);
+
     saveAccountsToFile(accounts);
   }
 
