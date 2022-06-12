@@ -15,6 +15,12 @@ import com.google.gson.reflect.TypeToken;
 import exceptions.InvalidTransactionException;
 import exceptions.LoginFailedException;
 
+/**
+ * Die BankDatabase speichert alle Accounts und ermöglicht Ein- und Auszahlen,
+ * Lesen und Speichern von Accounts in eine JSON-Datei.
+ * 
+ * @author Die Panzerknacker
+ */
 public class BankDatabase {
   private boolean debugMode;
 
@@ -24,6 +30,15 @@ public class BankDatabase {
   private String accountsFilePath;
   private CashDispenser cashDispenser;
 
+  /**
+   * Konstruktor der BankDatabase. Hier wird der Debugmodus und der Pfad zur
+   * JSON-Datei gesetzt.
+   * 
+   * @param debugMode          Debugmodus
+   * @param pathToAccountsJSON Pfad zur JSON-Datei
+   * @throws FileNotFoundException
+   * @throws IOException
+   */
   public BankDatabase(boolean debugMode, String pathToAccountsJSON) throws FileNotFoundException, IOException {
     this.debugMode = debugMode;
 
@@ -32,6 +47,12 @@ public class BankDatabase {
     accounts = readAccountsFromFile();
   }
 
+  /**
+   * Funktion um einen Account zu speichern.
+   * 
+   * @param a Der zu speichernende Account
+   * @throws IOException
+   */
   public void saveAccount(Account a) throws IOException {
     int index = accounts.indexOf(a);
 
@@ -43,6 +64,14 @@ public class BankDatabase {
     saveAccountsToFile(accounts);
   }
 
+  /**
+   * Funktion um einem bestimmten Account einen Betrag zu überweisen.
+   * 
+   * @param a      Der Account, zu dem der Betrag überwiesen werden soll
+   * @param amount Der Betrag, der überwiesen werden soll
+   * @throws InvalidTransactionException
+   * @throws IOException
+   */
   public void creditAccount(Account a, double amount) throws InvalidTransactionException, IOException {
     if (amount < 5)
       throw new InvalidTransactionException("Sie müssen einen minimalen Betrag von 5€ einzahlen!");
@@ -66,6 +95,14 @@ public class BankDatabase {
       System.out.println("Einzahlung von " + amount + "€ für Account " + a.getUsername());
   }
 
+  /**
+   * Funktion um einen bestimmten Account einen Betrag abzuziehen.
+   * 
+   * @param a      Der Account, von dem der Betrag abgezogen werden soll
+   * @param amount Der Betrag, der abgezogen werden soll
+   * @throws InvalidTransactionException
+   * @throws IOException
+   */
   public void debitAccount(Account a, double amount) throws InvalidTransactionException, IOException {
     if (amount < 5)
       throw new InvalidTransactionException("Sie müssen einen minimalen Betrag von 5€ abheben!");
@@ -90,6 +127,12 @@ public class BankDatabase {
       System.out.println("Abhebung von " + amount + "€ für Account " + a.getUsername());
   }
 
+  /**
+   * Funktion um alle Accounts von einer JSON-Datei zu lesen.
+   * 
+   * @return ArrayList<Account> Die Accounts
+   * @throws FileNotFoundException
+   */
   private ArrayList<Account> readAccountsFromFile() throws FileNotFoundException {
     FileReader fr = new FileReader(accountsFilePath);
     // Define the type of the object to be read from the json file
@@ -99,6 +142,12 @@ public class BankDatabase {
     return gson.fromJson(fr, t);
   }
 
+  /**
+   * Funktion um alle Accounts in eine JSON-Datei zu speichern.
+   * 
+   * @param accs ArrayList<Account> Die Accounts
+   * @throws IOException
+   */
   public void saveAccountsToFile(ArrayList<Account> accs) throws IOException {
     FileWriter fw = new FileWriter(accountsFilePath);
     gson.toJson(accs, fw);
@@ -109,6 +158,13 @@ public class BankDatabase {
     accounts.removeIf(acc -> acc.getAccountNumber() == accNumber);
   }
 
+  /**
+   * Funktion um einen Account anhand seiner PIN zu authentifizieren.
+   * 
+   * @param pin Benutzereingabe
+   * @return Gefundener Account
+   * @throws LoginFailedException
+   */
   public Account validateAccount(String pin) throws LoginFailedException {
     if (pin.length() != 4)
       throw new LoginFailedException("Die PIN muss 4 Zeichen lang sein!");
@@ -122,14 +178,6 @@ public class BankDatabase {
       throw new LoginFailedException("Fehlerhafte PIN!");
 
     return found;
-  }
-
-  public Account getAccountByAccountNumber(String accNumber) {
-    for (Account acc : accounts) {
-      if (acc.getAccountNumber() == accNumber)
-        return acc;
-    }
-    return null;
   }
 
   public ArrayList<Account> getAccounts() {
