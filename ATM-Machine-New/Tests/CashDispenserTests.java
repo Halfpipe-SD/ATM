@@ -23,11 +23,11 @@ public class CashDispenserTests {
   public void checkMoneyInventory() {
     HashMap<String, Integer> inventory = cashDispenser.getMoneyInventory();
 
-    assertTrue(inventory.get("5€") == 10);
-    assertTrue(inventory.get("10€") == 10);
-    assertTrue(inventory.get("20€") == 10);
-    assertTrue(inventory.get("50€") == 10);
-    assertTrue(inventory.get("100€") == 10);
+    assertTrue(inventory.get("5€") == 100);
+    assertTrue(inventory.get("10€") == 100);
+    assertTrue(inventory.get("20€") == 100);
+    assertTrue(inventory.get("50€") == 100);
+    assertTrue(inventory.get("100€") == 100);
   }
 
   @Test
@@ -36,11 +36,11 @@ public class CashDispenserTests {
 
     HashMap<String, Integer> inventory = cashDispenser.getMoneyInventory();
 
-    assertTrue(inventory.get("100€") == 18);
-    assertTrue(inventory.get("50€") == 11);
-    assertTrue(inventory.get("20€") == 11);
-    assertTrue(inventory.get("10€") == 10);
-    assertTrue(inventory.get("5€") == 11);
+    assertTrue(inventory.get("100€") == 108);
+    assertTrue(inventory.get("50€") == 101);
+    assertTrue(inventory.get("20€") == 101);
+    assertTrue(inventory.get("10€") == 100);
+    assertTrue(inventory.get("5€") == 101);
   }
 
   @Test
@@ -49,11 +49,11 @@ public class CashDispenserTests {
 
     HashMap<String, Integer> inventory = cashDispenser.getMoneyInventory();
 
-    assertTrue(inventory.get("100€") == 2);
-    assertTrue(inventory.get("50€") == 9);
-    assertTrue(inventory.get("20€") == 9);
-    assertTrue(inventory.get("10€") == 10);
-    assertTrue(inventory.get("5€") == 9);
+    assertTrue(inventory.get("100€") == 92);
+    assertTrue(inventory.get("50€") == 99);
+    assertTrue(inventory.get("20€") == 99);
+    assertTrue(inventory.get("10€") == 100);
+    assertTrue(inventory.get("5€") == 99);
   }
 
   @Test
@@ -65,9 +65,6 @@ public class CashDispenserTests {
     assertThrows(InvalidTransactionException.class, () -> {
       cashDispenser.withdrawAmount(7);
     });
-    assertThrows(InvalidTransactionException.class, () -> {
-      cashDispenser.withdrawAmount(1100);
-    });
   }
 
   @Test
@@ -78,9 +75,6 @@ public class CashDispenserTests {
     });
     assertThrows(InvalidTransactionException.class, () -> {
       cashDispenser.withdrawAmount(7);
-    });
-    assertThrows(InvalidTransactionException.class, () -> {
-      cashDispenser.withdrawAmount(1100);
     });
   }
 
