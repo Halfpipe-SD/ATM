@@ -20,3 +20,5 @@
 
 - Anbindung des Programms an eine Datenbank
 - Besserer Algorithmus für die Ausgabe der Geldscheine aus dem Cash Dispenser
+- Verfügbares Guthaben und gesamtes Guthaben sollten in Zukunft nicht gleich behandelt werden
+- Zusätzliche Information auf den Oberflächen z.B. I-Icon mit Informationen zum Abheben
