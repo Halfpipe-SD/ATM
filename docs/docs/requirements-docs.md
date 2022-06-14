@@ -120,16 +120,16 @@ Auflistung aller Aufgaben dieses Projektes.
 
 Hier werden alle fachspezifische Begriffe aufgelistet, die in diesem Projekt verwendet werden.
 
-| **Begriff**        | **Bedeutung**                     | **Beschreibung** |
-| ------------------ | --------------------------------- | ---------------- |
-| **Cash Dispenser** | Bargeld im ATM-Dispenser          | -                |
-| **Deposit Slot**   | Geldfach zum Ein- und Auszahlen   | -                |
-| **Balance**        | Ist-Saldo auf einem Account       | -                |
-| **Withdrawal**     | Geld abheben                      | -                |
-| **Account Pin**    | Geheimpin eines Accounts (unique) | -                |
-| **Account number** | Nummer eines Accounts (unique)    | -                |
-| **Credit**         | Gutschrift                        | -                |
-| **Debit**          | Maximale Auszahlung pro Tag       | -                |
+| **Begriff**        | **Bedeutung**                     |
+| ------------------ | --------------------------------- |
+| **Cash Dispenser** | Bargeld im ATM-Dispenser          |
+| **Deposit Slot**   | Geldfach zum Ein- und Auszahlen   |
+| **Balance**        | Ist-Saldo auf einem Account       |
+| **Withdrawal**     | Geld abheben                      |
+| **Account Pin**    | Geheimpin eines Accounts (unique) |
+| **Account number** | Nummer eines Accounts (unique)    |
+| **Credit**         | Gutschrift                        |
+| **Debit**          | Maximale Auszahlung pro Tag       |
 
 ## Mengengerüst
 
@@ -141,8 +141,8 @@ Das Mengengerüst beschreibt quantitativ die Komponenten eines Projektes.
 | **Geldautomaten** | Anzahl Geldautomaten in Aschaffenburg | 43        | Stück       |
 | **Debit**         | Maximale Auszahlung pro Tag           | 1000      | Euro        |
 | **Nutzer**        | Maximale Nutzer gleichzeitig          | 1         | Person      |
-| **Nutzer**        | Maximal registrierte Nutzer           |           |             |
-| **Transaktion**   | Maximale Transaktion pro Minute       |           |             |
+| **Nutzer**        | Maximal registrierte Nutzer           | >1000     | Person      |
+| **Transaktion**   | Maximale Transaktion pro Minute       | ~100      | Transaktion |
 
 ## Use Cases
 
