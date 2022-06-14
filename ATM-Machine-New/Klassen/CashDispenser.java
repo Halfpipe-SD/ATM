@@ -34,11 +34,11 @@ public class CashDispenser {
   public CashDispenser(boolean debugMode) {
     this.debugMode = debugMode;
 
-    moneyInventory.put("5€", 50);
-    moneyInventory.put("10€", 50);
-    moneyInventory.put("20€", 50);
-    moneyInventory.put("50€", 50);
-    moneyInventory.put("100€", 50);
+    moneyInventory.put("5€", 100);
+    moneyInventory.put("10€", 100);
+    moneyInventory.put("20€", 100);
+    moneyInventory.put("50€", 100);
+    moneyInventory.put("100€", 100);
 
     if (debugMode)
       printInfo();
