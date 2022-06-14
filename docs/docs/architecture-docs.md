@@ -102,6 +102,8 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 |              | Augen                    | Auszahlmodul                              | Peripherie Ansteuerung     |
 
 ### Gestaltungsprinzipien und Style-Guide
+Im Foglenden wurden Design-Mpckups erstellt die die Ansichten für den Benutzer und den Administrator Repräsentieren.
+
 Style-Guide Für den Benutzer:
 ![Style-Guide](images/Benutzer_Mockup.png "Style-Guide")
 
@@ -111,8 +113,8 @@ Style-guide für die Adminview:
 
 ### Interatkionsmodellierung
 
-
-
+Im folgenden wurde die Interaktion zwischen den Benutzern und dem Geldautomaten modelliert und in einem UML-Aktivitätsdiagramm
+dargestellt.
 
 #### Adminansicht
 
