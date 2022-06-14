@@ -102,7 +102,7 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 |              | Augen                    | Auszahlmodul                              | Peripherie Ansteuerung     |
 
 ### Gestaltungsprinzipien und Style-Guide
-Im Foglenden wurden Design-Mockups erstellt die die Ansichten für den Benutzer und den Administrator Repräsentieren.
+Im folgenden wurden Design-Mockups erstellt die die Ansichten für den Benutzer und den Administrator Repräsentieren.
 
 Style-Guide Für den Benutzer:
 ![Style-Guide](images/Benutzer_Mockup.png "Style-Guide")
