@@ -93,7 +93,7 @@ public class Screen extends JFrame implements KeypadListener {
    */
   public void showCardPrompt() {
     tfTop.setText("Bitte Karte einführen");
-    sidePanel.setLabelHTML("<br><br><br>Bitte Karte einführen<br><br>");
+    sidePanel.setLabelHTML("<br><br>Bitte Karte einführen!<br><br>");
     sidePanel.setElementsVisible(false, false, true);
   }
 
