@@ -28,6 +28,7 @@ public class ATM implements ATMListener {
   // Komponenten der Hauptklasse
   private Screen screen;
   private BankDatabase bankDatabase;
+  private CashDispenser cashDispenser;
   private Account currentAccount;
   private ATM_Mode currentMode;
 
@@ -44,6 +45,7 @@ public class ATM implements ATMListener {
     debugMode = debug;
     screen = new Screen(this, title);
     bankDatabase = new BankDatabase(debug, pathToJSON);
+    cashDispenser = new CashDispenser(debug);
   }
 
   /**
@@ -102,22 +104,10 @@ public class ATM implements ATMListener {
         case BALANCE:
           throw new InvalidModeException("Operation im Modus BALANCE nicht erlaubt!");
         case WITHDRAWAL:
-          if (input.length() > 0) {
-            int replyWithdrawal = JOptionPane.showConfirmDialog(screen,
-                "Wollen Sie " + input + "€ von Ihrem Konto abbuchen?",
-                "Geld auszahlen", JOptionPane.YES_NO_OPTION);
-            if (replyWithdrawal == JOptionPane.YES_OPTION)
-              this.withdrawTransaction(input);
-          }
+          this.withdrawTransaction(input);
           break;
         case DEPOSIT:
-          if (input.length() > 0) {
-            int replyDeposit = JOptionPane.showConfirmDialog(screen,
-                "Wollen Sie " + input + "€ auf Ihr Konto einzahlen?",
-                "Geld einzahlen", JOptionPane.YES_NO_OPTION);
-            if (replyDeposit == JOptionPane.YES_OPTION)
-              this.depositTransaction(input);
-          }
+          this.depositTransaction(input);
           break;
         case ADMIN:
           throw new InvalidModeException("Die Admin-Ansicht muss zuerst geschlossen werden!");
@@ -185,6 +175,8 @@ public class ATM implements ATMListener {
 
   /**
    * Mit dieser Funktion kann der Benutzer Geld von seinem Konto abbuchen.
+   * Das Geld wird aus dem CashDispenser genommen, vom Account abgezogen und in
+   * der Datenbank abgespeichert.
    * 
    * @param input Geldbetrag
    * @throws NumberFormatException
@@ -192,14 +184,48 @@ public class ATM implements ATMListener {
    * @throws IOException
    */
   public void withdrawTransaction(String input) throws NumberFormatException, InvalidTransactionException, IOException {
-    bankDatabase.debitAccount(currentAccount, Double.parseDouble(input));
+
+    if (input.length() == 0)
+      throw new InvalidTransactionException("Bitte geben Sie einen Betrag ein!");
+
+    double amount = Double.parseDouble(input);
+
+    if (amount < 5)
+      throw new InvalidTransactionException("Sie müssen einen minimalen Betrag von 5€ abheben!");
+
+    if (amount % 5 != 0)
+      throw new InvalidTransactionException("Sie müssen einen Betrag in 5€-Schritten abheben!");
+
+    if (amount > 1000)
+      throw new InvalidTransactionException("Sie können maximal 1000€ auf einmal abheben!");
+
+    if (amount > currentAccount.getAvailableBalance())
+      throw new InvalidTransactionException("Der Betrag überschreitet Ihr verfügbares Guthaben!");
+
+    int reply = JOptionPane.showConfirmDialog(screen,
+        "Wollen Sie " + input + "€ von Ihrem Konto abbuchen?",
+        "Geld auszahlen", JOptionPane.YES_NO_OPTION);
+
+    if (reply == JOptionPane.NO_OPTION || reply == JOptionPane.CLOSED_OPTION)
+      return;
+
+    cashDispenser.withdrawAmount(amount);
+
+    currentAccount.setAvailableBalance(currentAccount.getAvailableBalance() - amount);
+    currentAccount.setTotalBalance(currentAccount.getTotalBalance() - amount);
+
+    bankDatabase.saveAccount(currentAccount);
+
     this.atmSwitchModeAction(ATM_Mode.MENU);
+
     JOptionPane.showMessageDialog(screen, "Erfolgreich " + input + "€ abgehoben!", "Transaktion erfolgreich",
         JOptionPane.INFORMATION_MESSAGE);
   }
 
   /**
    * Mit dieser Funktion kann der Benutzer Geld auf seinem Konto einzahlen.
+   * Das Geld wird in den CashDispenser gelegt, in den Account eingezahlt und in
+   * der Datenbank abgespeichert.
    * 
    * @param input Geldbetrag
    * @throws NumberFormatException
@@ -207,8 +233,37 @@ public class ATM implements ATMListener {
    * @throws IOException
    */
   public void depositTransaction(String input) throws NumberFormatException, InvalidTransactionException, IOException {
-    bankDatabase.creditAccount(currentAccount, Double.parseDouble(input));
+
+    if (input.length() == 0)
+      throw new InvalidTransactionException("Bitte geben Sie einen Betrag ein!");
+
+    double amount = Double.parseDouble(input);
+
+    if (amount < 5)
+      throw new InvalidTransactionException("Sie müssen einen minimalen Betrag von 5€ einzahlen!");
+
+    if (amount % 5 != 0)
+      throw new InvalidTransactionException("Sie müssen einen Betrag in 5€-Schritten einzahlen!");
+
+    if (amount > 5000)
+      throw new InvalidTransactionException("Sie können maximal 5000€ auf einmal einzahlen!");
+
+    int reply = JOptionPane.showConfirmDialog(screen,
+        "Wollen Sie " + input + "€ auf Ihr Konto einzahlen?",
+        "Geld einzahlen", JOptionPane.YES_NO_OPTION);
+
+    if (reply == JOptionPane.NO_OPTION || reply == JOptionPane.CLOSED_OPTION)
+      return;
+
+    cashDispenser.depositAmount(amount);
+
+    currentAccount.setAvailableBalance(currentAccount.getAvailableBalance() + amount);
+    currentAccount.setTotalBalance(currentAccount.getTotalBalance() + amount);
+
+    bankDatabase.saveAccount(currentAccount);
+
     this.atmSwitchModeAction(ATM_Mode.MENU);
+
     JOptionPane.showMessageDialog(screen, "Erfolgreich " + input + "€ eingezahlt!", "Transaktion erfolgreich",
         JOptionPane.INFORMATION_MESSAGE);
   }
