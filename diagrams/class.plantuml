@@ -16,13 +16,18 @@ class SidePanel
 class AdminView 
 
 Main --> ATM
-ATM o-- BankDatabase
-ATM *-- Screen
-ATM o-- AdminView
-BankDatabase o-- Account
-BankDatabase o-- CashDispenser
+
 Screen *-- Keypad
 Screen *-- SidePanel
+
+BankDatabase o-- Account
+
+ATM o-- BankDatabase
+ATM o-- CashDispenser
+ATM o-- AdminView
+ATM *-- Screen
+
+
 
 ' class InvalidModeException extends Exception
 ' class InvalidTransactionException extends Exception
