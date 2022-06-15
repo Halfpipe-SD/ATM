@@ -1,6 +1,6 @@
 package tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,7 +9,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import exceptions.InvalidTransactionException;
-import klassen.*;
+import interfaces.ATMListener.ATM_Mode;
+import klassen.ATM;
+import klassen.Account;
+import klassen.BankDatabase;
 
 public class AccountTests {
 
@@ -36,6 +39,8 @@ public class AccountTests {
     bankDatabase.saveAccount(a1);
 
     atm.start();
+    atm.atmSwitchModeAction(ATM_Mode.LOGIN);
+    atm.atmEnterAction(pin);
   }
 
   @Test
@@ -45,13 +50,13 @@ public class AccountTests {
 
   @Test
   public void checkCredit() throws InvalidTransactionException, IOException {
-    bankDatabase.creditAccount(a1, 5);
+    atm.depositTransaction("5");
     assertTrue(a1.getTotalBalance() == totalBalance + 5);
   }
 
   @Test
   public void checkDebit() throws InvalidTransactionException, IOException {
-    bankDatabase.debitAccount(a1, 5);
+    atm.withdrawTransaction("5");
     assertTrue(a1.getAvailableBalance() == availableBalance - 5);
   }
 }
