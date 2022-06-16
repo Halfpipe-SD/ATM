@@ -44,7 +44,7 @@ public class ATM implements ATMListener {
   public ATM(boolean debug, String pathToJSON) throws FileNotFoundException, IOException {
     debugMode = debug;
     screen = new Screen(this, title);
-    bankDatabase = new BankDatabase(debug, pathToJSON);
+    bankDatabase = new BankDatabase(pathToJSON);
     cashDispenser = new CashDispenser(debug);
   }
 
