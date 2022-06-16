@@ -57,6 +57,4 @@ Nicht Implementiert: User Stories nicht erfolgreich implementiert
 
 ## Bereitstellung zur Abnahme
 
-In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragsnehmer. Kreuzen sie zwischen die Eckigenklammern soweit die Aussage entspricht [ X ].
-
 ![Exceptions](images/abnahmeprotokoll.png "Abnahmeprotokoll")
