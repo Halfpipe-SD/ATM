@@ -10,7 +10,7 @@ Das System wird unter verschiedenen Szenarien getestet. Die Anforderungsspezifik
 </br>
 </br>
 </br>
-Die folgende Tabelle beinhaltet die Testfälle und Testergebnisse. Für detallierte Testspezifikationen siehe Testdokumentation.
+Die folgende Tabelle beinhaltet die Testfälle und Testergebnisse. Für detallierte Testspezifikationen siehe [Testdokumentation](test-docs.md).
 </br>
 </br>
 Bestanden: Testergebnisse wie erwartet
