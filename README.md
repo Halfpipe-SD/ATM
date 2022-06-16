@@ -7,13 +7,13 @@
 
 ## Project Background
 
-This repository is the combined work of a group of five students during the second semster of the Software Design course.
-We were given the ATM code from [DanH957](https://github.com/DanH957/ATM-Machine) and various tasks like fixing errors, implementing feautres and writing documentation.
+This repository is the combined work of a group of five students during the second semester of the Software Design course.
+We were given the ATM code from [DanH957](https://github.com/DanH957/ATM-Machine) and various tasks like fixing errors, implementing features and writing documentation.
 
 
 ## New Code and Documentation
 
-After carfully looking into the old ATM code, we decided to compleley rewrite the program.
+After carefully looking into the old ATM code, we decided to completely rewrite the program.
 For the documentation we used [MkDocs](https://www.mkdocs.org/) to automatically generate a website from markdown files with GitHub Actions.
 
 ### Documentation [Website](https://atm.node5.de/).
