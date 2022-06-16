@@ -8,7 +8,7 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | ------------- | ------------------------------------------------------------- |
 | Anforderung   | Die ATM-Instanz soll einen screen und eine bankDatabase haben |
 | Vorbedingung  | ATM-Instanz wird erzeugt                                      |
-| Nachbedingung | Screen und bankDatabase des ATM sindinitialisiert             |
+| Nachbedingung | Screen und bankDatabase des ATM sind initialisiert            |
 | Testschritte  | Stelle sicher, dass Komponenten nicht null sind               |
 
 </br>
