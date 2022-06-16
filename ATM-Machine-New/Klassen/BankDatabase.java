@@ -21,7 +21,6 @@ import exceptions.LoginFailedException;
  * @author Die Panzerknacker
  */
 public class BankDatabase {
-  private boolean debugMode;
 
   private Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
@@ -32,14 +31,11 @@ public class BankDatabase {
    * Konstruktor der BankDatabase. Hier wird der Debugmodus und der Pfad zur
    * JSON-Datei gesetzt.
    * 
-   * @param debugMode          Debugmodus
    * @param pathToAccountsJSON Pfad zur JSON-Datei
    * @throws FileNotFoundException
    * @throws IOException
    */
-  public BankDatabase(boolean debugMode, String pathToAccountsJSON) throws FileNotFoundException, IOException {
-    this.debugMode = debugMode;
-
+  public BankDatabase(String pathToAccountsJSON) throws FileNotFoundException, IOException {
     accountsFilePath = new File("").getAbsolutePath() + pathToAccountsJSON;
     accounts = readAccountsFromFile();
   }
