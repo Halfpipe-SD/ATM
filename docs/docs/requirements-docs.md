@@ -120,16 +120,24 @@ Auflistung aller Aufgaben dieses Projektes.
 
 Hier werden alle fachspezifische Begriffe aufgelistet, die in diesem Projekt verwendet werden.
 
-| **Begriff**        | **Bedeutung**                     |
-| ------------------ | --------------------------------- |
-| **Cash Dispenser** | Bargeld im ATM-Dispenser          |
-| **Deposit Slot**   | Geldfach zum Ein- und Auszahlen   |
-| **Balance**        | Ist-Saldo auf einem Account       |
-| **Withdrawal**     | Geld abheben                      |
-| **Account Pin**    | Geheimpin eines Accounts (unique) |
-| **Account number** | Nummer eines Accounts (unique)    |
-| **Credit**         | Gutschrift                        |
-| **Debit**          | Maximale Auszahlung pro Tag       |
+| **Begriff**        | **Bedeutung**                         |
+| ------------------ | ------------------------------------- |
+| **Cash Dispenser** | Bargeld im ATM-Dispenser              |
+| **Deposit Slot**   | Geldfach zum Ein- und Auszahlen       |
+| **Balance**        | Ist-Saldo auf einem Account           |
+| **Withdrawal**     | Geld abheben                          |
+| **Account Pin**    | Geheimpin eines Accounts (unique)     |
+| **Account number** | Nummer eines Accounts (unique)        |
+| **Credit**         | Gutschrift                            |
+| **Debit**          | Lastschrift                           |
+| **UI**             | Benutzeroberfläche                    |
+| **GUI**            | Grafische Benutzeroberfläche          |
+| **JUnit**          | Java Bibliothek zum Testen            |
+| **Java swing**     | Grafisches Toolkit für Java           |
+| **ATM**            | Geldautomat(Automated Teller Machine) |
+| **Mockup**         | Digitales Modell einer Anwendung      |
+
+
 
 ## Mengengerüst
 
