@@ -7,11 +7,7 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | Name          | Sind Komponenten initialisiert                                |
 | ------------- | ------------------------------------------------------------- |
 | Anforderung   | Die ATM-Instanz soll einen screen und eine bankDatabase haben |
-<<<<<<< HEAD
 | Vorbedingung  | ATM-Instanz ist erzeugt                                       |
-=======
-| Vorbedingung  | ATM-Instanz ist erzeugt                                      |
->>>>>>> 41a2e49d198358e42f53e02c099705a3d7d99057
 | Nachbedingung | Screen und bankDatabase des ATM sind initialisiert            |
 | Testschritte  | Stelle sicher, dass Komponenten nicht null sind               |
 
@@ -89,11 +85,11 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 
 </br>
 
-| Name          | Ungültiger Einzahlungs-Betrag                                                                                                                                                                                |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Anforderung   | Es soll eine InvalidTransactionException geworfen werden, wenn versucht wird einen ungültigen Betrag einzuzahlen                                                                                             |
-| Vorbedingung  | Ein Objekt der Klasse CashDispenser ist erzeugt                                                                                                                                                              |
-| Nachbedingung | Es wurde 3 mal eine InvalidTransactionException geworfen                                                                                                                                                     |
+| Name          | Ungültiger Einzahlungs-Betrag                                                                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Anforderung   | Es soll eine InvalidTransactionException geworfen werden, wenn versucht wird einen ungültigen Betrag einzuzahlen                                                                                              |
+| Vorbedingung  | Ein Objekt der Klasse CashDispenser ist erzeugt                                                                                                                                                               |
+| Nachbedingung | Es wurde 3 mal eine InvalidTransactionException geworfen                                                                                                                                                      |
 | Testschritte  | Es wird überprüft, ob bei folgenden ungültigen Eingaben eine Exception geworfen wird:</br>- Eingabe: -4€ (negativ)</br>- Eingabe: 7€ (nicht durch 5 teilbar)</br>- Eingabe: 1100€ (mehr als 1000€ auf einmal) |
 
 </br>
