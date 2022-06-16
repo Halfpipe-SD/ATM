@@ -49,7 +49,10 @@ public class SidePanel extends JPanel {
 
     backButton.setVisible(false);
     backButton.setFocusable(false);
-    backButton.addActionListener(e -> atm.atmSwitchModeAction(ATM_Mode.MENU));
+    backButton.addActionListener(e -> {
+      atm.atmSwitchModeAction(ATM_Mode.MENU);
+      tfPin.setText("");
+    });
 
     okButton.setVisible(false);
     okButton.setFocusable(false);
