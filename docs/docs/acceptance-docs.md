@@ -3,19 +3,19 @@
 ## System Under Test
 
 </br>
-System Under Test bezieht sich auf die validierung des Systems.
+System Under Test bezieht sich auf die Validierung des Systems.
 </br>
 </br>
-Das system wird unter verschiedenen Szenarien getestet. Die Anforderungsspezifikationen werden den Testfällen zugeordnet, um zu überprüfen, ob alle Anforderungen erfüllt sind.
+Das System wird unter verschiedenen Szenarien getestet. Die Anforderungsspezifikationen werden den Testfällen zugeordnet, um zu überprüfen, ob alle Anforderungen erfüllt sind.
 </br>
 </br>
 </br>
-Die folgende Tabelle beinhaltet die Testfälle und Testergebnisse. Für detallierte Testspezifikationen sehe Testdokumentation.
+Die folgende Tabelle beinhaltet die Testfälle und Testergebnisse. Für detallierte Testspezifikationen siehe Testdokumentation.
 </br>
 </br>
 Bestanden: Testergebnisse wie erwartet
 </br>
-Nicht bestanden: Testergebnisse wie nicht erwartet.
+Nicht bestanden: Testergebnisse nicht wie erwartet
 </br>
 </br>
 
@@ -31,12 +31,12 @@ Nicht bestanden: Testergebnisse wie nicht erwartet.
 | Credit und Debit Funktion      | Bestanden    |
 
 </br>
-Die folgende Tabelle beinhaltet die User Stories und deren Ergebnisse. Für detallierte User Stories sehe Anforderungsdokumentation.
+Die folgende Tabelle beinhaltet die User Stories und deren Ergebnisse. Für detallierte User Stories siehe [Anforderungsdokumentation](requirements-docs.md).
 </br>
 </br>
 Implementiert: User Stories erfolgreich implementiert
 </br>
-Nicht Implementiert: User Stories nicht erfolgreich implementiert
+Nicht implementiert: User Stories nicht erfolgreich implementiert
 </br>
 </br>
 
@@ -50,7 +50,7 @@ Nicht Implementiert: User Stories nicht erfolgreich implementiert
 | 6   | ...Länge meiner Pin ändern...                     | Implementiert (Administrator) |
 | 7   | ...Stückelung auswählen...                        | Nicht Implementiert           |
 | 8   | ...auf meinem Konto einloggen...                  | Implementiert                 |
-| 9   | ...gegen Gebühren Geld abheben...                 | Implementiert  FEHLER         |
+| 9   | ...gegen Gebühren Geld abheben...                 | Nicht Implementiert           |
 | 10  | ...vollständige und detaillierte Dokumentation... | Implementiert                 |
 
 </br>
