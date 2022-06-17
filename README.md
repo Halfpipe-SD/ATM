@@ -14,7 +14,7 @@ We were given the ATM code from [DanH957](https://github.com/DanH957/ATM-Machine
 ## New Code and Documentation
 
 After carefully looking into the old ATM code, we decided to completely rewrite the program.
-For the documentation we used [MkDocs](https://www.mkdocs.org/) to automatically generate a website from markdown files with GitHub Actions.
+Using [MkDocs](https://www.mkdocs.org/) we managed to automatically generate a website from markdown files with GitHub Actions.
 
 ### Documentation [Website](https://atm.node5.de/)
 
