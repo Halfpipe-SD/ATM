@@ -1,7 +1,7 @@
+<!-- markdownlint-disable MD033 -->
 # Abnahmeprotokoll
 
 In diesem Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragnehmer. Machen sie ein Kreuz zwischen den Eckigen Klammern, wenn die Aussage korrekt ist [ X ].
-
 <table >
       <tr >
          <th  Colspan="2" style="width:10%; text-align:center" > Abnahmeprotokoll </th>
@@ -107,7 +107,7 @@ In diesem Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auft
       </tr>
       <tr>
          <th> Nr. </th>
-         <th> Anforderungensbeschreibung </th>
+         <th> Anforderungsbeschreibung </th>
       </tr>
       <tr>
          <td> ... </td>
@@ -133,7 +133,7 @@ Auch nach dem Abschluss des Projektes sind wir mit einem professionellen Service
          <br>
          <br>_________________________________________
          <br>
-         Auftragsgeber/Repräsentant, Unterschrift
+         Auftraggeber/Repräsentant, Unterschrift
          <br>
          <br>_________________________________________
          <br>
@@ -143,7 +143,7 @@ Auch nach dem Abschluss des Projektes sind wir mit einem professionellen Service
          <br>
          <br>_________________________________________
          <br>
-         Auftragsnehmer, Unterschrift
+         Auftragnehmer, Unterschrift
          <br>
          <br>_________________________________________
          <br>
