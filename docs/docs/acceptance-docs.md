@@ -57,4 +57,6 @@ Nicht implementiert: User Stories nicht erfolgreich implementiert
 
 ## Bereitstellung zur Abnahme
 
+Das Abnahmeprotokoll kann [hier](https://github.com/thieleju/ATM/raw/main/abnahmeprotokoll.pdf) als PDF-Datei heruntergeladen werden.
+
 ![Exceptions](images/abnahmeprotokoll.png "Abnahmeprotokoll")
