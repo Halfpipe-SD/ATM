@@ -43,13 +43,13 @@ Nicht implementiert: User Stories nicht erfolgreich implementiert
 | Nr. | User Stories                                      | Testergebnis                  |
 | --- | ------------------------------------------------- | ----------------------------- |
 | 1   | ...Verschiedene Geldbeträge eingeben...           | Implementiert                 |
-| 2   | ...Sehen, wie viel Geld auf  Konto ist...         | Implementiert                 |
+| 2   | ...Sehen, wie viel Geld auf Konto ist...          | Implementiert                 |
 | 3   | ...maximal Debit Betrag pro Tag festlegen...      | Implementiert                 |
-| 4   | ...vierstellige Pin zu meiner Karte eingeben...   | Implementiert                 |
-| 5   | ...Ziffern meiner Pin ändern...                   | Implementiert                 |
+| 4   | ...vierstelligen Pin zu meiner Karte eingeben...  | Implementiert                 |
+| 5   | ...Ziffern meiner Pin ändern...                   | Implementiert (Administrator) |
 | 6   | ...Länge meiner Pin ändern...                     | Implementiert (Administrator) |
 | 7   | ...Stückelung auswählen...                        | Nicht Implementiert           |
-| 8   | ...auf meinem Konto einloggen...                  | Implementiert                 |
+| 8   | ...in mein Konto einloggen...                     | Implementiert                 |
 | 9   | ...gegen Gebühren Geld abheben...                 | Nicht Implementiert           |
 | 10  | ...vollständige und detaillierte Dokumentation... | Implementiert                 |
 
