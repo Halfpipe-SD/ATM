@@ -15,7 +15,7 @@ Wir sind die Panzerknacker.
 
 | Mitglied        | Spezialisierung                            |
 | --------------- | ------------------------------------------ |
-| Michél Franz    | UX                                         |
+| Michel Franz    | UX                                         |
 | Juri Kaemper    | Text & QS                                  |
 | Christian Lopéz | Programmierung                             |
 | Felix Möhler    | Requirements Engineering                   |
