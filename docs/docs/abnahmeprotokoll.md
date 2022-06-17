@@ -1,6 +1,6 @@
 # Abnahmeprotokoll
 
-In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragsnehmer. Kreuzen sie zwischen die Eckigenklammern soweit die Aussage entspricht [ X ].
+In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragsnehmer. Kreuzen sie zwischen die eckigen Klammern soweit die Aussage entspricht [ X ].
 
 <table >
       <tr >
@@ -80,7 +80,6 @@ In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auft
          <td style="width:10%; text-align:center"> [ &nbsp; ] </td>
          <td> 8. Delta-Dokumentation </td>
       </tr>
-
 </table>
 
 <table style="width:100%">

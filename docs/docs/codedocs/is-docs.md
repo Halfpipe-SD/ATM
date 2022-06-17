@@ -16,15 +16,15 @@ Die Beschreibung in diesem Dokument ist zusätzlich zu dem kommentierten Code im
 - Sobald Enter betätigt wird, wird die PIN überprüft (login)
 - Wenn man eingeloggt ist, wird das Menü angezeigt, wenn man als Admin eingeloggt ist, wird das Admin-Menü angezeigt
 - Im Menü kann man nun zwischen Funktionen wählen:
-    - `balance`: Eigenes Guthaben anzeigen
-    - `withdrawal`: Geld abheben, indem man die Scheine einzeln wählt
-    - `deposit`: Geld einzahlen. Geld ist erst verfügbar, wenn überprüft.
-    - `exit`: Führt Login erneut aus, öffnet allerdings neues Fenster
+      - `balance`: Eigenes Guthaben anzeigen
+      - `withdrawal`: Geld abheben, indem man die Scheine einzeln wählt
+      - `deposit`: Geld einzahlen. Geld ist erst verfügbar, wenn überprüft.
+      - `exit`: Führt Login erneut aus, öffnet allerdings neues Fenster
 - Sollte man als Admin angemeldet sein, öffnet sich die Adminoberfläche mit diesen Funktionen:
-    - Kontostand jedes Nutzers einsehen
-    - Zwischen Accounts wecheln
-    - Accounts löschen
-    - Neue Accounts hinzufügen
+      - Kontostand jedes Nutzers einsehen
+      - Zwischen Accounts wecheln
+      - Accounts löschen
+      - Neue Accounts hinzufügen
 
 `Transaction.java`
 
@@ -92,12 +92,12 @@ Die Beschreibung in diesem Dokument ist zusätzlich zu dem kommentierten Code im
 - JFrame-Komponente, die Textfelder, Labels und Buttons besitzt
 - Besitzt Funktionen um Nachrichten in der Konsole auszugeben
 - Besitzt Funktionen um UI-Elemente anzuzeigen:
-    - Login
-    - Menü
-    - Kontostand
-    - Geldauszahlung
-    - Geldeinzahlung
-    - Admin-Ansicht
+      - Login
+      - Menü
+      - Kontostand
+      - Geldauszahlung
+      - Geldeinzahlung
+      - Admin-Ansicht
 
 `Keypad.java`
 
