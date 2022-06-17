@@ -93,7 +93,6 @@ In der folgenden Dokumentation werden die für das Projekt durchgeführten Test 
 | Testschritte  | Es wird überprüft, ob bei folgenden ungültigen Eingaben eine Exception geworfen wird:</br>- Eingabe: -4€ (negativ)</br>- Eingabe: 7€ (nicht durch 5 teilbar)</br>- Eingabe: 1100€ (mehr als 1000€ auf einmal) |
 
 </br>
-</br>
 
 Zusätzlich zu den automatisch durchlaufenen Unit-Tests wurden noch einige Tests manuell durchgeführt. Jegliche Funktionen der Software wurden durch das das direkte Benutzen dieser überprüft. Der gesamte Prozess, vom Login, zum Geldabheben, bis zum Logout wurde mehrmals mit verschiedenen möglichen Inputs und Reihenfolgen ausgeführt. Hierbei wurde auch auf die korrekte Anordnung der UI-Komponenten geachtet. Die verschiedenen Textbeschreibungen und Überschriften wurden ebenfalls auf ihre Richtigkeit überprüft.  
 </br>

@@ -102,14 +102,14 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 |              | Augen                    | Auszahlmodul                              | Peripherie Ansteuerung     |
 
 ### Gestaltungsprinzipien und Style-Guide
-Im Folgenden wurden Design-Mockups erstellt die die Ansichten für den Benutzer und den Administrator Repräsentieren.
 
-Style-Guide Für den Benutzer:
+Im Folgenden wurden Design-Mockups erstellt, welche die Ansichten für den Benutzer und den Administrator repräsentieren.
+
+Style-Guide für den Benutzer:
 ![Style-Guide](images/Benutzer_Mockup.png "Style-Guide")
 
-Style-guide für die Adminview:
+Style-Guide für die Adminview:
 ![Style-Guide](images/Admin_Mockup.png "Style-Guide")
-
 
 ### Interatkionsmodellierung
 

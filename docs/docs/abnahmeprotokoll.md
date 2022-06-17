@@ -1,6 +1,6 @@
 # Abnahmeprotokoll
 
-In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragsnehmer. Kreuzen sie zwischen die Eckigenklammern soweit die Aussage entspricht [ X ].
+In diesem Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragnehmer. Machen sie ein Kreuz zwischen den Eckigen Klammern, wenn die Aussage korrekt ist [ X ].
 
 <table >
       <tr >
@@ -121,9 +121,9 @@ In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auft
 
 Auftraggeber und Auftragnehmer stellen nach der vereinbarten Abnahmeprozedur übereinstimmend fest, dass die vertraglich vereinbarten Leistungen im Wesentlichen:
 
-[ &nbsp; ] erreicht sind. offene Punkte, die den vertraglich vorgesehenen Verwendungszweck nur unwesentlich beeinflussen, sind in der beiliegenden Liste der offenen Punkte aufgeführt.
+[ &nbsp; ] erreicht sind. Offene Punkte, die den vertraglich vorgesehenen Verwendungszweck nur unwesentlich beeinflussen, sind in der beiliegenden Liste der offenen Punkte aufgeführt.
 
-[ &nbsp; ] nicht erreicht sind. Die Abnahme muß zu den vertraglichen Bedingungen wiederholt werden.
+[ &nbsp; ] nicht erreicht sind. Die Abnahme muss zu den vertraglichen Bedingungen wiederholt werden.
 
 Auch nach dem Abschluss des Projektes sind wir mit einem professionellen Service für Ihre Systeme und Software für Sie da und betreuen auf Wunsch Ihr System über den gesamten Lebenszyklus.
 
