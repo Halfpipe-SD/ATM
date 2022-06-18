@@ -1,7 +1,8 @@
 <!-- markdownlint-disable MD033 -->
 # Abnahmeprotokoll
 
-In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragnehmer. Kreuzen sie zwischen die eckigen Klammern soweit die Aussage entspricht [ X ].
+In diesem Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragnehmer.<br>
+Machen sie ein Kreuz zwischen den eckigen Klammern, wenn die Aussage korrekt ist [ X ].
 
 <table >
       <tr >
@@ -43,7 +44,7 @@ In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auft
 
 <table style="width:100%">
       <tr  >
-         <th  Colspan="2" style="width:10%; text-align:center"> Lieferanhang </th>
+         <th  Colspan="2" style="width:10%"> Lieferanhang </th>
       </tr>
       <tr >
          <th > Bestätigung </th>
@@ -81,11 +82,12 @@ In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auft
          <td style="width:10%; text-align:center"> [ &nbsp; ] </td>
          <td> 8. Delta-Dokumentation </td>
       </tr>
+
 </table>
 
 <table style="width:100%">
       <tr  >
-         <th  Colspan="2" style="width:10%; text-align:center"> Offene Fehler </th>
+         <th  Colspan="2" style="width:10%"> Offene Fehler </th>
       </tr>
       <tr >
          <th > Nr. </th>
@@ -103,7 +105,7 @@ In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auft
 
 <table style="width:100%">
       <tr >
-         <th  Colspan="2" style="width:10%; text-align:center"> Offene Anforderungen </th>
+         <th  Colspan="2" style="width:10%"> Offene Anforderungen </th>
       </tr>
       <tr>
          <th> Nr. </th>
