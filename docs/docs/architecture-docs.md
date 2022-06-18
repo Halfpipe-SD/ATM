@@ -103,9 +103,9 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 | **Ausgabe**  | Hände                    | Bildschirm                                | Grafikausgabe              |
 |              | Augen                    | Auszahlmodul                              | Peripherie Ansteuerung     |
 
-### Gestaltungsprinzipien 
+### Gestaltungsprinzipien
 
-Gestaltungsprinzipien bzw. Gastaltungsgesetze je nach Literatur, helfen ein ansprechendes und verständliches Design zu erstellen. 
+Gestaltungsprinzipien bzw. Gastaltungsgesetze je nach Literatur, helfen ein ansprechendes und verständliches Design zu erstellen.
 Es sind psychologische Ansätze, wie das menschliche Gehirn visuelle Informationen wahrnimmt und ordnet. Folgende Prinzipien wurden in diesem Projekt beachtet:
 
 #### Benutzeransicht
@@ -133,7 +133,6 @@ Interaktionselemente wurden hervorgehoben. Wie im Falle der Eingabeknöpfe Null 
 Eingabe Elemente werden links vom Display platziert und das Ausgabe-Fenster rechts vom Display. Die Regionen sind mit einer unterschiedlichen Hintergrundfarbe optisch getrennt
 
 ![Style-Guide](images/Gestaltungsprinzipien/b4.png)
-
 
 > **Prinzip der Erfahrung**
 
@@ -166,7 +165,6 @@ Interaktionselemente wurden hervorgehoben. Die Buttons wurden bläulich gefärbt
 Die Auswahl der Kunden befindet sich rechts am Bildschirm und die dazugehörigen Daten werden links im Bildschirm angezeigt. Die verfügbaren Optionen wurden unten am Bildschirmrand platziert.
 
 ![Style-Guide](images/Gestaltungsprinzipien/a4.png)
-
 
 ### Styleguide
 
