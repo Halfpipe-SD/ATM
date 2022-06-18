@@ -9,6 +9,7 @@ Das Team beschloss zu Beginn des Projekts, den bestehenden Code zu verwerfen und
 
 Die Dokumentation wurde in Form einer Website realisiert, die unter der Adresse [atm.node5.de](https://atm.node5.de) eingesehen werden kann. Zusätzlich steht eine automatisch generierte [PDF-Datei](https://github.com/thieleju/ATM/raw/gh-pages/docs.pdf) zum Download zur Verfügung.
 
+![P4NZ3RKN4K$](images/PK_Logo.png)
 ## Das Team
 
 Wir sind die Panzerknacker.
@@ -22,4 +23,4 @@ Wir sind die Panzerknacker.
 | Julian Thiele   | UML/Kollab.-Werkzeug, Entwicklungsumgebung |
 
 
-![P4NZ3RKN4K$](images/PK_Logo.png)
+
