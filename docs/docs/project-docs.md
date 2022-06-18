@@ -1,14 +1,12 @@
 # Projektdokumentation
 
-## Lesson Learned
+## Lessons Learned
 
-### Gesammelte Erfahrungswerte
+Regelmäßige Meetings halfen uns die Aufgaben so zu verteilen, dass wir den Terminplan einhalten konnten und deshalb einen konstanten Fortschritt erzielten.
+<br>
+Durch dieses Projekt lernten wir, besser mit Git und den Softwareentwicklungs-Tools von GitHub umzugehen. Dazu zählen das Projektboard, Issues und Actions. 
+<br>
 
-sdf
-
-### Analyse der Erfahrungswerte
-
-sdf
 
 ## Mapping zu individuellen Leistungen
 
