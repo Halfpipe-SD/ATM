@@ -36,8 +36,9 @@ Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu ver
 > 2. Der Benutzer gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Menü an.
 > 3. Der Benutzer wählt „Abbrechen“. ATM zeigt Willkommens Bildschirm an.
 
-
+<br>
 Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Administrator, zu verschiedenen Optionen dargestellt.
+<br>
 ## Administrator
 
 ## Account hinzufügen
