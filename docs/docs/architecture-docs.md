@@ -105,10 +105,10 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 
 Im Folgenden wurden Design-Mockups erstellt, welche die Ansichten für den Benutzer und den Administrator repräsentieren.
 
-Style-Guide für den Benutzer:
+#### Mockup für die Standardansicht des Automaten
 ![Style-Guide](images/Benutzer_Mockup.png "Style-Guide")
 
-Style-Guide für die Adminview:
+#### Mockup für die Administratoransicht des Automaten
 ![Style-Guide](images/Admin_Mockup.png "Style-Guide")
 
 ### Interatkionsmodellierung
