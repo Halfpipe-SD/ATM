@@ -1,6 +1,8 @@
+<!-- markdownlint-disable MD033 -->
 # Abnahmeprotokoll
 
-In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragsnehmer. Kreuzen sie zwischen die Eckigenklammern soweit die Aussage entspricht [ X ].
+In diesem Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragnehmer.<br>
+Machen sie ein Kreuz zwischen den eckigen Klammern, wenn die Aussage korrekt ist [ X ].
 
 <table >
       <tr >
@@ -42,7 +44,7 @@ In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auft
 
 <table style="width:100%">
       <tr  >
-         <th  Colspan="2" style="width:10%; text-align:center"> Lieferanhang </th>
+         <th  Colspan="2" style="width:10%"> Lieferanhang </th>
       </tr>
       <tr >
          <th > Bestätigung </th>
@@ -85,7 +87,7 @@ In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auft
 
 <table style="width:100%">
       <tr  >
-         <th  Colspan="2" style="width:10%; text-align:center"> Offene Fehler </th>
+         <th  Colspan="2" style="width:10%"> Offene Fehler </th>
       </tr>
       <tr >
          <th > Nr. </th>
@@ -103,11 +105,11 @@ In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auft
 
 <table style="width:100%">
       <tr >
-         <th  Colspan="2" style="width:10%; text-align:center"> Offene Anforderungen </th>
+         <th  Colspan="2" style="width:10%"> Offene Anforderungen </th>
       </tr>
       <tr>
          <th> Nr. </th>
-         <th> Anforderungensbeschreibung </th>
+         <th> Anforderungsbeschreibung </th>
       </tr>
       <tr>
          <td> ... </td>
@@ -121,9 +123,9 @@ In diesen Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auft
 
 Auftraggeber und Auftragnehmer stellen nach der vereinbarten Abnahmeprozedur übereinstimmend fest, dass die vertraglich vereinbarten Leistungen im Wesentlichen:
 
-[ &nbsp; ] erreicht sind. offene Punkte, die den vertraglich vorgesehenen Verwendungszweck nur unwesentlich beeinflussen, sind in der beiliegenden Liste der offenen Punkte aufgeführt.
+[ &nbsp; ] erreicht sind. Offene Punkte, die den vertraglich vorgesehenen Verwendungszweck nur unwesentlich beeinflussen, sind in der beiliegenden Liste der offenen Punkte aufgeführt.
 
-[ &nbsp; ] nicht erreicht sind. Die Abnahme muß zu den vertraglichen Bedingungen wiederholt werden.
+[ &nbsp; ] nicht erreicht sind. Die Abnahme muss zu den vertraglichen Bedingungen wiederholt werden.
 
 Auch nach dem Abschluss des Projektes sind wir mit einem professionellen Service für Ihre Systeme und Software für Sie da und betreuen auf Wunsch Ihr System über den gesamten Lebenszyklus.
 
@@ -133,7 +135,7 @@ Auch nach dem Abschluss des Projektes sind wir mit einem professionellen Service
          <br>
          <br>_________________________________________
          <br>
-         Auftragsgeber/Repräsentant, Unterschrift
+         Auftraggeber/Repräsentant, Unterschrift
          <br>
          <br>_________________________________________
          <br>
@@ -143,7 +145,7 @@ Auch nach dem Abschluss des Projektes sind wir mit einem professionellen Service
          <br>
          <br>_________________________________________
          <br>
-         Auftragsnehmer, Unterschrift
+         Auftragnehmer, Unterschrift
          <br>
          <br>_________________________________________
          <br>

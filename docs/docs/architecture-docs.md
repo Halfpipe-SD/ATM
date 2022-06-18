@@ -4,6 +4,8 @@
 
 ### Priorisierung der nicht funktionalen Anforderungen
 
+Nichtfunktionale Anforderungen werden vielfach als Randbedingungen und Qualitätseigenschaften verstanden.
+
 #### Qualitätsanforderungen
 
 **Änderbarkeit** und **Wiederverwendbarkeit** waren uns besonders wichtig, da wir zu Beginn Schwierigkeiten hatten, uns einen Überblick über den bestehenden Code zu verschaffen. Aus diesem Grund entschieden wir uns, den Code noch einmal von Grund auf neu zu erstellen.
@@ -101,56 +103,87 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 | **Ausgabe**  | Hände                    | Bildschirm                                | Grafikausgabe              |
 |              | Augen                    | Auszahlmodul                              | Peripherie Ansteuerung     |
 
-### Gestaltungsprinzipien und Style-Guide
+### Gestaltungsprinzipien
 
-Im Folgenden wurden Design-Mockups erstellt die die Ansichten für den Benutzer und den Administrator Repräsentieren.
+Gestaltungsprinzipien bzw. Gastaltungsgesetze je nach Literatur, helfen ein ansprechendes und verständliches Design zu erstellen.
+Es sind psychologische Ansätze, wie das menschliche Gehirn visuelle Informationen wahrnimmt und ordnet. Folgende Prinzipien wurden in diesem Projekt beachtet:
 
-Style-Guide Für den Benutzer:
-![Style-Guide](images/Benutzer_Mockup.png "Style-Guide")
+#### Benutzeransicht
 
-Style-guide für die Adminview:
-![Style-Guide](images/Admin_Mockup.png "Style-Guide")
+> **Prinzip der Ähnlichkeit**
 
-#### Gestaltprinzipien
+Elemente die ähnliche bzw. gleiche Funktionen haben wurden gleich gestaltet. Wie zum Beispiel die Eingabe Tastenfeld Null bis Neun, sie haben alle das gleichen Design. Die Tasten “Enter”, “Clear” und “OK” haben das gleiche Design aber führen unterschiedliche Funktionen aus.
 
-Gestaltprinzipien, auch bekannt als Gestaltgesetzte je nach Literatur, helfen ein ansprechendes und verständliches design zu erstellen. Es handelt sich hier um psychologische Ansätze, um zu verstehen wie das menschliche Gehirn visuelle Informationen wahrnimmt und ordnet. Folgende Prinzipien wurden in diesem Projekt beachtet:
+![Style-Guide](images/Gestaltungsprinzipien/b1.png)
 
-##### 1. Prinzip der Ähnlichkeit
+> **Prinzip der Nähe**
 
-Elemente die eine ähnliche bzw. gleiche Funktionen haben wurden gleich gestaltet. Wie zum Beispiel die Eingabe Nummernfeld Null bis Neun. Sie haben alle den gleichen design. Die knöpfe “Enter”, “Clear” und “OK” haben den gleichen design aber führen unterschiede Funktionen aus.
+Elemente die die gleichen Funktionen ausführen, oder helfen, dass diese Funktion ausgeführt werden kann, wurden räumlich nah platziert. Wie zum Beispiel die Tasten Null bis Neun, sie wurden nah an einander, links im Display platziert. Auch die Knöpfe “Enter” und “Clear” wurden im Tastenfeld platziert, da sie die Eingabe bestätigen oder löschen.
 
-![Gestaltprinzipien](images/Prinzip_aehnlichkeit.png "Gestaltprinzipien")
+![Style-Guide](images/Gestaltungsprinzipien/b2.png)
 
-##### 2. Prinzip der Nähe
-
-Elemente die die gleichen Funktionen ausführen oder dazu helfen, dass diese Funktion ausgeführt werden kann, wurden räumlich nah platziert. Wie zum Beispiel die Eingabe Zifferknöpfe Null bis Neun, sie wurden links vom Display nah an einander  platziert, sowie auch die knöpfe “Enter” und “Clear” da sie die Zifferneingabe bestätigen oder korrigieren.  
-
-![Gestaltprinzipien](images/Prinzip_naehe.png "Gestaltprinzipien")
-
-##### 3. Prinzip der Prägnanz
+> **Prinzip der Prägnanz**
 
 Interaktionselemente wurden hervorgehoben. Wie im Falle der Eingabeknöpfe Null bis Neuen. Aber auch das Ausgabefenster wurde quadratisch und mit weißem Hintergrund gestaltet.
 
-![Gestaltprinzipien](images/Prinzip_praegnanz.png "Gestaltprinzipien")
+![Style-Guide](images/Gestaltungsprinzipien/b3.png)
 
-##### 4. Prinzip der gemeinsamen Region
+> **Prinzip der gemeinsamen Region**
 
-Eingabe Elemente werden links vom Display platziert und das Ausgabefenster rechts vom Display. Die Regionen sind mit einer unterschiedlichen Hintergrundfarbe getrennt.
+Eingabe Elemente werden links vom Display platziert und das Ausgabe-Fenster rechts vom Display. Die Regionen sind mit einer unterschiedlichen Hintergrundfarbe optisch getrennt
 
-![Gestaltprinzipien](images/Prinzip_region.png "Gestaltprinzipien")
+![Style-Guide](images/Gestaltungsprinzipien/b4.png)
 
-##### 5. Prinzip der Erfahrung
+> **Prinzip der Erfahrung**
 
-Elemente werden so gestaltet wie sie sich in voriger Praxis schon bewiesen haben oder aus Kulturellersicht angenommen wurden. Zum Beispiel in unseren Fall ist es kultureller standard das nummerische Tastenfelder in einer Matrix 3x4 angezeigt werden sollten.
+Elemente werden so gestaltet wie sie sich zuvor in der Praxis schon bewiesen haben, oder es aus kultureller Sicht angenommen wurde. In unserem Fall wurde kulturell standardisiert das nummerische Tastenfelder in einer Matrix 3x4 angeordnet.
 
-![Gestaltprinzipien](images/Prinzip_erfahrung.png "Gestaltprinzipien")
+![Style-Guide](images/Gestaltungsprinzipien/b5.png)
+
+#### Admin-Ansicht
+
+> **Prinzip der Ähnlichkeit**
+
+Elemente die ähnliche bzw. gleiche Funktionen haben wurden gleich gestaltet. Wie zum Beispiel die Buttons „Neuer Account“, „Account löschen“, „Speichern“, die alle benötigt werden um Accountmanagement auszuüben, wurden gleich gestaltet. Die Eingabefelder zum Erstellen neuer Accounts wurden ebenfalls gleich gestaltet.
+
+![Style-Guide](images/Gestaltungsprinzipien/a1.png)
+
+> **Prinzip der Nähe**
+
+Elemente, die die gleichen Funktionen ausführen oder dazu helfen, dass diese Funktion ausgeführt werden kann wurden räumlich nah platziert. Die Buttons für das Accountmanagement wurden alle unten platziert. Die Eingabefelder zum Erstellen eines neuen Accounts wurden alle rechts am Bildschirmrand zusammengefasst und die Auswahl eines Kunden an der linken Seite des Bildschirmrandes.
+
+![Style-Guide](images/Gestaltungsprinzipien/a2.png)
+
+> **Prinzip der Prägnanz**
+
+Interaktionselemente wurden hervorgehoben. Die Buttons wurden bläulich gefärbt und umrandet, um sie hervorzuheben. Ebenso wurde bei der Auswahl eines Kunden, die Auswahl bläulich hinterlegt um zu markieren, welcher Kunde ausgewählt wurde. Zusätzlich wurden die Eingabefelder alle mit weißem Hintergrund versehen.
+
+![Style-Guide](images/Gestaltungsprinzipien/a3.png)
+
+> **Prinzip der gemeinsamen Region**
+
+Die Auswahl der Kunden befindet sich rechts am Bildschirm und die dazugehörigen Daten werden links im Bildschirm angezeigt. Die verfügbaren Optionen wurden unten am Bildschirmrand platziert.
+
+![Style-Guide](images/Gestaltungsprinzipien/a4.png)
+
+### Styleguide
+
+Im Folgenden wurden Design-Mockups erstellt, welche die Ansichten für den Benutzer und den Administrator repräsentieren.
+
+#### Mockup für die Standardansicht des Automaten
+
+![Style-Guide](images/Benutzer_Mockup.png "Style-Guide")
+
+#### Mockup für die Administratoransicht des Automaten
+
+![Style-Guide](images/Admin_Mockup.png "Style-Guide")
 
 ### Interatkionsmodellierung
 
 Im Folgenden wurde die Interaktion zwischen den Benutzern und dem Geldautomaten modelliert und in einem UML-Aktivitätsdiagramm
 dargestellt.
 
-#### Adminansicht
+#### Admin-Ansicht
 
 ![InterkationsDiagramm](images/AdminView.png "InterkationsDiagramm")
 

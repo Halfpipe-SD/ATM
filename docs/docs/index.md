@@ -2,18 +2,25 @@
 
 ## Abstract
 
-abstract text
+Das Ziel dieses Projekts war es, den [bestehenden Java-Code](https://github.com/DanH957/ATM-Machine) eines Geldautomaten zu dokumentieren und zu verbessern. [Das Team](index.md#das-team) bestand aus fünf Personen, die sich auf ein bestimmtes Thema spezialisiert hatten.
+Ein [GitHub-Repository](https://github.com/thieleju/ATM) diente als zentraler Ort für die Dokumentation und den Programmcode. Zusätzlich konnten mit Hilfe eines [SCRUM-Boards](https://github.com/users/thieleju/projects/4/views/2?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%2C3859316%5D) die Aufgaben der Teammitglieder aufgeteilt und deren Fortschritt überwacht werden.
 
-<br>
+Das Team beschloss zu Beginn des Projekts, den bestehenden Code zu verwerfen und noch einmal von vorne zu beginnen. Dies führte zu einer neuen Architektur, die nun modularer gestaltet und dadurch leichter erweiterbar war. Details können in der [Architekturdokumentation](architecture-docs.md) nachgelesen werden.
 
+Die Dokumentation wurde in Form einer Website realisiert, die unter der Adresse [atm.node5.de](https://atm.node5.de) eingesehen werden kann. Zusätzlich steht eine automatisch generierte [PDF-Datei](https://github.com/thieleju/ATM/raw/gh-pages/docs.pdf) zum Download zur Verfügung.
+
+![P4NZ3RKN4K$](images/PK_Logo.png)
 ## Das Team
 
 Wir sind die Panzerknacker.
 
 | Mitglied        | Spezialisierung                            |
 | --------------- | ------------------------------------------ |
-| Michél Franz    | UX                                         |
+| Michel Franz    | UX                                         |
 | Juri Kaemper    | Text & QS                                  |
 | Christian Lopéz | Programmierung                             |
 | Felix Möhler    | Requirements Engineering                   |
 | Julian Thiele   | UML/Kollab.-Werkzeug, Entwicklungsumgebung |
+
+
+
