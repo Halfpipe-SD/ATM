@@ -20,3 +20,6 @@ Wir sind die Panzerknacker.
 | Christian Lopéz | Programmierung                             |
 | Felix Möhler    | Requirements Engineering                   |
 | Julian Thiele   | UML/Kollab.-Werkzeug, Entwicklungsumgebung |
+
+
+![P4NZ3RKN4K$](images/PK_Logo.png)
