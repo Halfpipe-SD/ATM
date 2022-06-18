@@ -22,3 +22,16 @@ Wir sind die Panzerknacker.
 | Christian Lopéz | Programmierung                             |
 | Felix Möhler    | Requirements Engineering                   |
 | Julian Thiele   | UML/Kollab.-Werkzeug, Entwicklungsumgebung |
+
+## Die Auftraggeber
+
+Katharina Franz<br>
+katharina.franz@th-ab.de
+
+Technische-Hochschule Aschaffenburg <br>
+Würzburger Straße 45,
+63743 Aschaffenburg,
+Deutschland
+
+![th-logo](images/th-ab-logo.png)
+
