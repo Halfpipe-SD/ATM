@@ -5,10 +5,10 @@ Coming soon
 
 ## Mapping zu individuellen Leistungen
 
-Christan Andés1, Michél Franz2, Juri Kaemper3, Felix Möhler4, Julian Thiele5
+Christan Andés1, Michél Franz2, Juri Kaemper3, Felix Möhler[^4], Julian Thiele5
 
 **01 Anforderungsdokumentation**
-- Produktvision und Produktziele4
+- (Produktvision und Produktziele)[^4]
 - Rollen und Personas5
 - User Stories4
 - Aufgaben
@@ -41,7 +41,7 @@ Mensch Maschine Schnittstelle
 - Vorlage Abnahmeprotokoll inkl. vereinbarter Use-Cases
 
 **05 Benutzerdokumentation**
-ToDo  Unterpunkt umbenennen
+ToDo -> Unterpunkt umbenennen
 - Benutzerhandbuch oder ein der Zielgruppe entsprechendes Format (Video, Tutorial, etc.) – mit Kundin abzustimmen
 
 **06 Projektdokumentation**
