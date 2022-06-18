@@ -128,18 +128,22 @@ Interaktionselemente wurden hervorgehoben. Wie im Falle der Eingabeknöpfe Null 
 
 ![Style-Guide](images/Gestaltungsprinzipien/b3.png)
 
-> 4. Prinzip der gemeinsamen Region.
+> 4. Prinzip der gemeinsamen Region
+
 Eingabe Elemente werden links vom Display platziert und das Ausgabe-Fenster rechts vom Display. Die Regionen sind mit einer unterschiedlichen Hintergrundfarbe optisch getrennt
 
 ![Style-Guide](images/Gestaltungsprinzipien/b4.png)
 
 
 > 5. Prinzip der Erfahrung
+
 Elemente werden so gestaltet wie sie sich zuvor in der Praxis schon bewiesen haben, oder es aus kultureller Sicht angenommen wurde. In unserem Fall wurde kulturell standardisiert das nummerische Tastenfelder in einer Matrix 3x4 angeordnet.
 
 ![Style-Guide](images/Gestaltungsprinzipien/b5.png)
 
-#### Admin-Ansich>### 1. Prinzip der Ähnlichkeit
+#### Admin-Ansicht
+
+> 1. Prinzip der Ähnlichkeit
 
 Elemente die ähnliche bzw. gleiche Funktionen haben wurden gleich gestaltet. Wie zum Beispiel die Buttons „Neuer Account“, „Account löschen“, „Speichern“, die alle benötigt werden um Accountmanagement auszuüben, wurden gleich gestaltet. Die Eingabefelder zum Erstellen neuer Accounts wurden ebenfalls gleich gestaltet.
 
@@ -157,7 +161,7 @@ Interaktionselemente wurden hervorgehoben. Die Buttons wurden bläulich gefärbt
 
 ![Style-Guide](images/Gestaltungsprinzipien/a3.png)
 
-> 4. Prinzip der gemeinsamen Region.
+> 4. Prinzip der gemeinsamen Region
 
 Die Auswahl der Kunden befindet sich rechts am Bildschirm und die dazugehörigen Daten werden links im Bildschirm angezeigt. Die verfügbaren Optionen wurden unten am Bildschirmrand platziert.
 
