@@ -101,8 +101,63 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 | **Ausgabe**  | Hände                    | Bildschirm                                | Grafikausgabe              |
 |              | Augen                    | Auszahlmodul                              | Peripherie Ansteuerung     |
 
-### Gestaltungsprinzipien und Style-Guide
+>#### Gestaltungsprinzipien 
 
+Gestaltprinzipien bzw. Gestaltgesetzte je nach Literatur helfen ein ansprechendes und verständliches design zu erstellen.
+Es sind psychologische Ansätze, wie das menschliche Gehirn visuelle Informationen wahrnimmt und ordnet. Folgende Prinzipien wurden in diesem Projekt beachtet.
+
+#### Benutzeransicht
+
+>#### 1.	Prinzip der Ähnlichkeit
+Elemente die ähnliche bzw. gleiche Funktionen haben wurden gleich gestaltet. Wie zum Beispiel die Eingabe Zifferknöpfe Null bis Neun, sie haben alle den gleichen design. Die knöpfe “Enter”, “Clear” und “OK” haben den gleichen design aber führen unterschiede Funktionen aus.
+
+![Style-Guide](images/Gestaltungsprinzipien/b1.png)
+
+>#### 2.	Prinzip der Nähe
+Elemente die die gleichen Funktionen ausführen oder dazu helfen, dass diese Funktion ausgeführt werden kann wurden räumlich nah platziert. Wie zum Beispiel die Eingabe Zifferknöpfe Null bis Neun, sie wurden im nah an einander links vom Display platziert sowie die knöpfe “Enter” und “Clear” da sie die Ziffer Eingabe bestätigen oder korrigieren.
+
+![Style-Guide](images/Gestaltungsprinzipien/b2.png)
+
+>#### 3.	Prinzip der Prägnanz
+Interaktionselemente wurden hervorgehoben. Wie im Falle der Eingabeknöpfe Null bis Neuen. Aber auch das Ausgabefenster wurde quadratisch und mit weisem Hintergrund gestaltet.
+
+![Style-Guide](images/Gestaltungsprinzipien/b3.png)
+
+>#### 4.	Prinzip der gemeinsamen Region.
+Eingabe Elemente werden links vom Display platziert und das Ausgabe Fenster rechts vom Display. Die Regionen sind mit einer unterschiedlichen Hintergrundfarbe getrennt
+
+![Style-Guide](images/Gestaltungsprinzipien/b4.png)
+
+
+>#### 5.	Prinzip der Erfahrung
+Elemente werden so gestaltet wie sie in voriger Praxis sich schon bewiesen haben oder es aus kultureller Sicht angenommen wurden. Zum Beispiel in unseren Fall wurde kulturell standardisiert das nummerische Tastenfelder in einer Matrix 3x4 angezeigt werden sollten.
+
+![Style-Guide](images/Gestaltungsprinzipien/b5.png)
+
+#### Adminansicht
+
+>#### 1.	Prinzip der Ähnlichkeit
+Elemente die ähnliche bzw. gleiche Funktionen haben wurden gleich gestaltet. Wie zum Beispiel die Buttons „Neuer Account“, „Account löschen“, „Speichern“, die alle benötigt werden um Accountmanagement auszuüben, wurden gleich gestaltet. die Eingabefelder zum erstellen neuer Accounts wurden ebenfalls gleich gestaltet.
+
+![Style-Guide](images/Gestaltungsprinzipien/a1.png)
+
+>#### 2.	Prinzip der Nähe
+Elemente die die gleichen Funktionen ausführen oder dazu helfen, dass diese Funktion ausgeführt werden kann wurden räumlich nah platziert. Die Buttons für das Accountmanagement wurden alle unten Platziert. Die Eingabefelder zum erstellen eines neuen Accounts wurden alle rechts am Bildschirmrand zusammengefasst und die Auswahl eines Kunden and die linke Seite des Bildschirmrands platziert.
+
+![Style-Guide](images/Gestaltungsprinzipien/a2.png)
+
+>#### 3. Prinzip der Prägnanz
+Interaktionselemente wurden hervorgehoben. Die Buttons wurden Bläulich gefärbt und umrandet um sie hervorzuheben. Ebenso wurde bei der Auswahl eines Kunden, die Auswahl Bläulich hinterlegt um zu markieren welcher Kunde ausgewählt wurde. Desweitern wurden die Eingabefelder alle weiß hinterlegt um sie hervorzuheben.
+
+![Style-Guide](images/Gestaltungsprinzipien/a3.png)
+
+>#### 4.	Prinzip der gemeinsamen Region.
+Die Auswahl der Kunden Befindet sich rechts am Bildschirm und die dazugehörigen daten werden links auf dem Bildschirm angezeigt. Die Verfügbaren Optionen wurden unten am Bildschirmrand plaziert.
+
+![Style-Guide](images/Gestaltungsprinzipien/a4.png)
+
+
+>#### Styleguide
 Im Folgenden wurden Design-Mockups erstellt, welche die Ansichten für den Benutzer und den Administrator repräsentieren.
 
 Style-Guide für den Benutzer:
