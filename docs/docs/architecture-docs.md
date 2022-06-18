@@ -105,7 +105,7 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 
 >#### Gestaltungsprinzipien 
 
-Gestaltprinzipien bzw. Gestaltgesetzte je nach Literatur helfen ein ansprechendes und verständliches design zu erstellen.
+Gestaltungsprinzipien bzw. Gastaltungsgesetze je nach Literatur helfen ein ansprechendes und verständliches design zu erstellen. 
 Es sind psychologische Ansätze, wie das menschliche Gehirn visuelle Informationen wahrnimmt und ordnet. Folgende Prinzipien wurden in diesem Projekt beachtet.
 
 #### Benutzeransicht
