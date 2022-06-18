@@ -6,16 +6,16 @@
 
 Nichtfunktionale Anforderungen werden vielfach als Randbedingungen und Qualitätseigenschaften verstanden.
 
-#### Qualitätsanforderungen
+> Qualitätsanforderungen
 
 **Änderbarkeit** und **Wiederverwendbarkeit** waren uns besonders wichtig, da wir zu Beginn Schwierigkeiten hatten, uns einen Überblick über den bestehenden Code zu verschaffen. Aus diesem Grund entschieden wir uns, den Code noch einmal von Grund auf neu zu erstellen.
 Dadurch verbessert sich vor allem die **Brauchbarkeit** und **Wartbarkeit** des Codes.
 
-#### Anforderungen an Lieferbestandteile
+> Anforderungen an Lieferbestandteile
 
 Eine vollständige Dokumentation in Form eines PDF Dokumentes und die Software bilden die Lieferbestandteile.
 
-#### Anforderungen an die Benutzerschnittstelle
+> Anforderungen an die Benutzerschnittstelle
 
 Eine weitere wichtige nicht funktionale Anforderung ist die **Bedienbarkeit** oder **Benutzerfreundlichkeit** des Programms. Da diese Anwendung für eine sehr große Menge an Benutzern ausgelegt ist, wurde die Bedienbarkeit und Benutzerfreundlichkeit des Programms auf eine höhere Priorität gesetzt. So wird gewährleistet, dass Benutzer aller Altersgruppen gut mit der Anwendung interagieren können.
 
