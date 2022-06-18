@@ -13,7 +13,7 @@ Durch dieses Projekt lernten wir, besser mit Git und den Softwareentwicklungs-To
 Die Aufgaben wurden mit Github-Issues verwaltet. Diese können [hier](https://github.com/thieleju/ATM/issues?q=) eingesehen werden. <br>
 Zusätzlich sind hier noch einmal die Abschnitte der Dokumentation mit Hochzahlen versehen, die zeigen, wer die Autoren sind:
 
-Christan Andés<sup>1</sup>, Michél Franz<sup>2</sup>, Juri Kaemper<sup>3</sup>, Felix Möhler<sup>4</sup>, Julian Thiele<sup>5</sup>
+Christan Andés<sup>1</sup>, Michel Franz<sup>2</sup>, Juri Kaemper<sup>3</sup>, Felix Möhler<sup>4</sup>, Julian Thiele<sup>5</sup>
 
 ### 01 Anforderungsdokumentation
 
