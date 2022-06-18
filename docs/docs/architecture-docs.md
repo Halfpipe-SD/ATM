@@ -4,6 +4,8 @@
 
 ### Priorisierung der nicht funktionalen Anforderungen
 
+Nichtfunktionale Anforderungen werden vielfach als Randbedingungen und Qualitätseigenschaften verstanden.
+
 #### Qualitätsanforderungen
 
 **Änderbarkeit** und **Wiederverwendbarkeit** waren uns besonders wichtig, da wir zu Beginn Schwierigkeiten hatten, uns einen Überblick über den bestehenden Code zu verschaffen. Aus diesem Grund entschieden wir uns, den Code noch einmal von Grund auf neu zu erstellen.
@@ -160,10 +162,10 @@ Die Auswahl der Kunden Befindet sich rechts am Bildschirm und die dazugehörigen
 >#### Styleguide
 Im Folgenden wurden Design-Mockups erstellt, welche die Ansichten für den Benutzer und den Administrator repräsentieren.
 
-Style-Guide für den Benutzer:
+#### Mockup für die Standardansicht des Automaten
 ![Style-Guide](images/Benutzer_Mockup.png "Style-Guide")
 
-Style-Guide für die Adminview:
+#### Mockup für die Administratoransicht des Automaten
 ![Style-Guide](images/Admin_Mockup.png "Style-Guide")
 
 ### Interatkionsmodellierung
