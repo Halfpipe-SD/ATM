@@ -7,7 +7,7 @@ Machen sie ein Kreuz zwischen den eckigen Klammern, wenn die Aussage korrekt ist
 <table >
       <tr >
          <th  Colspan="2" style="width:10%; text-align:center" > Abnahmeprotokoll </th>
-         <th  rowspan="3" style="width:30%; text-align:center" ><img src="images/Panzerknacker_logo.jpg"> </th>
+         <th  rowspan="3" style="width:30%; text-align:center" ><img src="images/Panzerknacker_logo.png"> </th>
       </tr>
       <tr >
          <th style="width:10%"> Projektname: </th>
