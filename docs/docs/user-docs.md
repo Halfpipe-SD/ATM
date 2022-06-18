@@ -1,7 +1,7 @@
 # Benutzerdokumentation
 
-Im Folgenden wird eine Anleitung zur Benutzung des ATM zu verschiedenen Optionen dargestellt.
-
+Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu verschiedenen Optionen dargestellt.
+## Kunde
 ## Geld abheben
 
 > 1. Der Benutzer inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.
@@ -36,3 +36,29 @@ Im Folgenden wird eine Anleitung zur Benutzung des ATM zu verschiedenen Optionen
 > 2. Der Benutzer gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Menü an.
 > 3. Der Benutzer wählt „Abbrechen“. ATM zeigt Willkommens Bildschirm an.
 
+
+Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Administrator, zu verschiedenen Optionen dargestellt.
+## Administrator
+
+## Account hinzufügen
+
+> 1. Administrator inseriert seine Karte. ATM zeigt das Authentifizierungsmenü an.
+> 2. Administrator gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Admin-Menü an.
+> 3. Administrator drückt „Neuer Account“. ATM erzeugt ein neues Konto.
+> 4. Administrator gibt Accountdaten ein und drückt "Speichern". ATM Zeigt Informationsbildschirm an.
+> 5. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+
+## Account löschen
+
+> 1. Administrator inseriert seine Karte. ATM zeigt das Authentifizierungsmenü an.
+> 2. Administrator gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Admin-Menü an.
+> 3. Administrator wählt einen account aus und drückt "Löschen". ATM erfordert bestätigung.
+> 4. Adminstrator bestätigt das Löschen. ATM löscht das Konto und Zeigt Informationsbildschirm an.
+> 5. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+
+## Account bearbeiten
+
+> 1. Administrator inseriert seine Karte. ATM zeigt das Authentifizierungsmenü an.
+> 2. Administrator gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Admin-Menü an.
+> 3. Administrator wählt einen Account aus, gibt die gewünschte änderung ein und drückt "Speichern". ATM zeigt Informationsbildschirm an.
+> 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
