@@ -57,6 +57,6 @@ Christan Andés<sup>1</sup>, Michél Franz<sup>2</sup>, Juri Kaemper<sup>3</sup>
 - Lessons Learned
 - Mapping zur individuellen Leistung
 
-### 07 Codedokumentation<sup>5</sup>
+### 07 Codedokumentation<sup>5, 2</sup>
 - Delta-Codedokumentation
 - Ist-Dokumentation
