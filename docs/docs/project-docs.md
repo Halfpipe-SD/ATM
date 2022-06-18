@@ -39,7 +39,7 @@ Christan Andés1, Michél Franz2, Juri Kaemper3, Felix Möhler[^4], Julian Thiel
 - Gestaltungsprinzipien und Style-Guide2
 - Interaktionsmodellierung2
 
-### 03 Testdokumentation**
+### 03 Testdokumentation
 
 - Testspezifikation
 - Testprotokoll
