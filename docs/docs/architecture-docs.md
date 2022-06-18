@@ -102,6 +102,7 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 |              | Augen                    | Auszahlmodul                              | Peripherie Ansteuerung     |
 
 ### Gestaltungsprinzipien und Style-Guide
+
 Im Folgenden wurden Design-Mockups erstellt die die Ansichten für den Benutzer und den Administrator Repräsentieren.
 
 Style-Guide Für den Benutzer:
@@ -110,6 +111,39 @@ Style-Guide Für den Benutzer:
 Style-guide für die Adminview:
 ![Style-Guide](images/Admin_Mockup.png "Style-Guide")
 
+#### Gestaltprinzipien
+
+Gestaltprinzipien, auch bekannt als Gestaltgesetzte je nach Literatur, helfen ein ansprechendes und verständliches design zu erstellen. Es handelt sich hier um psychologische Ansätze, um zu verstehen wie das menschliche Gehirn visuelle Informationen wahrnimmt und ordnet. Folgende Prinzipien wurden in diesem Projekt beachtet:
+
+##### 1. Prinzip der Ähnlichkeit
+
+Elemente die eine ähnliche bzw. gleiche Funktionen haben wurden gleich gestaltet. Wie zum Beispiel die Eingabe Nummernfeld Null bis Neun. Sie haben alle den gleichen design. Die knöpfe “Enter”, “Clear” und “OK” haben den gleichen design aber führen unterschiede Funktionen aus.
+
+![Gestaltprinzipien](images/Prinzip_aehnlichkeit.png "Gestaltprinzipien")
+
+##### 2. Prinzip der Nähe
+
+Elemente die die gleichen Funktionen ausführen oder dazu helfen, dass diese Funktion ausgeführt werden kann, wurden räumlich nah platziert. Wie zum Beispiel die Eingabe Zifferknöpfe Null bis Neun, sie wurden links vom Display nah an einander  platziert, sowie auch die knöpfe “Enter” und “Clear” da sie die Zifferneingabe bestätigen oder korrigieren.  
+
+![Gestaltprinzipien](images/Prinzip_naehe.png "Gestaltprinzipien")
+
+##### 3. Prinzip der Prägnanz
+
+Interaktionselemente wurden hervorgehoben. Wie im Falle der Eingabeknöpfe Null bis Neuen. Aber auch das Ausgabefenster wurde quadratisch und mit weißem Hintergrund gestaltet.
+
+![Gestaltprinzipien](images/Prinzip_praegnanz.png "Gestaltprinzipien")
+
+##### 4. Prinzip der gemeinsamen Region
+
+Eingabe Elemente werden links vom Display platziert und das Ausgabefenster rechts vom Display. Die Regionen sind mit einer unterschiedlichen Hintergrundfarbe getrennt.
+
+![Gestaltprinzipien](images/Prinzip_region.png "Gestaltprinzipien")
+
+##### 5. Prinzip der Erfahrung
+
+Elemente werden so gestaltet wie sie sich in voriger Praxis schon bewiesen haben oder aus Kulturellersicht angenommen wurden. Zum Beispiel in unseren Fall ist es kultureller standard das nummerische Tastenfelder in einer Matrix 3x4 angezeigt werden sollten.
+
+![Gestaltprinzipien](images/Prinzip_erfahrung.png "Gestaltprinzipien")
 
 ### Interatkionsmodellierung
 
