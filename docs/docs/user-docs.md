@@ -43,7 +43,7 @@ Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu ver
 
 > 1. Der Benutzer wählt „Geld einzahlen“ . ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.<br>
 > ![udoc](images/BenutzerDoku/BH-EinZahlen.png)
-> 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.
+> 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.<br>
 > ![udoc](images/BenutzerDoku/BH-Einzahlung1.png)
 > 3. Benutzer drückt „JA“. ATM validiert die Eingabe. Bei erfolgreicher Prüfung wird der Betrag dem Bankkonto gutgeschrieben und der Informationsbildschirm wird angezeigt.<br>
 > ![udoc](images/BenutzerDoku/BH-Einzahlung2.png)
