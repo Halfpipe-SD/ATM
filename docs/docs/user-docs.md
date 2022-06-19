@@ -28,6 +28,7 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 
 > 1. Der Benutzer wählt "Geld abheben" aus. ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.<br>
 > ![udoc](images/BenutzerDoku/BH-AbHeben.png)
+> ![udoc](images/BenutzerDoku/BH-abzahlung.png)
 > 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.<br>
 > ![udoc](images/BenutzerDoku/BH-Auszahlung1.png)
 > ![udoc](images/BenutzerDoku/BH-Auszahlung1.1.png)
