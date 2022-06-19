@@ -7,10 +7,10 @@
 ### Authentifizieren
 >Der Benutzer sieht zunächst den „Willkommens Bildschirm“ mit der Forderung seine Karte einzustecken.<br>
 >![udoc](images/BenutzerDoku/bh-Auth1.png)<br>
->Nachdem die Karte eingeführt wurde, wird der Benutzer aufgefordert, sich durch die Eingabe seines „PIN“, auf dem „Keypad“, zu Authentifizieren.<br>
+>Nachdem die Karte eingeführt wurde, wird der Benutzer aufgefordert, sich durch die Eingabe seines „PIN“, auf dem „Keypad“, zu authentifizieren.<br>
 >![udoc](images/BenutzerDoku/bh-Auth2.png)<br>
->Die Eingabe des „PIN“, muss mit „Enter“ bestätigt werden. <br>
-Nach erfolgreichem „Login“ , wird entweder die Kunden-Ansicht, oder die Admin-Ansicht angezeigt.
+>Die Eingabe des „PIN“ muss mit „Enter“ bestätigt werden. <br>
+Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-Ansicht angezeigt.
 
 ### Kunden-Ansicht (Menü)<br>
 >![udoc](images/BenutzerDoku/BH-Menü.png)
@@ -30,7 +30,7 @@ Nach erfolgreichem „Login“ , wird entweder die Kunden-Ansicht, oder die Admi
 > ![udoc](images/BenutzerDoku/BH-AbHeben.png)
 > 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.<br>
 > ![udoc](images/BenutzerDoku/BH-Auszahlung1.png)
-> 3. Der Benutzer bestätigt das Geld abzubuchen. ATM Bestätigt die Auszahlung.
+> 3. Der Benutzer bestätigt das Geld abzubuchen. ATM bestätigt die Auszahlung.
 > ![udoc](images/BenutzerDoku/BH-Auszahlung2.png)
 > 4. Der Benutzer drück auf "OK". ATM zeigt das Menü an.
 > ![udoc](images/BenutzerDoku/BH-Auszahlung3.png)
@@ -72,7 +72,7 @@ Nach erfolgreichem „Login“ , wird entweder die Kunden-Ansicht, oder die Admi
 
 > 1. Administrator drückt „Neuer Account“. ATM erzeugt ein neues Konto.
 > ![udoc](images/BenutzerDoku/BH-ACCNeu1.png)
-> 2. Administrator gibt Accountdaten ein und drückt "Speichern". ATM Zeigt Informationsbildschirm an.<br>
+> 2. Administrator gibt Accountdaten ein und drückt "Speichern". ATM zeigt Informationsbildschirm an.<br>
 > ![udoc](images/BenutzerDoku/BH-ACCNeu2.png)
 > 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
 > ![udoc](images/BenutzerDoku/BH-ACCNeu3.png)
@@ -80,9 +80,9 @@ Nach erfolgreichem „Login“ , wird entweder die Kunden-Ansicht, oder die Admi
 ## Account löschen
 
 
-> 1. Administrator wählt einen account aus und drückt "Löschen". ATM erfordert bestätigung.<br>
+> 1. Administrator wählt einen Account aus und drückt "Löschen". ATM erfordert Bestätigung.<br>
 > ![udoc](images/BenutzerDoku/BH-ACCD1.png)
-> 2. Adminstrator bestätigt das Löschen. ATM löscht das Konto und Zeigt Informationsbildschirm an.<br>
+> 2. Adminstrator bestätigt das Löschen. ATM löscht das Konto und zeigt Informationsbildschirm an.<br>
 > ![udoc](images/BenutzerDoku/BH-ACCD3.png)
 > 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
 > image.png
@@ -90,7 +90,7 @@ Nach erfolgreichem „Login“ , wird entweder die Kunden-Ansicht, oder die Admi
 ## Account bearbeiten
 
 
-> 1. Administrator wählt einen Account aus, gibt die gewünschte änderung ein und drückt "Speichern". ATM zeigt Informationsbildschirm an.<br>
+> 1. Administrator wählt einen Account aus, gibt die gewünschte Änderung ein und drückt "Speichern". ATM zeigt Informationsbildschirm an.<br>
 > ![udoc](images/BenutzerDoku/BH-Ändern1.png)
 > ![udoc](images/BenutzerDoku/BH-Ändern2.png)
 > 2. Administrator drückt "OK". ATM zeigt das Admin-Menü an.

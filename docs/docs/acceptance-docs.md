@@ -47,10 +47,10 @@ Nicht implementiert: User Stories nicht erfolgreich implementiert
 | 3   | ...maximal Debit Betrag pro Tag festlegen...      | Implementiert                 |
 | 4   | ...vierstelligen Pin zu meiner Karte eingeben...  | Implementiert                 |
 | 5   | ...Ziffern meiner Pin ändern...                   | Implementiert (Administrator) |
-| 6   | ...Länge meiner Pin ändern...                     | Implementiert (Administrator) |
-| 7   | ...Stückelung auswählen...                        | Nicht Implementiert           |
+| 6   | ...Länge meiner Pin ändern...                     | Nicht implementiert           |
+| 7   | ...Stückelung auswählen...                        | Nicht implementiert           |
 | 8   | ...in mein Konto einloggen...                     | Implementiert                 |
-| 9   | ...gegen Gebühren Geld abheben...                 | Nicht Implementiert           |
+| 9   | ...gegen Gebühren Geld abheben...                 | Nicht implementiert           |
 | 10  | ...vollständige und detaillierte Dokumentation... | Implementiert                 |
 
 </br>
