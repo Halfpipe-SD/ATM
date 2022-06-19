@@ -1,11 +1,27 @@
 # Benutzerdokumentation
 
+## Allgemeine Funktionen
+### Authentifizieren
+>Der Benutzer sieht zunächst den „Willkommens Bildschirm“ mit der forderung seine Karte eizustecken.
+
+![udoc](images/BenutzerDoku/bh-Auth1.png)
+
+>Nachdem die Karte eingeführt wurde, wird der Benutzer aufgefordert sich, durch die Eingabe seines „PIN“, auf dem „Keypad“, zu Authentifizieren.
+
+![udoc](images/BenutzerDoku/bh-Auth2.png)
+
+>Die Eingabe des „PIN“ muss mit „Enter“ bestätigt werden. <br>
+Nach erfolgreichem „Login“ , wird entweder die Kunden-Ansicht, oder die Admin-Ansicht angezeigt.
+
+
+
 Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu verschiedenen Optionen dargestellt.
 ## Kunde
 ## Geld abheben
 
 > 1. Der Benutzer inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.
 > 2. Der Benutzer gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Menü an.
+> ![udoc](images/BenutzerDoku/BH-Menü.png)
 > 3. Der Benutzer wählt "Geld abheben" aus. ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.
 > 4. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.
 > 5. Der Benutzer bestätigt das Geld abzubuchen. ATM Bestätigt die Auszahlung.
