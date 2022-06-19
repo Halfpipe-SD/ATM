@@ -12,10 +12,10 @@
 >Die Eingabe des „PIN“, muss mit „Enter“ bestätigt werden. <br>
 Nach erfolgreichem „Login“ , wird entweder die Kunden-Ansicht, oder die Admin-Ansicht angezeigt.
 
-Kunden-Ansicht (Menü)<br>
+### Kunden-Ansicht (Menü)<br>
 >![udoc](images/BenutzerDoku/BH-Menü.png)
 
-Admin-Ansicht (Admin-Menü)<br>
+### Admin-Ansicht (Admin-Menü)<br>
 >![udoc](images/BenutzerDoku/BH-Admin.png)
 
 
