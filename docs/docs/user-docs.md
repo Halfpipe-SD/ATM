@@ -85,7 +85,7 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 > 2. Adminstrator bestätigt das Löschen. ATM löscht das Konto und zeigt Informationsbildschirm an.<br>
 > ![udoc](images/BenutzerDoku/BH-ACCD3.png)
 > 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
-> image.png
+> ![udoc](images/BenutzerDoku/BH-ACCD2.png)
 
 ## Account bearbeiten
 
