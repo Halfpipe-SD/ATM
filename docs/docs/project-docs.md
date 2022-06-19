@@ -7,6 +7,25 @@ Regelmäßige Meetings halfen uns die Aufgaben so zu verteilen, dass wir den Ter
 Durch dieses Projekt lernten wir, besser mit Git und den Softwareentwicklungs-Tools von GitHub umzugehen. Dazu zählen das Projektboard, Issues und Actions. 
 <br>
 
+### Reflexion
+
+1. Die **Terminplanung** war manchmal zu spontan, so dass bei manchen Meetings nicht alle Mitglieder teilnehmen konnten.
+2. Das **Konfigurationsmanagement** für dieses Projekt war am Anfang schwer, da wir nicht wussten, wie das ganze Team gleichzeitig an einem digitalen Projekt arbeiten soll, ohne dass jeder andere Stände der Software und Dokumentation hat.
+3. Die **Aufgabenaufteilung** war am Anfang des Projektes noch unstrukturiert und es gab keine gute Zeitliche Planung.
+4. Beim Projektbeginn war das **Verstehen des Java Codes** eine zentrale Aufgabe, die den Einzelnen Mitglieder schwergefallen ist.
+5. Die **Weiterentwicklung des bestehenden Projekts** ohne Dokumentation machte es uns schwer zu verstehen was die eigentlichen Funktionen sowie Ein- und Ausgaben der Maschine sind.
+6. Mit den **zugeteilten Fachgebieten** für jedes Mitglied konnten wir zum Start des Projekts nicht viel anfangen und es kam uns vor wie eine zusätzliche Aufgabe statt einer Hilfe.
+
+### Verbesserung
+
+1. Durch **Regelmäßige Meetings** zu abgestimmten Zeiten konnte alle Mitglieder anwesend sein und ihre Themen vorbereiten.
+2. Durch die **Nutzung von Git** konnten alle Mitglieder immer gleichzeitig auf dem aktuellen Stand der Software und Dokumentation arbeiten.
+3. Durch das Nutzen eines **Projektboard mit Issues und Actions** konnten wir die Aufgaben gut auf die Mitglieder aufteilen und passende Zeitslots erstellen.
+4. Durch **Teamarbeit** mit geteilten Bildschirmen, konnten wir zusammen den Code Analysieren, Verstehen und Dokumentieren.
+5. Die **Notwendigkeit von Dokumentation** wurde uns bei diesem Projekt bewusst, da durch Schreiben und Reflektieren der Aufgaben vieles besser verständlich wurde. Außerdem können auch Kunden oder Projektfremde durch die Dokumentation schnell einen guten Überblick zum Projekt gewinnen.
+6. Durch die **Erfahrung auf den Fachgebieten** konnten wir einen bessern Blick auf die Aufteilung der Aufgaben und das agile Arbeiten in der Softwareentwicklung gewinnen.
+
+
 
 ## Mapping zu individuellen Leistungen
 
