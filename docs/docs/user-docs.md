@@ -1,8 +1,8 @@
 # Benutzerdokumentation
-In diesem Dokument wird die Benutzerdokumentationen, in Form eines Benutzerhandbuchs mit Text und Bild beschrieben.
+## In diesem Dokument wird die Benutzerdokumentationen, in Form eines Benutzerhandbuchs mit Text und Bild beschrieben.
 ## Allgemeine Funktionen
 
-Im Folgenden wird die Authenitifizierung mit dem ATM und einem Benutzer aufgeführt.
+## Im Folgenden wird die Authenitifizierung mit dem ATM und einem Benutzer aufgeführt.
 ### Authentifizieren
 >Der Benutzer sieht zunächst den „Willkommens Bildschirm“ mit der Forderung seine Karte einzustecken.<br>
 >![udoc](images/BenutzerDoku/bh-Auth1.png)
@@ -19,7 +19,8 @@ Admin-Ansicht (Admin-Menü)<br>
 
 
 
-Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu verschiedenen Optionen dargestellt.
+## Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu verschiedenen Optionen dargestellt.
+
 ## Kunde
 ## Geld abheben
 
