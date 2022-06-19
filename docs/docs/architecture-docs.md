@@ -112,31 +112,31 @@ Es sind psychologische Ansätze, wie das menschliche Gehirn visuelle Information
 
 > **Prinzip der Ähnlichkeit**
 
-Elemente die ähnliche bzw. gleiche Funktionen haben wurden gleich gestaltet. Wie zum Beispiel die Eingabe Tastenfeld Null bis Neun, sie haben alle das gleichen Design. Die Tasten “Enter”, “Clear” und “OK” haben das gleiche Design aber führen unterschiedliche Funktionen aus.
+Elemente die ähnliche bzw. gleiche Funktionen haben wurden gleich gestaltet. Wie zum Beispiel die Eingabe Tastenfeld Null bis Neun. Diese haben alle das gleiche Design. Die Tasten “Enter”, “Clear” und “OK” haben das gleiche Design, aber führen unterschiedliche Funktionen aus.
 
 ![Style-Guide](images/Gestaltungsprinzipien/b1.png)
 
 > **Prinzip der Nähe**
 
-Elemente die die gleichen Funktionen ausführen, oder helfen, dass diese Funktion ausgeführt werden kann, wurden räumlich nah platziert. Wie zum Beispiel die Tasten Null bis Neun, sie wurden nah an einander, links im Display platziert. Auch die Knöpfe “Enter” und “Clear” wurden im Tastenfeld platziert, da sie die Eingabe bestätigen oder löschen.
+Elemente, welche die gleichen Funktionen ausführen, oder helfen, dass diese Funktion ausgeführt werden können, wurden räumlich nah platziert. Wie zum Beispiel die Tasten Null bis Neun. Sie wurden nah aneinander, links im Display platziert. Auch die Knöpfe “Enter” und “Clear” wurden im Tastenfeld platziert, da sie die Eingabe bestätigen oder löschen.
 
 ![Style-Guide](images/Gestaltungsprinzipien/b2.png)
 
 > **Prinzip der Prägnanz**
 
-Interaktionselemente wurden hervorgehoben. Wie im Falle der Eingabeknöpfe Null bis Neuen. Aber auch das Ausgabefenster wurde quadratisch und mit weißem Hintergrund gestaltet.
+Interaktionselemente wurden hervorgehoben. Wie im Falle der Eingabeknöpfe Null bis Neun. Aber auch das Ausgabefenster wurde quadratisch und mit weißem Hintergrund gestaltet.
 
 ![Style-Guide](images/Gestaltungsprinzipien/b3.png)
 
 > **Prinzip der gemeinsamen Region**
 
-Eingabe Elemente werden links vom Display platziert und das Ausgabe-Fenster rechts vom Display. Die Regionen sind mit einer unterschiedlichen Hintergrundfarbe optisch getrennt
+Eingabe Elemente werden links vom Display platziert und das Ausgabe-Fenster rechts vom Display. Die Regionen sind mit einer unterschiedlichen Hintergrundfarbe optisch getrennt.
 
 ![Style-Guide](images/Gestaltungsprinzipien/b4.png)
 
 > **Prinzip der Erfahrung**
 
-Elemente werden so gestaltet wie sie sich zuvor in der Praxis schon bewiesen haben, oder es aus kultureller Sicht angenommen wurde. In unserem Fall wurde kulturell standardisiert das nummerische Tastenfelder in einer Matrix 3x4 angeordnet.
+Elemente werden so gestaltet, wie sie sich zuvor in der Praxis schon bewiesen haben, oder es aus kultureller Sicht angenommen wurde. In unserem Fall wurde kulturell standardisiert, dass numerische Tastenfelder in einer 3x4 Matrix angeordnet werden.
 
 ![Style-Guide](images/Gestaltungsprinzipien/b5.png)
 
@@ -144,13 +144,13 @@ Elemente werden so gestaltet wie sie sich zuvor in der Praxis schon bewiesen hab
 
 > **Prinzip der Ähnlichkeit**
 
-Elemente die ähnliche bzw. gleiche Funktionen haben wurden gleich gestaltet. Wie zum Beispiel die Buttons „Neuer Account“, „Account löschen“, „Speichern“, die alle benötigt werden um Accountmanagement auszuüben, wurden gleich gestaltet. Die Eingabefelder zum Erstellen neuer Accounts wurden ebenfalls gleich gestaltet.
+Elemente, die ähnliche bzw. gleiche Funktionen haben, wurden gleich gestaltet. Wie zum Beispiel die Buttons „Neuer Account“, „Account löschen“ und „Speichern“, die alle benötigt werden um Accountmanagement auszuüben. Die Eingabefelder zum Erstellen neuer Accounts wurden ebenfalls gleich gestaltet.
 
 ![Style-Guide](images/Gestaltungsprinzipien/a1.png)
 
 > **Prinzip der Nähe**
 
-Elemente, die die gleichen Funktionen ausführen oder dazu helfen, dass diese Funktion ausgeführt werden kann wurden räumlich nah platziert. Die Buttons für das Accountmanagement wurden alle unten platziert. Die Eingabefelder zum Erstellen eines neuen Accounts wurden alle rechts am Bildschirmrand zusammengefasst und die Auswahl eines Kunden an der linken Seite des Bildschirmrandes.
+Elemente, welche die gleichen Funktionen ausführen, oder dazu helfen, dass diese Funktion ausgeführt werden können, wurden räumlich nah platziert. Die Buttons für das Accountmanagement wurden alle unten platziert. Die Eingabefelder zum Erstellen eines neuen Accounts wurden alle rechts am Bildschirmrand zusammengefasst und die Auswahl eines Kunden an der linken Seite des Bildschirmrandes.
 
 ![Style-Guide](images/Gestaltungsprinzipien/a2.png)
 
