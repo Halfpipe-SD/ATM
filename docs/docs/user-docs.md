@@ -6,9 +6,9 @@
 ### Im Folgenden wird die Authenitifizierung mit dem ATM und einem Benutzer aufgeführt.
 ### Authentifizieren
 >Der Benutzer sieht zunächst den „Willkommens Bildschirm“ mit der Forderung seine Karte einzustecken.<br>
->![udoc](images/BenutzerDoku/bh-Auth1.png)
+>![udoc](images/BenutzerDoku/bh-Auth1.png)<br>
 >Nachdem die Karte eingeführt wurde, wird der Benutzer aufgefordert, sich durch die Eingabe seines „PIN“, auf dem „Keypad“, zu Authentifizieren.<br>
->![udoc](images/BenutzerDoku/bh-Auth2.png)
+>![udoc](images/BenutzerDoku/bh-Auth2.png)<br>
 >Die Eingabe des „PIN“, muss mit „Enter“ bestätigt werden. <br>
 Nach erfolgreichem „Login“ , wird entweder die Kunden-Ansicht, oder die Admin-Ansicht angezeigt.
 
