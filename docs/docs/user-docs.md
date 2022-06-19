@@ -42,6 +42,7 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 
 > 1. Der Benutzer wählt „Geld einzahlen“ . ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.<br>
 > ![udoc](images/BenutzerDoku/BH-EinZahlen.png)
+>![udoc](images/BenutzerDoku/BH-einzahlung.png)
 > 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.<br>
 > ![udoc](images/BenutzerDoku/BH-Einzahlung1.png)
 > ![udoc](images/BenutzerDoku/BH-Einzahlung1.1.png)
