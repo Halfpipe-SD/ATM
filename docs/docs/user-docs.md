@@ -28,7 +28,8 @@ Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu ver
 ## Geld abheben
 
 
-> 1. Der Benutzer wählt "Geld abheben" aus. ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.
+> 1. Der Benutzer wählt "Geld abheben" aus. ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.<br>
+> ![udoc](images/BenutzerDoku/BH-AbHeben.png)
 > 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.
 > ![udoc](images/BenutzerDoku/BH-Auszahlung1.png)
 > 3. Der Benutzer bestätigt das Geld abzubuchen. ATM Bestätigt die Auszahlung.
@@ -41,17 +42,19 @@ Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu ver
 
 
 > 1. Der Benutzer wählt „Geld einzahlen“ . ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.<br>
-> ![udoc](images/BenutzerDoku/BH-Einzahlung1.png)
+> ![udoc](images/BenutzerDoku/BH-EinZahlen.png)
 > 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.
+> ![udoc](images/BenutzerDoku/BH-Einzahlung1.png)
 > 3. Benutzer drückt „JA“. ATM validiert die Eingabe. Bei erfolgreicher Prüfung wird der Betrag dem Bankkonto gutgeschrieben und der Informationsbildschirm wird angezeigt.<br>
 > ![udoc](images/BenutzerDoku/BH-Einzahlung2.png)
-> 4. Benutzer drückt "OK". ATM zeigt das Menü an.
+> 4. Benutzer drückt "OK". ATM zeigt das Menü an.<br>
 > ![udoc](images/BenutzerDoku/BH-Einzahlung3.png)
 
 
 ## Kontostand anzeigen
 
 > 1. Benutzer wählt „Kontostand anzeigen“. ATM zeigt Bildschirm mit Kontostand an.
+> ![udoc](images/BenutzerDoku/BH-KontoStand.png)
 > ![udoc](images/BenutzerDoku/BH-Kontostand1.png)
 > 2. Benutzer drückt „Abbrechen“. ATM zeigt das Menü an.
 > ![udoc](images/BenutzerDoku/BH-Kontostand2.png)
