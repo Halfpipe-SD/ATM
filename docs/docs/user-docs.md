@@ -30,7 +30,7 @@ Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu ver
 
 > 1. Der Benutzer wählt "Geld abheben" aus. ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.<br>
 > ![udoc](images/BenutzerDoku/BH-AbHeben.png)
-> 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.
+> 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.<br>
 > ![udoc](images/BenutzerDoku/BH-Auszahlung1.png)
 > 3. Der Benutzer bestätigt das Geld abzubuchen. ATM Bestätigt die Auszahlung.
 > ![udoc](images/BenutzerDoku/BH-Auszahlung2.png)
