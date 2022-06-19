@@ -30,7 +30,8 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 > ![udoc](images/BenutzerDoku/BH-AbHeben.png)
 > 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.<br>
 > ![udoc](images/BenutzerDoku/BH-Auszahlung1.png)
-> 3. Der Benutzer bestätigt das Geld abzubuchen. ATM bestätigt die Auszahlung.
+> ![udoc](images/BenutzerDoku/BH-Auszahlung1.1.png)
+> 3. Der Benutzer bestätigt das Geld abzubuchen. ATM bestätigt die Auszahlung.<br>
 > ![udoc](images/BenutzerDoku/BH-Auszahlung2.png)
 > 4. Der Benutzer drück auf "OK". ATM zeigt das Menü an.
 > ![udoc](images/BenutzerDoku/BH-Auszahlung3.png)
@@ -43,6 +44,7 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 > ![udoc](images/BenutzerDoku/BH-EinZahlen.png)
 > 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.<br>
 > ![udoc](images/BenutzerDoku/BH-Einzahlung1.png)
+> ![udoc](images/BenutzerDoku/BH-Einzahlung1.1.png)
 > 3. Benutzer drückt „JA“. ATM validiert die Eingabe. Bei erfolgreicher Prüfung wird der Betrag dem Bankkonto gutgeschrieben und der Informationsbildschirm wird angezeigt.<br>
 > ![udoc](images/BenutzerDoku/BH-Einzahlung2.png)
 > 4. Benutzer drückt "OK". ATM zeigt das Menü an.<br>
