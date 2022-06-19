@@ -1,17 +1,25 @@
 # Benutzerdokumentation
-
+In diesem Dokument wird die Benutzerdokumentationen, in Form eines Benutzerhandbuchs mit Text und Bild beschrieben.
 ## Allgemeine Funktionen
+
+Im Folgenden wird die Authenitifizierung mit dem ATM und einem Benutzer aufgeführt.
 ### Authentifizieren
->Der Benutzer sieht zunächst den „Willkommens Bildschirm“ mit der forderung seine Karte eizustecken.
+>Der Benutzer sieht zunächst den „Willkommens Bildschirm“ mit der Forderung seine Karte einzustecken.
 
 ![udoc](images/BenutzerDoku/bh-Auth1.png)
 
->Nachdem die Karte eingeführt wurde, wird der Benutzer aufgefordert sich, durch die Eingabe seines „PIN“, auf dem „Keypad“, zu Authentifizieren.
+>Nachdem die Karte eingeführt wurde, wird der Benutzer aufgefordert, sich durch die Eingabe seines „PIN“, auf dem „Keypad“, zu Authentifizieren.
 
 ![udoc](images/BenutzerDoku/bh-Auth2.png)
 
->Die Eingabe des „PIN“ muss mit „Enter“ bestätigt werden. <br>
+>Die Eingabe des „PIN“, muss mit „Enter“ bestätigt werden. <br>
 Nach erfolgreichem „Login“ , wird entweder die Kunden-Ansicht, oder die Admin-Ansicht angezeigt.
+
+Kunden-Ansicht (Menü)<br>
+![udoc](images/BenutzerDoku/BH-Menü.png)
+
+Admin-Ansicht (Admin-Menü)<br>
+![udoc](images/BenutzerDoku/BH-Admin.png)
 
 
 
@@ -19,38 +27,39 @@ Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu ver
 ## Kunde
 ## Geld abheben
 
-> 1. Der Benutzer inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.
-> 2. Der Benutzer gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Menü an.
-> ![udoc](images/BenutzerDoku/BH-Menü.png)
-> 3. Der Benutzer wählt "Geld abheben" aus. ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.
-> 4. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.
-> 5. Der Benutzer bestätigt das Geld abzubuchen. ATM Bestätigt die Auszahlung.
-> 6. Der Benutzer drück auf "OK". ATM zeigt das Menü an.
+
+> 1. Der Benutzer wählt "Geld abheben" aus. ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.
+> 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.
+> ![udoc](images/BenutzerDoku/BH-Auszahlung1.png)
+> 3. Der Benutzer bestätigt das Geld abzubuchen. ATM Bestätigt die Auszahlung.
+> ![udoc](images/BenutzerDoku/BH-Auszahlung2.png)
+> 4. Der Benutzer drück auf "OK". ATM zeigt das Menü an.
+> ![udoc](images/BenutzerDoku/BH-Auszahlung3.png)
 
 
 ## Geld einzahlen
 
-> 1. Der Benutzer inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.
-> 2. Der Benutzer gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Menü an.
-> 3. Der Benutzer wählt „Geld einzahlen“ . ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.
-> 4. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.
-> 6. Benutzer drückt „JA“. ATM validiert die Eingabe. Bei erfolgreicher Prüfung wird der Betrag dem Bankkonto gutgeschrieben und der Informationsbildschirm wird angezeigt.
-> 7. Benutzer drückt „JA“. ATM s validiert die Eingabe. Bei nicht erfolgreicher Prüfung wird ein Informationsbildschirm angezeigt.
-> 8. Benutzer drückt "OK" . ATM zeigt das Menü an.
+
+> 1. Der Benutzer wählt „Geld einzahlen“ . ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.<br>
+> ![udoc](images/BenutzerDoku/BH-Einzahlung1.png)
+> 2. Der Benutzer gibt den gewünschten Betrag ein und drückt "Enter". ATM fordert Bestätigung.
+> 3. Benutzer drückt „JA“. ATM validiert die Eingabe. Bei erfolgreicher Prüfung wird der Betrag dem Bankkonto gutgeschrieben und der Informationsbildschirm wird angezeigt.<br>
+> ![udoc](images/BenutzerDoku/BH-Einzahlung2.png)
+> 4. Benutzer drückt "OK". ATM zeigt das Menü an.
+> ![udoc](images/BenutzerDoku/BH-Einzahlung3.png)
 
 
 ## Kontostand anzeigen
 
-> 1. Der Benutzer inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.
-> 2. Der Benutzer gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Menü an.
-> 3. Benutzer wählt „Kontostand anzeigen“. ATM zeigt Bildschirm mit Kontostand an.
-> 4. Benutzer drückt „Abbrechen“. ATM zeigt das Menü an.
+> 1. Benutzer wählt „Kontostand anzeigen“. ATM zeigt Bildschirm mit Kontostand an.
+> ![udoc](images/BenutzerDoku/BH-Kontostand1.png)
+> 2. Benutzer drückt „Abbrechen“. ATM zeigt das Menü an.
+> ![udoc](images/BenutzerDoku/BH-Kontostand2.png)
 
 ## Logout
 
-> 1. Der Benutzer inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.
-> 2. Der Benutzer gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Menü an.
-> 3. Der Benutzer wählt „Abbrechen“. ATM zeigt Willkommens Bildschirm an.
+> 1. Der Benutzer wählt „Abbrechen“, bestätigt mit "Enter". ATM zeigt Willkommens Bildschirm an.<br>
+> ![udoc](images/BenutzerDoku/BH-Abbrechen.png)
 
 <br>
 Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Administrator, zu verschiedenen Optionen dargestellt.
@@ -60,23 +69,28 @@ Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Administrator,
 
 ## Account hinzufügen
 
-> 1. Administrator inseriert seine Karte. ATM zeigt das Authentifizierungsmenü an.
-> 2. Administrator gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Admin-Menü an.
-> 3. Administrator drückt „Neuer Account“. ATM erzeugt ein neues Konto.
-> 4. Administrator gibt Accountdaten ein und drückt "Speichern". ATM Zeigt Informationsbildschirm an.
-> 5. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+> 1. Administrator drückt „Neuer Account“. ATM erzeugt ein neues Konto.
+> ![udoc](images/BenutzerDoku/BH-ACCNeu1.png)
+> 2. Administrator gibt Accountdaten ein und drückt "Speichern". ATM Zeigt Informationsbildschirm an.<br>
+> ![udoc](images/BenutzerDoku/BH-ACCNeu2.png)
+> 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+> ![udoc](images/BenutzerDoku/BH-ACCNeu3.png)
 
 ## Account löschen
 
-> 1. Administrator inseriert seine Karte. ATM zeigt das Authentifizierungsmenü an.
-> 2. Administrator gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Admin-Menü an.
-> 3. Administrator wählt einen account aus und drückt "Löschen". ATM erfordert bestätigung.
-> 4. Adminstrator bestätigt das Löschen. ATM löscht das Konto und Zeigt Informationsbildschirm an.
-> 5. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+
+> 1. Administrator wählt einen account aus und drückt "Löschen". ATM erfordert bestätigung.<br>
+> ![udoc](images/BenutzerDoku/BH-ACCD1.png)
+> 2. Adminstrator bestätigt das Löschen. ATM löscht das Konto und Zeigt Informationsbildschirm an.<br>
+> ![udoc](images/BenutzerDoku/BH-ACCD3.png)
+> 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+> image.png
 
 ## Account bearbeiten
 
-> 1. Administrator inseriert seine Karte. ATM zeigt das Authentifizierungsmenü an.
-> 2. Administrator gibt seine PIN ein, um sich zu authentifizieren. ATM Zeigt das Admin-Menü an.
-> 3. Administrator wählt einen Account aus, gibt die gewünschte änderung ein und drückt "Speichern". ATM zeigt Informationsbildschirm an.
-> 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+
+> 1. Administrator wählt einen Account aus, gibt die gewünschte änderung ein und drückt "Speichern". ATM zeigt Informationsbildschirm an.<br>
+> ![udoc](images/BenutzerDoku/BH-Ändern1.png)
+> ![udoc](images/BenutzerDoku/BH-Ändern2.png)
+> 2. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+> ![udoc](images/BenutzerDoku/BH-Ändern3.png)
