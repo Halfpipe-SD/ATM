@@ -23,7 +23,7 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 ### Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu verschiedenen Optionen dargestellt.
 
 ## Kunde
-## Geld abheben
+## Geld abheben 
 
 
 > 1. Der Benutzer wählt "Geld abheben" aus. ATM zeigt das verfügbare Guthaben an und erfordert die Eingabe des Betrags.<br>
@@ -34,7 +34,7 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 > ![udoc](images/BenutzerDoku/BH-Auszahlung1.1.png)
 > 3. Der Benutzer bestätigt das Geld abzubuchen. ATM bestätigt die Auszahlung.<br>
 > ![udoc](images/BenutzerDoku/BH-Auszahlung2.png)
-> 4. Der Benutzer drück auf "OK". ATM zeigt das Menü an.
+> 4. Der Benutzer drück auf "OK". ATM zeigt das Menü an.<br>
 > ![udoc](images/BenutzerDoku/BH-Auszahlung3.png)
 
 
@@ -55,10 +55,10 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 
 ## Kontostand anzeigen
 
-> 1. Benutzer wählt „Kontostand anzeigen“. ATM zeigt Bildschirm mit Kontostand an.
+> 1. Benutzer wählt „Kontostand anzeigen“. ATM zeigt Bildschirm mit Kontostand an.<br>
 > ![udoc](images/BenutzerDoku/BH-KontoStand.png)
 > ![udoc](images/BenutzerDoku/BH-Kontostand1.png)
-> 2. Benutzer drückt „Abbrechen“. ATM zeigt das Menü an.
+> 2. Benutzer drückt „Abbrechen“. ATM zeigt das Menü an.<br>
 > ![udoc](images/BenutzerDoku/BH-Kontostand2.png)
 
 ## Logout
@@ -75,11 +75,11 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 
 ## Account hinzufügen
 
-> 1. Administrator drückt „Neuer Account“. ATM erzeugt ein neues Konto.
+> 1. Administrator drückt „Neuer Account“. ATM erzeugt ein neues Konto.<br>
 > ![udoc](images/BenutzerDoku/BH-ACCNeu1.png)
 > 2. Administrator gibt Accountdaten ein und drückt "Speichern". ATM zeigt Informationsbildschirm an.<br>
 > ![udoc](images/BenutzerDoku/BH-ACCNeu2.png)
-> 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+> 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.<br>
 > ![udoc](images/BenutzerDoku/BH-ACCNeu3.png)
 
 ## Account löschen
@@ -90,7 +90,7 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 > 2. Adminstrator bestätigt das Löschen. ATM löscht das Konto und zeigt Informationsbildschirm an.<br>
 > ![udoc](images/BenutzerDoku/BH-ACCD3.png)
 > ![udoc](images/BenutzerDoku/BH-ACCLösch3.png)
-> 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+> 3. Administrator drückt "OK". ATM zeigt das Admin-Menü an.<br>
 > ![udoc](images/BenutzerDoku/BH-ACCD2.png)
 
 ## Account bearbeiten
@@ -99,5 +99,5 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 > 1. Administrator wählt einen Account aus, gibt die gewünschte Änderung ein und drückt "Speichern". ATM zeigt Informationsbildschirm an.<br>
 > ![udoc](images/BenutzerDoku/BH-Ändern1.png)
 > ![udoc](images/BenutzerDoku/BH-Ändern2.png)
-> 2. Administrator drückt "OK". ATM zeigt das Admin-Menü an.
+> 2. Administrator drückt "OK". ATM zeigt das Admin-Menü an.<br>
 > ![udoc](images/BenutzerDoku/BH-Ändern3.png)
