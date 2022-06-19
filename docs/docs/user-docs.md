@@ -65,6 +65,7 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 
 > 1. Der Benutzer wählt „Abbrechen“, bestätigt mit "Enter". ATM zeigt Willkommens Bildschirm an.<br>
 > ![udoc](images/BenutzerDoku/BH-Abbrechen.png)
+> ![udoc](images/BenutzerDoku/BH-Willkommen1.png)
 
 
 ### Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Administrator, zu verschiedenen Optionen dargestellt. <br>
