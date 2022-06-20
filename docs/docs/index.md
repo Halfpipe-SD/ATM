@@ -26,7 +26,10 @@ Wir sind die Panzerknacker.
 ## Die Auftraggeber
 
 Katharina Franz<br>
-katharina.franz@th-ab.de
+<a href="mailto:katharina.franz@th-ab.de">katharina.franz@th-ab.de</a>  
+
+Prof. Dr. Timea Illes-Seifer <br>
+<a href="mailto:timea.illes-seifert@th-ab.de">timea.illes-seifert@th-ab.de</a>  
 
 Technische-Hochschule Aschaffenburg <br>
 Würzburger Straße 45,

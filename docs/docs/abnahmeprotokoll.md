@@ -1,8 +1,13 @@
 <!-- markdownlint-disable MD033 -->
 # Abnahmeprotokoll
 
+<br>
+
 In diesem Absatz finden sie die Abnahmeerklärung zwischen Auftraggeber und Auftragnehmer.<br>
 Machen sie ein Kreuz zwischen den eckigen Klammern, wenn die Aussage korrekt ist [ X ].
+
+<br>
+<br>
 
 <table >
       <tr >
@@ -18,6 +23,8 @@ Machen sie ein Kreuz zwischen den eckigen Klammern, wenn die Aussage korrekt ist
          <td> 0001 </td>
       </tr>
 </table>
+
+<br>
 
 <table >
       <tr >
@@ -41,6 +48,9 @@ Machen sie ein Kreuz zwischen den eckigen Klammern, wenn die Aussage korrekt ist
         <td> 20.06.2022 </td>
       </tr>
 </table>
+
+<br>
+<br>
 
 <table style="width:100%">
       <tr  >
@@ -82,44 +92,108 @@ Machen sie ein Kreuz zwischen den eckigen Klammern, wenn die Aussage korrekt ist
          <td style="width:10%; text-align:center"> [ &nbsp; ] </td>
          <td> 8. Delta-Dokumentation </td>
       </tr>
+      <tr>
+         <td style="width:10%; text-align:center"> [ &nbsp; ] </td>
+         <td> Neuer Delta-Code </td>
+      </tr>
+      <tr>
+         <td style="width:10%; text-align:center"> [ &nbsp; ] </td>
+         <td> Dokumentierter Ist-Code </td>
+      </tr>
 
 </table>
 
+<br>
+<br>
+<br>
+
 <table style="width:100%">
-      <tr  >
-         <th  Colspan="2" style="width:10%"> Offene Fehler </th>
+      <colgroup>
+         <col span="1" style="width: 3%;">
+         <col span="1" style="width: 60%;">
+         <col span="1" style="width: 15%;">
+         <col span="1" style="width: 22%;">
+      </colgroup>
+      <tr >
+         <th  Colspan="5" style="width:100%"> Offene Fehler </th>
       </tr>
       <tr >
          <th > Nr. </th>
-         <th > Fehlerbeschreibung </th>
+         <th > Beschreibung </th>
+         <th > Schwere </th>
+         <th > Zu beheben bis </th>
       </tr>
       <tr>
-         <td > ... </td>
-         <td> ... </td>
+         <td > 1 </td>
+         <td>  </td>
+         <td>  </td>
+         <td>  </td>
       </tr>
       <tr>
-         <td> ... </td>
-         <td> ... </td>
+         <td > 2 </td>
+         <td>  </td>
+         <td>  </td>
+         <td>  </td>
+      </tr>
+      <tr>
+         <td > 3 </td>
+         <td>  </td>
+         <td>  </td>
+         <td>  </td>
+      </tr>
+      <tr>
+         <td > 4 </td>
+         <td>  </td>
+         <td>  </td>
+         <td>  </td>
       </tr>
 </table>
 
+<br>
+
 <table style="width:100%">
+      <colgroup>
+         <col span="1" style="width: 3%;">
+         <col span="1" style="width: 60%;">
+         <col span="1" style="width: 15%;">
+         <col span="1" style="width: 22%;">
+      </colgroup>
       <tr >
-         <th  Colspan="2" style="width:10%"> Offene Anforderungen </th>
+         <th  Colspan="5" style="width:10%"> Offene Anforderungen </th>
       </tr>
       <tr>
-         <th> Nr. </th>
-         <th> Anforderungsbeschreibung </th>
+         <th > Nr. </th>
+         <th > Beschreibung </th>
+         <th > Schwere </th>
+         <th > Zu beheben bis </th>
       </tr>
       <tr>
-         <td> ... </td>
-         <td> ... </td>
+         <td> 1 </td>
+         <td>  </td>
+         <td>  </td>
+         <td>  </td>
       </tr>
       <tr>
-         <td> ... </td>
-         <td> ... </td>
+         <td> 2 </td>
+         <td>  </td>
+         <td>  </td>
+         <td>  </td>
+      </tr>
+      <tr>
+         <td> 3 </td>
+         <td>  </td>
+         <td>  </td>
+         <td>  </td>
+      </tr>
+      <tr>
+         <td> 4 </td>
+         <td>  </td>
+         <td>  </td>
+         <td>  </td>
       </tr>
 </table>
+
+<br>
 
 Auftraggeber und Auftragnehmer stellen nach der vereinbarten Abnahmeprozedur übereinstimmend fest, dass die vertraglich vereinbarten Leistungen im Wesentlichen:
 
@@ -128,6 +202,8 @@ Auftraggeber und Auftragnehmer stellen nach der vereinbarten Abnahmeprozedur üb
 [ &nbsp; ] nicht erreicht sind. Die Abnahme muss zu den vertraglichen Bedingungen wiederholt werden.
 
 Auch nach dem Abschluss des Projektes sind wir mit einem professionellen Service für Ihre Systeme und Software für Sie da und betreuen auf Wunsch Ihr System über den gesamten Lebenszyklus.
+
+<br>
 
 <table>
       <tr>
