@@ -19,6 +19,7 @@ Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-
 >![udoc](images/BenutzerDoku/BH-Admin.png)
 
 
+## Benutzerspezifische Funktionen
 
 ### Im Folgenden wird eine Anleitung zur Benutzung des ATM, mit einem Kunden, zu verschiedenen Optionen dargestellt.
 
