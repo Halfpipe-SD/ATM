@@ -8,21 +8,21 @@
 
 > Der Benutzer sieht zunächst den „Willkommens Bildschirm“ mit der Forderung seine Karte einzustecken.
 
-[udoc](images/BenutzerDoku/bh-Auth1.png)
+![udoc](images/BenutzerDoku/bh-Auth1.png)
 
 > Nachdem die Karte eingeführt wurde, wird der Benutzer aufgefordert, sich durch die Eingabe seines „PIN“, auf dem „Keypad“, zu authentifizieren.
 
-[udoc](images/BenutzerDoku/bh-Auth2.png)
+![udoc](images/BenutzerDoku/bh-Auth2.png)
 
 > Die Eingabe des „PIN“ muss mit „Enter“ bestätigt werden. 
 
 Nach erfolgreichem „Login“ wird entweder die Kunden-Ansicht, oder die Admin-Ansicht angezeigt.
 
 ### Kunden-Ansicht (Menü)
-[udoc](images/BenutzerDoku/BH-Menü.png)
+![udoc](images/BenutzerDoku/BH-Menü.png)
 
 ### Admin-Ansicht (Admin-Menü)
-[udoc](images/BenutzerDoku/BH-Admin.png)
+![udoc](images/BenutzerDoku/BH-Admin.png)
 
 
 ## Benutzerspezifische Funktionen
