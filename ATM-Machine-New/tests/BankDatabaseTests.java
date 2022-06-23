@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import exceptions.LoginFailedException;
-import klassen.*;
+import src.*;
 
 public class BankDatabaseTests {
 

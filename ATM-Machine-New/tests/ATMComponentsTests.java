@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import exceptions.InvalidModeException;
 import interfaces.ATMListener.ATM_Mode;
-import klassen.*;
+import src.*;
 
 public class ATMComponentsTests {
     private ATM atm;

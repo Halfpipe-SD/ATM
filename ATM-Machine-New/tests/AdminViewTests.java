@@ -10,9 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import interfaces.ATMListener.ATM_Mode;
-
-import klassen.*;
-
+import src.*;
 
 public class AdminViewTests {
 
@@ -68,9 +66,8 @@ public class AdminViewTests {
     assertEquals(lastAcc.getUsername(), "Neuer Benutzer");
   }
 
-  @Test 
+  @Test
   public void checkBtnSave() {
-      
-      
+
   }
 }
