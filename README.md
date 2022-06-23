@@ -25,8 +25,3 @@ Using [MkDocs](https://www.mkdocs.org/) we managed to automatically generate a w
 ### Documentation [Website](https://atm.node5.de/)
 
 ### Documentation [PDF](https://github.com/thieleju/ATM/raw/gh-pages/docs.pdf)
-
-<br>
-
-> **Warning** <br>
-> When using this project, you might have to convert the names of all folders inside `ATM-Machine-New` into all-lowercase characters!

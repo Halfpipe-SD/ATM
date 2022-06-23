@@ -1,4 +1,4 @@
-package klassen;
+package src;
 
 import java.util.HashMap;
 

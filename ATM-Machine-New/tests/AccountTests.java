@@ -10,9 +10,9 @@ import org.junit.Test;
 
 import exceptions.InvalidTransactionException;
 import interfaces.ATMListener.ATM_Mode;
-import klassen.ATM;
-import klassen.Account;
-import klassen.BankDatabase;
+import src.ATM;
+import src.Account;
+import src.BankDatabase;
 
 public class AccountTests {
 

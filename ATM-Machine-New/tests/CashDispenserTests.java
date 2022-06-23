@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import exceptions.InvalidTransactionException;
-import klassen.CashDispenser;
+import src.CashDispenser;
 
 public class CashDispenserTests {
 

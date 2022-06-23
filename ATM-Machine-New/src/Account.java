@@ -1,4 +1,4 @@
-package klassen;
+package src;
 
 /**
  * Die Klasse Account ist eine Klasse, die ein Konto repräsentiert.
