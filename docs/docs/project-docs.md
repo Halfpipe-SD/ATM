@@ -40,7 +40,7 @@ Christan Andés<sup>1</sup>, Michel Franz<sup>2</sup>, Juri Kaemper<sup>3</sup>,
 - Aufgaben<sup>1</sup>
 - Begriffslexikon<sup>2</sup>
 - Mengengerüst<sup>3</sup>
-- Use Cases<sup>3</sup>
+- Use Cases<sup>3, 5</sup>
 
 ### 02 Architekturdokumentation
 
@@ -74,6 +74,6 @@ Christan Andés<sup>1</sup>, Michel Franz<sup>2</sup>, Juri Kaemper<sup>3</sup>,
 - Lessons Learned
 - Mapping zur individuellen Leistung
 
-### 07 Codedokumentation<sup>5, 2</sup>
+### 07 Codedokumentation<sup>2, 3, 5</sup>
 - Delta-Codedokumentation
 - Ist-Dokumentation
