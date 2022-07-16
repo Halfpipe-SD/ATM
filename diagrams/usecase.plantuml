@@ -6,24 +6,25 @@ skinparam packageStyle rectangle
 actor "Benutzer" as AB
 actor "Administrator" as AA
 
-AB <- AA
 
 rectangle ATM {
 
-  AB -- (Login)
-  AB -- (Logout)
+  AB -- (Kontostand anzeigen) 
+  AB -- (Geld abheben) 
+  AB -- (Geld einzahlen) 
 
-  (Login) <.- (Kontostand anzeigen) : "<<extend>>"
-  (Login) <.- (Geld abheben) : "<<extend>>"
-  (Login) <.- (Geld einzahlen) : "<<extend>>"
+  (Kontostand anzeigen) -.> (Login) : "<<include>>"
+  (Geld abheben) -.> (Login) : "<<include>>"
+  (Geld einzahlen) -.> (Login) : "<<include>>"
+  (Login) <.- (Logout) : "<<extend>>"
 
-  AA -- (Login)
-  AA -- (Logout)
-  AA -- (Admin-Ansicht)
+  AA -- (Account hinzufügen)
+  AA -- (Account löschen)
+  AA -- (Accountguthaben bearbeiten)
 
-  (Admin-Ansicht) <.- (Account hinzufügen) : "<<extend>>"
-  (Admin-Ansicht) <.- (Account löschen) : "<<extend>>"
-  (Admin-Ansicht) <.- (Accountguthaben bearbeiten) : "<<extend>>"
+  (Account hinzufügen) -.> (Login) : "<<include>>"
+  (Account löschen) -.> (Login) : "<<include>>"
+  (Accountguthaben bearbeiten) -.> (Login) : "<<include>>"
 }
 
 @enduml

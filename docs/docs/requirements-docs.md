@@ -155,3 +155,41 @@ Das Mengengerüst beschreibt quantitativ die Komponenten eines Projektes.
 In diesem Anwendungsfalldiagramm wird das nach außen sichtbare Verhalten des Systems aus Sicht der Nutzer beschrieben.
 
 ![df](images/usecase.png)
+
+### Use-Case Beschreibung 
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <td>ATM - Anwendungsfälle des Geldautomaten</td>
+  </tr>
+  <tr>
+    <th>Kurzbeschreibung</th>
+    <td>Dieser Use-Case beschreibt alle Funktionen, die ein Benutzer oder ein Administrator an dem Geldautomaten tätigen kann. </td>
+  </tr>
+  <tr>
+    <th>Akteure</th>
+    <td>Benutzer, Administrator</td>
+  </tr>
+  <tr>
+    <th>Vorbedingungen</th>
+    <td>Der Benutzer hat ein Konto bei der Bank.</td>
+  </tr>
+  <tr>
+    <th>Auslösendes Ereignis</th>
+    <td>Der Benutzer möchte eine Funktion des Geldautomaten benutzen. <br> Der Administrator möchte Änderungen vornehmen </td>
+  </tr>
+  <tr>
+    <th>Hauptszenario</th>
+    <td>1. Der Benutzer meldet sich an. <br>2. Das System zeigt die möglichen Funktionen an. <br>3. Der Benutzer wählt eine Funktion. <br>4. Die Funktion wird ausgeführt.<br>5. Der Benutzer meldet sich ab. </td>
+  </tr>
+  <tr>
+    <th>Alternativszenarien</th>
+    <td>1. Ein Administrator meldet sich an. <br>2. Das System zeigt die Admin-Ansicht mit den Funktionen für den Administrator an. <br>3. Der Administrator wählt eine Funktion. <br>4. Die Funktion wird ausgeführt. <br>5. Der Administrator schließt die Admin-Ansicht und meldet sich ab. </td>
+  </tr>
+  <tr>
+    <th>Nachbedingungen</th>
+    <td>Hauptszenario: Funktion des Benutzers wurde erledigt und der Benutzer hat sich abgemeldet.<br>Alternativszenario: Funktion des Administrators wurde erledigt und der Administrator hat sich abgemeldet.</td>
+  </tr>
+</table>
